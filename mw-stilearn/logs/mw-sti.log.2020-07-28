@@ -1,0 +1,1361 @@
+10:44:33,033  INFO [main] - ----------- MW START -----------
+10:44:33,033  INFO [main] - Start load config
+10:45:28,028  INFO [main] - ----------- MW START -----------
+10:45:28,028  INFO [main] - Start load config
+10:46:13,013  INFO [main] - ----------- MW START -----------
+10:46:13,013  INFO [main] - Start load config
+10:46:13,013  INFO [main] - LISTEN TO : 192.168.16.243:28888
+10:46:43,043  INFO [New I/O worker #1] - Panjang Stream dari CA = 5
+10:46:54,054  INFO [New I/O worker #1] - Panjang Stream dari CA = 5
+10:47:01,001  INFO [New I/O worker #2] - Panjang Stream dari CA = 12
+10:49:46,046  INFO [New I/O worker #5] - Panjang Stream dari CA = 284
+10:49:46,046  INFO [New I/O worker #5] - Serving from IP: 192.168.16.241:47946 , accepting in port = 28888
+10:49:46,046  INFO [New I/O worker #5] - Incoming CA - IP Address: 192.168.16.241:47946
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="104946"/>
+  <field id="12" value="104946"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728104946"/>
+  <field id="48" value="600511001000900            MOBIL               MOBIL               28072020104946                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:49:46,046 ERROR [New I/O worker #5] - Failed to parse bit 48 date (MOBIL)
+10:49:46,046 ERROR [New I/O worker #5] - doInquiryPostpaid error. 
+java.lang.NullPointerException
+	at java.util.Calendar.setTime(Calendar.java:1770)
+	at java.text.SimpleDateFormat.format(SimpleDateFormat.java:943)
+	at java.text.SimpleDateFormat.format(SimpleDateFormat.java:936)
+	at java.text.DateFormat.format(DateFormat.java:345)
+	at com.syb.util.CommonUtil.generateTimestamp(CommonUtil.java:22)
+	at com.syb.processor.Processor.doInquery(Processor.java:90)
+	at com.syb.processor.Processor.process(Processor.java:45)
+	at com.syb.server.CollectorAgentHandler.messageReceived(CollectorAgentHandler.java:52)
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:462)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.callDecode(FrameDecoder.java:443)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.messageReceived(FrameDecoder.java:303)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+10:49:46,046  INFO [New I/O worker #5] - Outgoing CA - IP Address: 192.168.16.241:47946
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="104946"/>
+  <field id="12" value="104946"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728104946"/>
+  <field id="39" value="98"/>
+  <field id="48" value="600511001000900            MOBIL               MOBIL               28072020104946                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:50:30,030  INFO [New I/O worker #6] - Panjang Stream dari CA = 284
+10:50:30,030  INFO [New I/O worker #6] - Serving from IP: 192.168.16.241:47950 , accepting in port = 28888
+10:50:30,030  INFO [New I/O worker #6] - Incoming CA - IP Address: 192.168.16.241:47950
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="105030"/>
+  <field id="12" value="105030"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728105030"/>
+  <field id="48" value="600511001000900            MOBIL               BCA                 28072020105030                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:50:30,030 ERROR [New I/O worker #6] - Failed to parse bit 48 date (MOBIL)
+10:50:30,030 ERROR [New I/O worker #6] - doInquiryPostpaid error. 
+java.lang.NullPointerException
+	at java.util.Calendar.setTime(Calendar.java:1770)
+	at java.text.SimpleDateFormat.format(SimpleDateFormat.java:943)
+	at java.text.SimpleDateFormat.format(SimpleDateFormat.java:936)
+	at java.text.DateFormat.format(DateFormat.java:345)
+	at com.syb.util.CommonUtil.generateTimestamp(CommonUtil.java:22)
+	at com.syb.processor.Processor.doInquery(Processor.java:90)
+	at com.syb.processor.Processor.process(Processor.java:45)
+	at com.syb.server.CollectorAgentHandler.messageReceived(CollectorAgentHandler.java:52)
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:462)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.callDecode(FrameDecoder.java:443)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.messageReceived(FrameDecoder.java:303)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+10:50:30,030  INFO [New I/O worker #6] - Outgoing CA - IP Address: 192.168.16.241:47950
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="105030"/>
+  <field id="12" value="105030"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728105030"/>
+  <field id="39" value="98"/>
+  <field id="48" value="600511001000900            MOBIL               BCA                 28072020105030                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:53:31,031  INFO [New I/O worker #9] - Panjang Stream dari CA = 284
+10:53:31,031  INFO [New I/O worker #9] - Serving from IP: 192.168.16.241:48002 , accepting in port = 28888
+10:53:31,031  INFO [New I/O worker #9] - Incoming CA - IP Address: 192.168.16.241:48002
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="105331"/>
+  <field id="12" value="105331"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728105331"/>
+  <field id="48" value="600511001000900            MOBIL               MOBIL               28072020105331                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:53:31,031 ERROR [New I/O worker #9] - Failed to parse bit 48 date (MOBIL)
+10:53:31,031 ERROR [New I/O worker #9] - doInquiryPostpaid error. 
+java.lang.NullPointerException
+	at java.util.Calendar.setTime(Calendar.java:1770)
+	at java.text.SimpleDateFormat.format(SimpleDateFormat.java:943)
+	at java.text.SimpleDateFormat.format(SimpleDateFormat.java:936)
+	at java.text.DateFormat.format(DateFormat.java:345)
+	at com.syb.util.CommonUtil.generateTimestamp(CommonUtil.java:22)
+	at com.syb.processor.Processor.doInquery(Processor.java:90)
+	at com.syb.processor.Processor.process(Processor.java:45)
+	at com.syb.server.CollectorAgentHandler.messageReceived(CollectorAgentHandler.java:52)
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:462)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.callDecode(FrameDecoder.java:443)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.messageReceived(FrameDecoder.java:303)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+10:53:31,031  INFO [New I/O worker #9] - Outgoing CA - IP Address: 192.168.16.241:48002
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="105331"/>
+  <field id="12" value="105331"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728105331"/>
+  <field id="39" value="98"/>
+  <field id="48" value="600511001000900            MOBIL               MOBIL               28072020105331                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:54:21,021  INFO [New I/O worker #10] - Panjang Stream dari CA = 284
+10:54:21,021  INFO [New I/O worker #10] - Serving from IP: 192.168.16.241:48006 , accepting in port = 28888
+10:54:21,021  INFO [New I/O worker #10] - Incoming CA - IP Address: 192.168.16.241:48006
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="105421"/>
+  <field id="12" value="105421"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728105421"/>
+  <field id="48" value="600511001000900            MOBIL               BCA                 28072020105421                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:54:21,021 ERROR [New I/O worker #10] - Failed to parse bit 48 date (MOBIL)
+10:54:21,021 ERROR [New I/O worker #10] - doInquiryPostpaid error. 
+java.lang.NullPointerException
+	at java.util.Calendar.setTime(Calendar.java:1770)
+	at java.text.SimpleDateFormat.format(SimpleDateFormat.java:943)
+	at java.text.SimpleDateFormat.format(SimpleDateFormat.java:936)
+	at java.text.DateFormat.format(DateFormat.java:345)
+	at com.syb.util.CommonUtil.generateTimestamp(CommonUtil.java:22)
+	at com.syb.processor.Processor.doInquery(Processor.java:90)
+	at com.syb.processor.Processor.process(Processor.java:45)
+	at com.syb.server.CollectorAgentHandler.messageReceived(CollectorAgentHandler.java:52)
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:462)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.callDecode(FrameDecoder.java:443)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.messageReceived(FrameDecoder.java:303)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+10:54:21,021  INFO [New I/O worker #10] - Outgoing CA - IP Address: 192.168.16.241:48006
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="105421"/>
+  <field id="12" value="105421"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728105421"/>
+  <field id="39" value="98"/>
+  <field id="48" value="600511001000900            MOBIL               BCA                 28072020105421                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+11:06:21,021  INFO [main] - ----------- MW START -----------
+11:06:21,021  INFO [main] - Start load config
+11:06:21,021  INFO [main] - LISTEN TO : 192.168.16.243:28888
+11:06:21,021  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+11:06:21,021  INFO [New I/O worker #1] - Serving from IP: 192.168.16.241:48018 , accepting in port = 28888
+11:06:21,021  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.241:48018
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="110621"/>
+  <field id="12" value="110621"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728110621"/>
+  <field id="48" value="600511001000900            MOBIL               BCA                 28072020110621                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+11:06:21,021  INFO [New I/O worker #1] - Postpaid Inquiry Request : com.sun.xml.internal.bind.v2.runtime.MarshallerImpl@1644353e
+11:06:22,022 DEBUG [pool-1-thread-1] - CookieSpec selected: default
+11:06:22,022 DEBUG [pool-1-thread-1] - Auth cache not set in the context
+11:06:22,022 DEBUG [pool-1-thread-1] - Connection request: [route: {}->http://122.129.117.54:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+11:06:22,022 DEBUG [pool-1-thread-1] - Connection leased: [id: 0][route: {}->http://122.129.117.54:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+11:06:22,022 DEBUG [pool-1-thread-1] - Opening connection {}->http://122.129.117.54:80
+11:06:22,022 DEBUG [pool-1-thread-1] - Connecting to /122.129.117.54:80
+11:06:22,022 DEBUG [pool-1-thread-1] - Connection established 192.168.16.243:34702<->122.129.117.54:80
+11:06:22,022 DEBUG [pool-1-thread-1] - Executing request POST /wsdl_buana/SYBServices.php HTTP/1.1
+11:06:22,022 DEBUG [pool-1-thread-1] - Target auth state: UNCHALLENGED
+11:06:22,022 DEBUG [pool-1-thread-1] - Proxy auth state: UNCHALLENGED
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 >> POST /wsdl_buana/SYBServices.php HTTP/1.1
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 >> Content-type: application/xml
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 >> Accept: application/xml
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 >> Content-Length: 60
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 >> Host: 122.129.117.54
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 >> Connection: Keep-Alive
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_65)
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 >> "POST /wsdl_buana/SYBServices.php HTTP/1.1[\r][\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 >> "Content-type: application/xml[\r][\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 >> "Accept: application/xml[\r][\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 >> "Content-Length: 60[\r][\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 >> "Host: 122.129.117.54[\r][\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_65)[\r][\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 >> "[\r][\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 >> "com.sun.xml.internal.bind.v2.runtime.MarshallerImpl@1644353e"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << "HTTP/1.0 500 Internal Server Error[\r][\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << "Date: Tue, 28 Jul 2020 04:06:22 GMT[\r][\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << "Server: Apache/2.4.39 (Unix) OpenSSL/1.0.2s PHP/7.3.7 mod_perl/2.0.8-dev Perl/v5.16.3[\r][\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << "X-Powered-By: PHP/7.3.7[\r][\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << "Status: 500 Internal Server Error[\r][\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << "X-SOAP-Server: NuSOAP/0.9.5 (1.123)[\r][\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << "Content-Length: 519[\r][\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << "Connection: close[\r][\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << "Content-Type: text/xml; charset=ISO-8859-1[\r][\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << "[\r][\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << "<?xml version="1.0" encoding="ISO-8859-1"?><SOAP:Envelope SOAP:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"[\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << "  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"[\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << "  xmlns:xsd="http://www.w3.org/2001/XMLSchema"[\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << "  xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/">[\n]"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << "<SOAP:Body><SOAP:Fault><faultcode>SOAP-ENV:Client</faultcode><faultactor></faultactor><faultstring>Operation &apos;&apos; is not defined in the WSDL for this service</faultstring><detail></detail></SOAP:Fault></SOAP:Body></SOAP:Envelope>"
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << HTTP/1.0 500 Internal Server Error
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << Date: Tue, 28 Jul 2020 04:06:22 GMT
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << Server: Apache/2.4.39 (Unix) OpenSSL/1.0.2s PHP/7.3.7 mod_perl/2.0.8-dev Perl/v5.16.3
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << X-Powered-By: PHP/7.3.7
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << Status: 500 Internal Server Error
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << X-SOAP-Server: NuSOAP/0.9.5 (1.123)
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << Content-Length: 519
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << Connection: close
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0 << Content-Type: text/xml; charset=ISO-8859-1
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0: Shutdown connection
+11:06:22,022 DEBUG [pool-1-thread-1] - Connection discarded
+11:06:22,022 DEBUG [pool-1-thread-1] - http-outgoing-0: Close connection
+11:06:22,022 DEBUG [pool-1-thread-1] - Connection released: [id: 0][route: {}->http://122.129.117.54:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+11:06:22,022  INFO [pool-1-thread-1] - [Response] HTTP Response Error 500
+11:06:22,022  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.16.241:48018
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="110621"/>
+  <field id="12" value="110621"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728110621"/>
+  <field id="48" value="600511001000900            MOBIL               BCA                 28072020110621                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+11:06:56,056  INFO [New I/O worker #2] - Panjang Stream dari CA = 284
+11:06:56,056  INFO [New I/O worker #2] - Serving from IP: 192.168.16.241:48020 , accepting in port = 28888
+11:06:56,056  INFO [New I/O worker #2] - Incoming CA - IP Address: 192.168.16.241:48020
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="110656"/>
+  <field id="12" value="110656"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728110656"/>
+  <field id="48" value="600511001000900            MOBIL               BCA                 28072020110656                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+11:06:56,056  INFO [New I/O worker #2] - Postpaid Inquiry Request : com.sun.xml.internal.bind.v2.runtime.MarshallerImpl@4cbea3
+11:06:56,056 DEBUG [pool-1-thread-1] - CookieSpec selected: default
+11:06:56,056 DEBUG [pool-1-thread-1] - Auth cache not set in the context
+11:06:56,056 DEBUG [pool-1-thread-1] - Connection request: [route: {}->http://122.129.117.54:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+11:06:56,056 DEBUG [pool-1-thread-1] - Connection leased: [id: 1][route: {}->http://122.129.117.54:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+11:06:56,056 DEBUG [pool-1-thread-1] - Opening connection {}->http://122.129.117.54:80
+11:06:56,056 DEBUG [pool-1-thread-1] - Connecting to /122.129.117.54:80
+11:06:56,056 DEBUG [pool-1-thread-1] - Connection established 192.168.16.243:34722<->122.129.117.54:80
+11:06:56,056 DEBUG [pool-1-thread-1] - Executing request POST /wsdl_buana/SYBServices.php HTTP/1.1
+11:06:56,056 DEBUG [pool-1-thread-1] - Target auth state: UNCHALLENGED
+11:06:56,056 DEBUG [pool-1-thread-1] - Proxy auth state: UNCHALLENGED
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 >> POST /wsdl_buana/SYBServices.php HTTP/1.1
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 >> Content-type: application/xml
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 >> Accept: application/xml
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 >> Content-Length: 58
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 >> Host: 122.129.117.54
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 >> Connection: Keep-Alive
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_65)
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 >> "POST /wsdl_buana/SYBServices.php HTTP/1.1[\r][\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 >> "Content-type: application/xml[\r][\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 >> "Accept: application/xml[\r][\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 >> "Content-Length: 58[\r][\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 >> "Host: 122.129.117.54[\r][\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_65)[\r][\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 >> "[\r][\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 >> "com.sun.xml.internal.bind.v2.runtime.MarshallerImpl@4cbea3"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << "HTTP/1.0 500 Internal Server Error[\r][\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << "Date: Tue, 28 Jul 2020 04:06:56 GMT[\r][\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << "Server: Apache/2.4.39 (Unix) OpenSSL/1.0.2s PHP/7.3.7 mod_perl/2.0.8-dev Perl/v5.16.3[\r][\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << "X-Powered-By: PHP/7.3.7[\r][\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << "Status: 500 Internal Server Error[\r][\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << "X-SOAP-Server: NuSOAP/0.9.5 (1.123)[\r][\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << "Content-Length: 519[\r][\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << "Connection: close[\r][\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << "Content-Type: text/xml; charset=ISO-8859-1[\r][\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << "[\r][\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << "<?xml version="1.0" encoding="ISO-8859-1"?><SOAP:Envelope SOAP:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"[\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << "  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"[\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << "  xmlns:xsd="http://www.w3.org/2001/XMLSchema"[\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << "  xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/">[\n]"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << "<SOAP:Body><SOAP:Fault><faultcode>SOAP-ENV:Client</faultcode><faultactor></faultactor><faultstring>Operation &apos;&apos; is not defined in the WSDL for this service</faultstring><detail></detail></SOAP:Fault></SOAP:Body></SOAP:Envelope>"
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << HTTP/1.0 500 Internal Server Error
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << Date: Tue, 28 Jul 2020 04:06:56 GMT
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << Server: Apache/2.4.39 (Unix) OpenSSL/1.0.2s PHP/7.3.7 mod_perl/2.0.8-dev Perl/v5.16.3
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << X-Powered-By: PHP/7.3.7
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << Status: 500 Internal Server Error
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << X-SOAP-Server: NuSOAP/0.9.5 (1.123)
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << Content-Length: 519
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << Connection: close
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1 << Content-Type: text/xml; charset=ISO-8859-1
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1: Shutdown connection
+11:06:56,056 DEBUG [pool-1-thread-1] - Connection discarded
+11:06:56,056 DEBUG [pool-1-thread-1] - http-outgoing-1: Close connection
+11:06:56,056 DEBUG [pool-1-thread-1] - Connection released: [id: 1][route: {}->http://122.129.117.54:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+11:06:56,056  INFO [pool-1-thread-1] - [Response] HTTP Response Error 500
+11:06:56,056  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.16.241:48020
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="110656"/>
+  <field id="12" value="110656"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728110656"/>
+  <field id="48" value="600511001000900            MOBIL               BCA                 28072020110656                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+11:07:11,011  INFO [main] - ----------- MW START -----------
+11:07:11,011  INFO [main] - Start load config
+11:07:11,011  INFO [main] - LISTEN TO : 192.168.16.243:28888
+11:07:15,015  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+11:07:15,015  INFO [New I/O worker #1] - Serving from IP: 192.168.16.241:48022 , accepting in port = 28888
+11:07:15,015  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.241:48022
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="110715"/>
+  <field id="12" value="110715"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728110715"/>
+  <field id="48" value="600511001000900            MOBIL               BCA                 28072020110715                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+11:07:15,015  INFO [New I/O worker #1] - Postpaid Inquiry Request : com.sun.xml.internal.bind.v2.runtime.MarshallerImpl@1644353e
+11:07:15,015 DEBUG [pool-1-thread-1] - CookieSpec selected: default
+11:07:15,015 DEBUG [pool-1-thread-1] - Auth cache not set in the context
+11:07:15,015 DEBUG [pool-1-thread-1] - Connection request: [route: {}->http://122.129.117.54:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+11:07:15,015 DEBUG [pool-1-thread-1] - Connection leased: [id: 0][route: {}->http://122.129.117.54:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+11:07:15,015 DEBUG [pool-1-thread-1] - Opening connection {}->http://122.129.117.54:80
+11:07:15,015 DEBUG [pool-1-thread-1] - Connecting to /122.129.117.54:80
+11:07:15,015 DEBUG [pool-1-thread-1] - Connection established 192.168.16.243:34758<->122.129.117.54:80
+11:07:15,015 DEBUG [pool-1-thread-1] - Executing request POST /wsdl_buana/SYBServices.php HTTP/1.1
+11:07:15,015 DEBUG [pool-1-thread-1] - Target auth state: UNCHALLENGED
+11:07:15,015 DEBUG [pool-1-thread-1] - Proxy auth state: UNCHALLENGED
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 >> POST /wsdl_buana/SYBServices.php HTTP/1.1
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 >> Content-type: application/xml
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 >> Accept: application/xml
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 >> Content-Length: 60
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 >> Host: 122.129.117.54
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 >> Connection: Keep-Alive
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_65)
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 >> "POST /wsdl_buana/SYBServices.php HTTP/1.1[\r][\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 >> "Content-type: application/xml[\r][\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 >> "Accept: application/xml[\r][\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 >> "Content-Length: 60[\r][\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 >> "Host: 122.129.117.54[\r][\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.4 (Java 1.5 minimum; Java/1.8.0_65)[\r][\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 >> "[\r][\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 >> "com.sun.xml.internal.bind.v2.runtime.MarshallerImpl@1644353e"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << "HTTP/1.0 500 Internal Server Error[\r][\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << "Date: Tue, 28 Jul 2020 04:07:15 GMT[\r][\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << "Server: Apache/2.4.39 (Unix) OpenSSL/1.0.2s PHP/7.3.7 mod_perl/2.0.8-dev Perl/v5.16.3[\r][\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << "X-Powered-By: PHP/7.3.7[\r][\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << "Status: 500 Internal Server Error[\r][\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << "X-SOAP-Server: NuSOAP/0.9.5 (1.123)[\r][\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << "Content-Length: 519[\r][\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << "Connection: close[\r][\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << "Content-Type: text/xml; charset=ISO-8859-1[\r][\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << "[\r][\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << "<?xml version="1.0" encoding="ISO-8859-1"?><SOAP:Envelope SOAP:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"[\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << "  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"[\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << "  xmlns:xsd="http://www.w3.org/2001/XMLSchema"[\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << "  xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/">[\n]"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << "<SOAP:Body><SOAP:Fault><faultcode>SOAP-ENV:Client</faultcode><faultactor></faultactor><faultstring>Operation &apos;&apos; is not defined in the WSDL for this service</faultstring><detail></detail></SOAP:Fault></SOAP:Body></SOAP:Envelope>"
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << HTTP/1.0 500 Internal Server Error
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << Date: Tue, 28 Jul 2020 04:07:15 GMT
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << Server: Apache/2.4.39 (Unix) OpenSSL/1.0.2s PHP/7.3.7 mod_perl/2.0.8-dev Perl/v5.16.3
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << X-Powered-By: PHP/7.3.7
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << Status: 500 Internal Server Error
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << X-SOAP-Server: NuSOAP/0.9.5 (1.123)
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << Content-Length: 519
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << Connection: close
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0 << Content-Type: text/xml; charset=ISO-8859-1
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0: Shutdown connection
+11:07:15,015 DEBUG [pool-1-thread-1] - Connection discarded
+11:07:15,015 DEBUG [pool-1-thread-1] - http-outgoing-0: Close connection
+11:07:15,015 DEBUG [pool-1-thread-1] - Connection released: [id: 0][route: {}->http://122.129.117.54:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+11:07:15,015  INFO [pool-1-thread-1] - [Response] HTTP Response Error 500
+11:07:15,015  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.16.241:48022
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="110715"/>
+  <field id="12" value="110715"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728110715"/>
+  <field id="48" value="600511001000900            MOBIL               BCA                 28072020110715                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+14:55:29,029  INFO [main] - ----------- MW START -----------
+14:55:29,029  INFO [main] - Start load config
+14:55:41,041  INFO [main] - ----------- MW START -----------
+14:55:41,041  INFO [main] - Start load config
+14:55:41,041  INFO [main] - LISTEN TO : 192.168.16.243:28888
+14:56:51,051  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+14:56:51,051  INFO [New I/O worker #1] - Serving from IP: 192.168.16.241:49016 , accepting in port = 28888
+14:56:51,051  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.241:49016
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="145651"/>
+  <field id="12" value="145651"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728145651"/>
+  <field id="48" value="600511001000900            MOBIL               BCA                 28072020145651                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+14:56:51,051  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<request>
+    <timestamp>2020-07-28T14:56:51+0700</timestamp>
+    <messageId>Inquery</messageId>
+    <productId>MOBIL</productId>
+    <paymentCode>1001000900</paymentCode>
+    <trackingRef>000000000000000</trackingRef>
+    <storeId>BCA</storeId>
+</request>
+</soapenv:Body>
+</soapenv:Envelope>
+14:56:52,052 ERROR [pool-1-thread-1] - processResponse error. 
+java.lang.IllegalArgumentException: TransformerFactory does not recognise attribute 'indent_number'.
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl.setAttribute(TransformerFactoryImpl.java:485)
+	at com.syb.util.CommonUtil.formatStringXml(CommonUtil.java:69)
+	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:64)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:145)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+14:56:52,052  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.16.241:49016
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="145651"/>
+  <field id="12" value="145651"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728145651"/>
+  <field id="39" value="98"/>
+  <field id="48" value="600511001000900            MOBIL               BCA                 28072020145651                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+15:00:25,025  INFO [main] - ----------- MW START -----------
+15:00:25,025  INFO [main] - Start load config
+15:00:25,025 ERROR [main] - JAXBContext initialization error. 
+com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException: 12 counts of IllegalAnnotationExceptions
+Property messageId is present but not specified in @XmlType.propOrder
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getMessageId()
+		at com.syb.bean.Request
+Property paymentCode is present but not specified in @XmlType.propOrder
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getPaymentCode()
+		at com.syb.bean.Request
+Property productId is present but not specified in @XmlType.propOrder
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getProductId()
+		at com.syb.bean.Request
+Property storeId is present but not specified in @XmlType.propOrder
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getStoreId()
+		at com.syb.bean.Request
+Property timestamp is present but not specified in @XmlType.propOrder
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getTimestamp()
+		at com.syb.bean.Request
+Property trackingRef is present but not specified in @XmlType.propOrder
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getTrackingRef()
+		at com.syb.bean.Request
+Property TimeStamp appears in @XmlType.propOrder, but no such property exists. Maybe you meant timestamp?
+	this problem is related to the following location:
+		at com.syb.bean.Request
+Property MessageId appears in @XmlType.propOrder, but no such property exists. Maybe you meant messageId?
+	this problem is related to the following location:
+		at com.syb.bean.Request
+Property ProductId appears in @XmlType.propOrder, but no such property exists. Maybe you meant productId?
+	this problem is related to the following location:
+		at com.syb.bean.Request
+Property PaymentCode appears in @XmlType.propOrder, but no such property exists. Maybe you meant paymentCode?
+	this problem is related to the following location:
+		at com.syb.bean.Request
+Property TrackingRef appears in @XmlType.propOrder, but no such property exists. Maybe you meant trackingRef?
+	this problem is related to the following location:
+		at com.syb.bean.Request
+Property StoreId appears in @XmlType.propOrder, but no such property exists. Maybe you meant storeId?
+	this problem is related to the following location:
+		at com.syb.bean.Request
+
+	at com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException$Builder.check(IllegalAnnotationsException.java:91)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.getTypeInfoSet(JAXBContextImpl.java:445)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:277)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:124)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1123)
+	at com.sun.xml.internal.bind.v2.ContextFactory.createContext(ContextFactory.java:147)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:247)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:234)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:462)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:641)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:584)
+	at com.syb.util.SessionManager.<init>(SessionManager.java:74)
+	at com.syb.util.SessionManager.<clinit>(SessionManager.java:24)
+	at com.syb.server.Server.main(Server.java:36)
+15:00:25,025  INFO [main] - LISTEN TO : 192.168.16.243:28888
+15:00:31,031  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+15:00:31,031  INFO [New I/O worker #1] - Serving from IP: 192.168.16.241:49022 , accepting in port = 28888
+15:00:31,031  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.241:49022
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="150031"/>
+  <field id="12" value="150031"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728150031"/>
+  <field id="48" value="600511001000900            MOBIL               BCA                 28072020150031                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+15:00:31,031 ERROR [pool-1-thread-1] - Runtime exception occured while executing request: null
+java.lang.NullPointerException
+	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:52)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:145)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+15:02:06,006  INFO [main] - ----------- MW START -----------
+15:02:06,006  INFO [main] - Start load config
+15:02:06,006 ERROR [main] - JAXBContext initialization error. 
+com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException: 18 counts of IllegalAnnotationExceptions
+Property timestamp is present but not specified in @XmlType.propOrder
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.timestamp
+		at com.syb.bean.Request
+Property messageId is present but not specified in @XmlType.propOrder
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.messageId
+		at com.syb.bean.Request
+Property productId is present but not specified in @XmlType.propOrder
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.productId
+		at com.syb.bean.Request
+Property paymentCode is present but not specified in @XmlType.propOrder
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.paymentCode
+		at com.syb.bean.Request
+Property trackingRef is present but not specified in @XmlType.propOrder
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.trackingRef
+		at com.syb.bean.Request
+Property storeId is present but not specified in @XmlType.propOrder
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.storeId
+		at com.syb.bean.Request
+Property TimeStamp appears in @XmlType.propOrder, but no such property exists. Maybe you meant timestamp?
+	this problem is related to the following location:
+		at com.syb.bean.Request
+Property MessageId appears in @XmlType.propOrder, but no such property exists. Maybe you meant messageId?
+	this problem is related to the following location:
+		at com.syb.bean.Request
+Property ProductId appears in @XmlType.propOrder, but no such property exists. Maybe you meant productId?
+	this problem is related to the following location:
+		at com.syb.bean.Request
+Property PaymentCode appears in @XmlType.propOrder, but no such property exists. Maybe you meant paymentCode?
+	this problem is related to the following location:
+		at com.syb.bean.Request
+Property TrackingRef appears in @XmlType.propOrder, but no such property exists. Maybe you meant trackingRef?
+	this problem is related to the following location:
+		at com.syb.bean.Request
+Property StoreId appears in @XmlType.propOrder, but no such property exists. Maybe you meant storeId?
+	this problem is related to the following location:
+		at com.syb.bean.Request
+Class has two properties of the same name "timestamp"
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getTimestamp()
+		at com.syb.bean.Request
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.timestamp
+		at com.syb.bean.Request
+Class has two properties of the same name "messageId"
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getMessageId()
+		at com.syb.bean.Request
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.messageId
+		at com.syb.bean.Request
+Class has two properties of the same name "productId"
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getProductId()
+		at com.syb.bean.Request
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.productId
+		at com.syb.bean.Request
+Class has two properties of the same name "paymentCode"
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getPaymentCode()
+		at com.syb.bean.Request
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.paymentCode
+		at com.syb.bean.Request
+Class has two properties of the same name "trackingRef"
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getTrackingRef()
+		at com.syb.bean.Request
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.trackingRef
+		at com.syb.bean.Request
+Class has two properties of the same name "storeId"
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getStoreId()
+		at com.syb.bean.Request
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.storeId
+		at com.syb.bean.Request
+
+	at com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException$Builder.check(IllegalAnnotationsException.java:91)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.getTypeInfoSet(JAXBContextImpl.java:445)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:277)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:124)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1123)
+	at com.sun.xml.internal.bind.v2.ContextFactory.createContext(ContextFactory.java:147)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:247)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:234)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:462)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:641)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:584)
+	at com.syb.util.SessionManager.<init>(SessionManager.java:74)
+	at com.syb.util.SessionManager.<clinit>(SessionManager.java:24)
+	at com.syb.server.Server.main(Server.java:36)
+15:02:06,006  INFO [main] - LISTEN TO : 192.168.16.243:28888
+15:03:10,010  INFO [main] - ----------- MW START -----------
+15:03:10,010  INFO [main] - Start load config
+15:03:10,010 ERROR [main] - JAXBContext initialization error. 
+com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException: 12 counts of IllegalAnnotationExceptions
+There are two properties named "messageId"
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getMessageId()
+		at com.syb.bean.Request
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.messageId
+		at com.syb.bean.Request
+There are two properties named "paymentCode"
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getPaymentCode()
+		at com.syb.bean.Request
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.paymentCode
+		at com.syb.bean.Request
+There are two properties named "productId"
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getProductId()
+		at com.syb.bean.Request
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.productId
+		at com.syb.bean.Request
+There are two properties named "storeId"
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getStoreId()
+		at com.syb.bean.Request
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.storeId
+		at com.syb.bean.Request
+There are two properties named "timestamp"
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getTimestamp()
+		at com.syb.bean.Request
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.timestamp
+		at com.syb.bean.Request
+There are two properties named "trackingRef"
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getTrackingRef()
+		at com.syb.bean.Request
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.trackingRef
+		at com.syb.bean.Request
+Class has two properties of the same name "timestamp"
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getTimestamp()
+		at com.syb.bean.Request
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.timestamp
+		at com.syb.bean.Request
+Class has two properties of the same name "messageId"
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getMessageId()
+		at com.syb.bean.Request
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.messageId
+		at com.syb.bean.Request
+Class has two properties of the same name "productId"
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getProductId()
+		at com.syb.bean.Request
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.productId
+		at com.syb.bean.Request
+Class has two properties of the same name "paymentCode"
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getPaymentCode()
+		at com.syb.bean.Request
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.paymentCode
+		at com.syb.bean.Request
+Class has two properties of the same name "trackingRef"
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getTrackingRef()
+		at com.syb.bean.Request
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.trackingRef
+		at com.syb.bean.Request
+Class has two properties of the same name "storeId"
+	this problem is related to the following location:
+		at public java.lang.String com.syb.bean.Request.getStoreId()
+		at com.syb.bean.Request
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.Request.storeId
+		at com.syb.bean.Request
+
+	at com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException$Builder.check(IllegalAnnotationsException.java:91)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.getTypeInfoSet(JAXBContextImpl.java:445)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:277)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:124)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1123)
+	at com.sun.xml.internal.bind.v2.ContextFactory.createContext(ContextFactory.java:147)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:247)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:234)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:462)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:641)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:584)
+	at com.syb.util.SessionManager.<init>(SessionManager.java:74)
+	at com.syb.util.SessionManager.<clinit>(SessionManager.java:24)
+	at com.syb.server.Server.main(Server.java:36)
+15:03:10,010  INFO [main] - LISTEN TO : 192.168.16.243:28888
+15:05:29,029  INFO [main] - ----------- MW START -----------
+15:05:29,029  INFO [main] - Start load config
+15:05:29,029  INFO [main] - LISTEN TO : 192.168.16.243:28888
+15:05:42,042  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+15:05:42,042  INFO [New I/O worker #1] - Serving from IP: 192.168.16.241:49026 , accepting in port = 28888
+15:05:42,042  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.241:49026
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="150542"/>
+  <field id="12" value="150542"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728150542"/>
+  <field id="48" value="600511001000900            MOBIL               BCA                 28072020150542                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+15:05:42,042  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doInquery>
+    <TimeStamp>2020-07-28T15:05:42+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>1001000900</PaymentCode>
+    <TrackingRef>000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
+</soapenv:Body>
+</soapenv:Envelope>
+15:05:46,046  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<ns1:doInqueryResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
+<ReqInquery>
+<TimeStamp>2020-07-28T15:05:42+0700</TimeStamp>
+<MessageID>Inquery</MessageID>
+<ContractNo>1001000900</ContractNo>
+<Customer>-</Customer>
+<PoliceNum>-</PoliceNum>
+<Type>-</Type>
+<Details>-</Details>
+<TotalAmount>-</TotalAmount>
+<Fee>0</Fee>
+<ResponseCode>404</ResponseCode>
+<ResponseDesc>Konsumen tidak ditemukan</ResponseDesc>
+<TrackingRef>000000000000000</TrackingRef>
+<StoreID>BCA</StoreID>
+</ReqInquery>
+</ns1:doInqueryResponse>
+</SOAP:Body>
+</SOAP:Envelope>
+
+15:05:46,046 ERROR [pool-1-thread-1] - processResponse error. 
+java.lang.NullPointerException
+	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:88)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:145)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+15:05:46,046  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.16.241:49026
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="150542"/>
+  <field id="12" value="150542"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728150542"/>
+  <field id="39" value="98"/>
+  <field id="48" value="600511001000900            MOBIL               BCA                 28072020150542                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+15:07:27,027  INFO [New I/O worker #2] - Panjang Stream dari CA = 284
+15:07:27,027  INFO [New I/O worker #2] - Serving from IP: 192.168.16.241:49028 , accepting in port = 28888
+15:07:27,027  INFO [New I/O worker #2] - Incoming CA - IP Address: 192.168.16.241:49028
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="150727"/>
+  <field id="12" value="150727"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728150727"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 28072020150727                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+15:07:27,027  INFO [pool-1-thread-2] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doInquery>
+    <TimeStamp>2020-07-28T15:07:27+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>1002100796</PaymentCode>
+    <TrackingRef>000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
+</soapenv:Body>
+</soapenv:Envelope>
+15:07:28,028  INFO [pool-1-thread-2] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<ns1:doInqueryResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
+<ReqInquery>
+<TimeStamp>2020-07-28T15:07:27+0700</TimeStamp>
+<MessageID>Inquery</MessageID>
+<ContractNo>1002100796</ContractNo>
+<Customer>-</Customer>
+<PoliceNum>-</PoliceNum>
+<Type>-</Type>
+<Details>-</Details>
+<TotalAmount>-</TotalAmount>
+<Fee>0</Fee>
+<ResponseCode>404</ResponseCode>
+<ResponseDesc>Konsumen tidak ditemukan</ResponseDesc>
+<TrackingRef>000000000000000</TrackingRef>
+<StoreID>BCA</StoreID>
+</ReqInquery>
+</ns1:doInqueryResponse>
+</SOAP:Body>
+</SOAP:Envelope>
+
+15:07:28,028 ERROR [pool-1-thread-2] - processResponse error. 
+java.lang.NullPointerException
+	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:88)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:145)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+15:07:28,028  INFO [pool-1-thread-2] - Outgoing CA - IP Address: 192.168.16.241:49028
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="150727"/>
+  <field id="12" value="150727"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728150727"/>
+  <field id="39" value="98"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 28072020150727                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+15:10:03,003  INFO [main] - ----------- MW START -----------
+15:10:03,003  INFO [main] - Start load config
+15:10:03,003  INFO [main] - LISTEN TO : 192.168.16.243:28888
+15:10:39,039  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+15:10:39,039  INFO [New I/O worker #1] - Serving from IP: 192.168.16.241:49034 , accepting in port = 28888
+15:10:39,039  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.241:49034
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="151039"/>
+  <field id="12" value="151039"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728151039"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 28072020151039                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+15:10:39,039  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doInquery>
+    <TimeStamp>2020-07-28T15:10:39+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>02100796</PaymentCode>
+    <TrackingRef>000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
+</soapenv:Body>
+</soapenv:Envelope>
+15:10:42,042  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<ns1:doInqueryResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
+<ReqInquery>
+<TimeStamp>2020-07-28T15:10:39+0700</TimeStamp>
+<MessageID>Inquery</MessageID>
+<ContractNo>02100796</ContractNo>
+<Customer>TITIS KURNIAJI</Customer>
+<PoliceNum>B8103GI</PoliceNum>
+<Type>TOYOTA KIJANG INNOVA 2.0 V A/T</Type>
+<Details>
+<Detail>
+<InstallmentPeriod>2019-09</InstallmentPeriod>
+<InstallmentNumber>15</InstallmentNumber>
+<InstallmentAmount>3240000</InstallmentAmount>
+<InstallmentPenalty>4909000</InstallmentPenalty>
+</Detail>
+</Details>
+<TotalAmount>8149000</TotalAmount>
+<Fee>0</Fee>
+<ResponseCode>200</ResponseCode>
+<ResponseDesc>Inquery data berhasil</ResponseDesc>
+<TrackingRef>000000000000000</TrackingRef>
+<StoreID>BCA</StoreID>
+</ReqInquery>
+</ns1:doInqueryResponse>
+</SOAP:Body>
+</SOAP:Envelope>
+
+15:10:42,042 ERROR [pool-1-thread-1] - processResponse error. 
+java.lang.NullPointerException
+	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:87)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:144)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+15:10:42,042  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.16.241:49034
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="151039"/>
+  <field id="12" value="151039"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728151039"/>
+  <field id="39" value="98"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 28072020151039                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+15:18:51,051  INFO [New I/O worker #2] - Panjang Stream dari CA = 284
+15:18:51,051  INFO [New I/O worker #2] - Serving from IP: 192.168.16.243:40804 , accepting in port = 28888
+15:18:51,051  INFO [New I/O worker #2] - Incoming CA - IP Address: 192.168.16.243:40804
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="151851"/>
+  <field id="12" value="151851"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728151851"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 28072020151851                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+15:18:51,051  INFO [pool-1-thread-2] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doInquery>
+    <TimeStamp>2020-07-28T15:18:51+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>02100796</PaymentCode>
+    <TrackingRef>000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
+</soapenv:Body>
+</soapenv:Envelope>
+15:18:52,052  INFO [pool-1-thread-2] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<ns1:doInqueryResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
+<ReqInquery>
+<TimeStamp>2020-07-28T15:18:51+0700</TimeStamp>
+<MessageID>Inquery</MessageID>
+<ContractNo>02100796</ContractNo>
+<Customer>TITIS KURNIAJI</Customer>
+<PoliceNum>B8103GI</PoliceNum>
+<Type>TOYOTA KIJANG INNOVA 2.0 V A/T</Type>
+<Details>
+<Detail>
+<InstallmentPeriod>2019-09</InstallmentPeriod>
+<InstallmentNumber>15</InstallmentNumber>
+<InstallmentAmount>3240000</InstallmentAmount>
+<InstallmentPenalty>4909000</InstallmentPenalty>
+</Detail>
+</Details>
+<TotalAmount>8149000</TotalAmount>
+<Fee>0</Fee>
+<ResponseCode>200</ResponseCode>
+<ResponseDesc>Inquery data berhasil</ResponseDesc>
+<TrackingRef>000000000000000</TrackingRef>
+<StoreID>BCA</StoreID>
+</ReqInquery>
+</ns1:doInqueryResponse>
+</SOAP:Body>
+</SOAP:Envelope>
+
+15:18:52,052 ERROR [pool-1-thread-2] - processResponse error. 
+java.lang.NullPointerException
+	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:87)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:144)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+15:18:52,052  INFO [pool-1-thread-2] - Outgoing CA - IP Address: 192.168.16.243:40804
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="151851"/>
+  <field id="12" value="151851"/>
+  <field id="13" value="0728"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200728151851"/>
+  <field id="39" value="98"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 28072020151851                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
