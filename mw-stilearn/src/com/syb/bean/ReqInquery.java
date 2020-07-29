@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlRootElement(name = "doInqueryResponse")
+@XmlRootElement(name = "ReqInquery")
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder = { "timestamp", "messageId", "contractNo", "customer", "policeNum", "type","detail","totalAmount", "fee", "responseCode", "responseDesc", "trackingRef", "storeId" })
 public class ReqInquery  {

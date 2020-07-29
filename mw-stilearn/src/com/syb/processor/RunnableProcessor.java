@@ -15,6 +15,7 @@ import org.jpos.iso.ISOUtil;
 
 import com.syb.bean.ClientResponse;
 import com.syb.bean.Detail;
+import com.syb.bean.InqueryResponse;
 import com.syb.bean.ReqInquery;
 import com.syb.bean.Request;
 import com.syb.client.Client;
@@ -63,9 +64,10 @@ public class RunnableProcessor implements Runnable {
 				logger.info("Response: " + respContent);
 				String rc = null;
 				if (!clientResponse.getSoapMessage().getSOAPBody().hasFault()) {
-					StringReader reader = new StringReader(respContent);
+//					/StringReader reader = new StringReader(respContent);
 					Unmarshaller unmarshaller = sessionManager.getInquiryResponseContext().createUnmarshaller();
-					ReqInquery reqInquery = unmarshaller.unmarshal(new StreamSource(reader), ReqInquery.class).getValue();
+					InqueryResponse inqueryResponse = unmarshaller.unmarshal(clientResponse.getSoapMessage().getSOAPBody().extractContentAsDocument(), InqueryResponse.class).getValue();
+					ReqInquery reqInquery = inqueryResponse.getReqInquery();
 					Long amount = reqInquery.getTotalAmount();
 					rc= reqInquery.getResponseCode();
 
