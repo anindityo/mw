@@ -1,23 +1,27 @@
 package com.syb.processor;
 
-import java.io.StringReader;
 import java.io.StringWriter;
+import java.util.Date;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
-import javax.xml.transform.stream.StreamSource;
 
 import org.apache.log4j.Logger;
 import org.jboss.netty.channel.Channel;
+import org.jpos.iso.ISOException;
 import org.jpos.iso.ISOMsg;
 import org.jpos.iso.ISOUtil;
 
 import com.syb.bean.ClientResponse;
 import com.syb.bean.Detail;
 import com.syb.bean.InqueryResponse;
+import com.syb.bean.PaymentRequest;
+import com.syb.bean.PaymentResponse;
 import com.syb.bean.ReqInquery;
+import com.syb.bean.ReqPayment;
 import com.syb.bean.Request;
+//import com.syb.bean.Request;
 import com.syb.client.Client;
 import com.syb.server.CollectorAgentHandler;
 import com.syb.util.CommonUtil;
@@ -29,16 +33,17 @@ public class RunnableProcessor implements Runnable {
 
 	private Logger logger = Logger.getLogger(RunnableProcessor.class);
 
-	private Request xmlRequest;
-	private String method;
+	/*
+	 * Perubahan parameter untuk class runnable proccessor String xml request
+	 * dihapus.
+	 */
+//	private String xmlRequest;
 	private Channel channel;
 	private String header;
 	private ISOMsg resp;
 
-
-	public RunnableProcessor(Request xmlRequest, String method, String header, ISOMsg resp, Channel channel) {
-		this.xmlRequest = xmlRequest;
-		this.method = method;
+	public RunnableProcessor(String header, ISOMsg resp, Channel channel) {
+//		this.xmlRequest = xmlRequest;
 		this.header = header;
 		this.resp = resp;
 		this.channel = channel;
@@ -52,8 +57,34 @@ public class RunnableProcessor implements Runnable {
 		marshaller.setProperty(Marshaller.JAXB_FRAGMENT, true);
 		marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
+		String messageId = "Inquery";
+		Date dTrxDate = null;
+		Request request = new Request();
+		try {
+			dTrxDate = (Date) IsoHelper.getTrxDate(resp);
+			String timestamp = CommonUtil.generateTimestamp(dTrxDate);
+			String trackRef = IsoHelper.getTrackingRef(resp);
+			String storeId = IsoHelper.getStoreId(resp);
+			String productId = IsoHelper.getProductId(resp);
+			String noKontrak = IsoHelper.getPaymentCode(resp);
+
+			request.setTimestamp(timestamp);
+			request.setMessageId(messageId);
+			request.setProductId(productId);
+			request.setPaymentCode(noKontrak);
+			request.setTrackingRef(trackRef);
+			request.setStoreId(storeId);
+		} catch (ISOException e1) {
+			logger.error("doInquiry error. ", e1);
+			try {
+				resp.set(39, Constant.RC_ERROR);
+			} catch (Exception ex) {
+				logger.error("doInquiryPostpaid error. ", ex);
+			}
+		}
+
 		StringWriter stringWriter = new StringWriter();
-		marshaller.marshal(xmlRequest, stringWriter);
+		marshaller.marshal(request, stringWriter);
 		String requestString = CommonUtil.createEnvelope(stringWriter.toString());
 
 		ClientResponse clientResponse = client.createSoapMessage(requestString, header);
@@ -62,14 +93,18 @@ public class RunnableProcessor implements Runnable {
 				String respContent = CommonUtil.getSoapContent(clientResponse.getSoapMessage());
 				respContent = CommonUtil.formatStringXml(respContent);
 				logger.info("Response: " + respContent);
+
 				String rc = null;
 				if (!clientResponse.getSoapMessage().getSOAPBody().hasFault()) {
 //					/StringReader reader = new StringReader(respContent);
 					Unmarshaller unmarshaller = sessionManager.getInquiryResponseContext().createUnmarshaller();
-					InqueryResponse inqueryResponse = unmarshaller.unmarshal(clientResponse.getSoapMessage().getSOAPBody().extractContentAsDocument(), InqueryResponse.class).getValue();
+					InqueryResponse inqueryResponse = unmarshaller
+							.unmarshal(clientResponse.getSoapMessage().getSOAPBody().extractContentAsDocument(),
+									InqueryResponse.class)
+							.getValue();
 					ReqInquery reqInquery = inqueryResponse.getReqInquery();
 					Long amount = reqInquery.getTotalAmount();
-					rc= reqInquery.getResponseCode();
+					rc = reqInquery.getResponseCode();
 
 					if (amount != null) {
 						String modifiedbit48 = "";
@@ -100,7 +135,8 @@ public class RunnableProcessor implements Runnable {
 
 					String bit62 = CommonUtil.strpad(reqInquery.getContractNo(), 20)
 							+ CommonUtil.strpad(reqInquery.getCustomer(), 30)
-							+ CommonUtil.strpad(reqInquery.getPoliceNum(), 20) + CommonUtil.strpad(reqInquery.getType(), 50)
+							+ CommonUtil.strpad(reqInquery.getPoliceNum(), 20)
+							+ CommonUtil.strpad(reqInquery.getType(), 50)
 							+ ISOUtil.zeropad(reqInquery.getDetail().size(), 2) + detailTagihan;
 
 					resp.set(4, CommonUtil.zeropad(amount, 12));
@@ -135,14 +171,120 @@ public class RunnableProcessor implements Runnable {
 
 	}
 
+	private void processResponsePayment() throws JAXBException {
+
+		SessionManager sessionManager = SessionManager.getInstance();
+		Client client = new Client();
+		Marshaller marshaller = sessionManager.getInquiryContext().createMarshaller();
+		marshaller.setProperty(Marshaller.JAXB_FRAGMENT, true);
+		marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+		PaymentRequest paymentRequest = new PaymentRequest();
+		try {
+			String messageId = "Payment";
+			Date dTrxDate = IsoHelper.getTrxDate(resp);
+			String timestamp = CommonUtil.generateTimestamp(dTrxDate);
+			String trackRef = IsoHelper.getTrackingRef(resp);
+			String storeId = IsoHelper.getStoreId(resp);
+			String productId = IsoHelper.getProductId(resp);
+			String noKontrak = IsoHelper.getPaymentCode(resp);
+			String amount = IsoHelper.getAmount(resp);
+
+			paymentRequest.setTimestamp(timestamp);
+			paymentRequest.setMessageId(messageId);
+			paymentRequest.setTrackingRef(trackRef);
+			paymentRequest.setStoreId(storeId);
+			paymentRequest.setPaymentCode(noKontrak);
+			paymentRequest.setProductId(productId);
+			paymentRequest.setAmount(amount);
+			
+		} catch (Exception e) {
+			logger.error("processPayment error. ", e);
+			try {
+				resp.set(39, Constant.RC_ERROR);
+			} catch (Exception ex) {
+				logger.error("processPayment error. ", ex);
+			}
+
+		}
+
+		StringWriter stringWriter = new StringWriter();
+		 marshaller.marshal(paymentRequest, stringWriter);
+		String requestString = CommonUtil.createEnvelope(stringWriter.toString());
+
+		ClientResponse clientResponse = client.createSoapMessage(requestString, header);
+		try {
+			if (clientResponse != null && !clientResponse.isTimeout()) {
+				String respContent = CommonUtil.getSoapContent(clientResponse.getSoapMessage());
+				respContent = CommonUtil.formatStringXml(respContent);
+				logger.info("Response: " + respContent);
+
+				String rc = null;
+				if (!clientResponse.getSoapMessage().getSOAPBody().hasFault()) {
+//					/StringReader reader = new StringReader(respContent);
+					Unmarshaller unmarshaller = sessionManager.getInquiryResponseContext().createUnmarshaller();
+					PaymentResponse paymentResponse = unmarshaller
+							.unmarshal(clientResponse.getSoapMessage().getSOAPBody().extractContentAsDocument(),
+									PaymentResponse.class)
+							.getValue();
+					ReqPayment reqPayment = paymentResponse.getReqPayment();
+					rc = reqPayment.getResponseCode();
+
+					if (rc != null) {
+						String bit48 = resp.getString(48);
+						bit48 = bit48.substring(0, 81) + CommonUtil.zeropad(reqPayment.getMessage(), 100) + 
+								CommonUtil.zeropad(reqPayment.getTrackingRef(), 32);
+						resp.set(48, bit48);
+
+					}
+
+					String bit62 = CommonUtil.strpad(reqPayment.getTrackingRef(), 100)
+							+ CommonUtil.strpad(reqPayment.getBillInfo(), 100)
+							+ CommonUtil.strpad(reqPayment.getMessage(), 100);
+
+					resp.set(39, Constant.RC_SUCCESS);
+					resp.set(62, bit62);
+				} else if (rc.equals(Constant.STATUS_LINK_DOWN)) {
+					resp.set(39, Constant.RC_ERROR);
+				} else if (rc.equals(Constant.STATUS_UNAUTHORIZED)) {
+					resp.set(39, Constant.RC_INVALID_MANDATORY_FIELD);
+				} else if (rc.equals(Constant.STATUS_ERROR_PAYMENT)) {
+					resp.set(39, Constant.RC_NO_BILLING);
+				}
+			} else {
+				if (clientResponse == null) {
+					logger.info("[Response] No Response ");
+					resp = null;
+				} else {
+					resp.set(39, Constant.RC_ERROR);
+					logger.info("[Response] HTTP Response Error " + clientResponse.getSoapMessage());
+				}
+			}
+		} catch (Exception e) {
+			logger.error("processResponsePayment error. ", e);
+			try {
+				resp.set(39, Constant.RC_ERROR);
+			} catch (Exception ex) {
+				logger.error("processResponsePayment error. ", ex);
+			}
+		} finally {
+			CollectorAgentHandler.sendResponseToFrontEnd(channel, resp);
+		}
+
+	}
+
 	@Override
 	public void run() {
 		try {
 			String productCode = IsoHelper.getProductCode(resp);
+			String bit3 = resp.getString(3).trim().substring(0, 1);
 
 			SessionManager sessionManager = SessionManager.getInstance();
 			if (sessionManager.getProducCode().equalsIgnoreCase(productCode)) {
-				processResponse();
+				if (Constant.TRANSACTION_TYPE_INQUIRY.equalsIgnoreCase(bit3)) {
+					processResponse();
+				}  else if(Constant.TRANSACTION_TYPE_PAYMENT.equalsIgnoreCase(bit3)) {
+					processResponsePayment();
+				}
 			}
 
 		} catch (Exception e) {

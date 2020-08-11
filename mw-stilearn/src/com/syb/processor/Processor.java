@@ -1,7 +1,9 @@
 package com.syb.processor;
 
-import java.util.Date;
+//import java.io.StringWriter;
+//import java.util.Date;
 
+//import javax.xml.bind.Marshaller;
 
 import org.apache.log4j.Logger;
 import org.jboss.netty.channel.Channel;
@@ -9,9 +11,10 @@ import org.jpos.iso.ISOException;
 import org.jpos.iso.ISOMsg;
 
 import com.syb.bean.ClientResponse;
-import com.syb.bean.Request;
+//import com.syb.bean.PaymentRequest;
+//import com.syb.bean.Request;
 import com.syb.server.CollectorAgentHandler;
-import com.syb.util.CommonUtil;
+//import com.syb.util.CommonUtil;
 import com.syb.util.Constant;
 import com.syb.util.IsoHelper;
 import com.syb.util.SessionManager;
@@ -41,6 +44,8 @@ public class Processor {
 						if (sessionManager.getProducCode().equalsIgnoreCase(productCode)) {
 							if (transactionType.equals(Constant.TRANSACTION_TYPE_INQUIRY)) {
 								resp = doInquery(msg, channel);
+							} else if (transactionType.equals(Constant.TRANSACTION_TYPE_PAYMENT)) {
+								resp = doPayment(msg, channel);
 							} else {
 								logger.info("bit 3 (" + transactionType + ") is invalid");
 								resp.set(39, Constant.RC_INVALID_PROCESSING_CODE);
@@ -77,43 +82,91 @@ public class Processor {
 		}
 	}
 
-	public ISOMsg doInquery (ISOMsg req, Channel channel) {
+	/* Perubahan marshaller di runnable processor
+	 * sebelumnya di class processor
+	 * 
+	 * */
+	public ISOMsg doInquery(ISOMsg req, Channel channel) {
 		ISOMsg resp = (ISOMsg) req.clone();
-		try {
-			
-			
-			SessionManager sessionManager = SessionManager.getInstance();
-			String messageId = "Inquery";
-			Date dTrxDate = IsoHelper.getTrxDate(req);
-			String timestamp = CommonUtil.generateTimestamp(dTrxDate);
-			String trackRef = IsoHelper.getTrackingRef(req);
-			String storeId = IsoHelper.getStoreId(req);
-			String productId = IsoHelper.getProductId(req);
-			String noKontrak = IsoHelper.getPaymentCode(req);
-			
-			
-			Request request = new Request();
-			request.setTimestamp(timestamp);
-			request.setMessageId(messageId);
-			request.setProductId(productId);
-			request.setPaymentCode(noKontrak);
-			request.setTrackingRef(trackRef);
-			request.setStoreId(storeId);
-			
-	        
-			String url = sessionManager.getUrl();
-			RunnableProcessor runnableProcessor = new RunnableProcessor(request, url, Constant.BUANA_HEADER_INQUIRY, resp, channel);
-			sessionManager.getConnectionExecutor().execute(runnableProcessor);
-			
-		} catch (Exception e) {
-			logger.error("doInquiry error. ", e);
-			try {
-				resp.set(39, Constant.RC_ERROR);
-			} catch (Exception ex) {
-				logger.error("doInquiryPostpaid error. ", ex);
-			}
+//		try {
 
-		}
+			SessionManager sessionManager = SessionManager.getInstance();
+			
+			
+//			String messageId = "Inquery";
+//			Date dTrxDate = IsoHelper.getTrxDate(req);
+//			String timestamp = CommonUtil.generateTimestamp(dTrxDate);
+//			String trackRef = IsoHelper.getTrackingRef(req);
+//			String storeId = IsoHelper.getStoreId(req);
+//			String productId = IsoHelper.getProductId(req);
+//			String noKontrak = IsoHelper.getPaymentCode(req);
+//
+//			Request request = new Request();
+//			request.setTimestamp(timestamp);
+//			request.setMessageId(messageId);
+//			request.setProductId(productId);
+//			request.setPaymentCode(noKontrak);
+//			request.setTrackingRef(trackRef);
+//			request.setStoreId(storeId);
+//			
+//			String xmlReq = request.toString();
+			
+			
+			RunnableProcessor runnableProcessor = new RunnableProcessor(Constant.BUANA_HEADER_INQUIRY,
+					resp, channel);
+			sessionManager.getConnectionExecutor().execute(runnableProcessor);
+
+//		} catch (Exception e) {
+//			logger.error("doInquiry error. ", e);
+//			try {
+//				resp.set(39, Constant.RC_ERROR);
+//			} catch (Exception ex) {
+//				logger.error("doInquiryPostpaid error. ", ex);
+//			}
+//
+//		}
+		return resp;
+	}
+	
+	public ISOMsg doPayment(ISOMsg req, Channel channel) {
+		ISOMsg resp = (ISOMsg) req.clone();
+//		try {
+//
+			SessionManager sessionManager = SessionManager.getInstance();
+//			String messageId = "Payment";
+//			Date dTrxDate = IsoHelper.getTrxDate(req);
+//			String timestamp = CommonUtil.generateTimestamp(dTrxDate);
+//			String trackRef = IsoHelper.getTrackingRef(req);
+//			String storeId = IsoHelper.getStoreId(req);
+//			String productId = IsoHelper.getProductId(req);
+//			String noKontrak = IsoHelper.getPaymentCode(req);
+//			String amount = IsoHelper.getAmount(req);
+//
+//			PaymentRequest paymentRequest = new PaymentRequest();
+//			paymentRequest.setTimestamp(timestamp);
+//			paymentRequest.setMessageId(messageId);
+//			paymentRequest.setTrackingRef(trackRef);
+//			paymentRequest.setStoreId(storeId);
+//			paymentRequest.setPaymentCode(noKontrak);
+//			paymentRequest.setProductId(productId);
+//			paymentRequest.setAmount(amount);
+//			
+////			String payReq = paymentRequest.toString();
+//
+////			String url = sessionManager.getUrl();
+			RunnableProcessor runnableProcessor = new RunnableProcessor(Constant.BUANA_HEADER_INQUIRY,
+					resp, channel);
+			sessionManager.getConnectionExecutor().execute(runnableProcessor);
+
+//		} catch (Exception e) {
+//			logger.error("doInquiry error. ", e);
+//			try {
+//				resp.set(39, Constant.RC_ERROR);
+//			} catch (Exception ex) {
+//				logger.error("doInquiryPostpaid error. ", ex);
+//			}
+//
+//		}
 		return resp;
 	}
 

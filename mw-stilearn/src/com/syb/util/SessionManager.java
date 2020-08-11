@@ -15,7 +15,7 @@ import org.jpos.iso.ISOPackager;
 import org.jpos.iso.packager.ISO87APackager;
 
 import com.syb.bean.InqueryResponse;
-import com.syb.bean.ReqInquery;
+//import com.syb.bean.ReqInquery;
 import com.syb.bean.Request;
 
 public class SessionManager {
