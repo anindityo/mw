@@ -1,0 +1,814 @@
+10:02:30,030  INFO [main] - ----------- MW START -----------
+10:02:30,030  INFO [main] - Start load config
+10:03:15,015  INFO [main] - ----------- MW START -----------
+10:03:15,015  INFO [main] - Start load config
+10:03:15,015  INFO [main] - LISTEN TO : 192.168.100.115:28888
+10:05:21,021  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+10:05:21,021  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:42370 , accepting in port = 28888
+10:05:21,021  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:42370
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="100521"/>
+  <field id="12" value="100521"/>
+  <field id="13" value="0810"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200810100521"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 10082020100521                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:05:21,021 ERROR [pool-1-thread-1] - Runtime exception occured while executing request: null
+javax.xml.bind.MarshalException
+ - with linked exception:
+[com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation]
+	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:311)
+	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:236)
+	at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:116)
+	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:54)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:222)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation
+	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.reportError(XMLSerializer.java:234)
+	at com.sun.xml.internal.bind.v2.runtime.LeafBeanInfoImpl.serializeRoot(LeafBeanInfoImpl.java:127)
+	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:479)
+	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:308)
+	... 7 more
+10:07:25,025  INFO [main] - ----------- MW START -----------
+10:07:25,025  INFO [main] - Start load config
+10:07:25,025  INFO [main] - LISTEN TO : 192.168.100.115:28888
+10:07:31,031  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+10:07:31,031  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:42374 , accepting in port = 28888
+10:07:31,031  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:42374
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="100731"/>
+  <field id="12" value="100731"/>
+  <field id="13" value="0810"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200810100731"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 10082020100731                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:07:31,031 ERROR [pool-1-thread-1] - Runtime exception occured while executing request: null
+javax.xml.bind.MarshalException
+ - with linked exception:
+[com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation]
+	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:311)
+	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:236)
+	at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:116)
+	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:54)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:222)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation
+	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.reportError(XMLSerializer.java:234)
+	at com.sun.xml.internal.bind.v2.runtime.LeafBeanInfoImpl.serializeRoot(LeafBeanInfoImpl.java:127)
+	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:479)
+	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:308)
+	... 7 more
+10:08:25,025  INFO [main] - ----------- MW START -----------
+10:08:25,025  INFO [main] - Start load config
+10:08:25,025  INFO [main] - LISTEN TO : 192.168.100.115:28888
+10:08:30,030  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+10:08:30,030  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:42376 , accepting in port = 28888
+10:08:30,030  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:42376
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="100830"/>
+  <field id="12" value="100830"/>
+  <field id="13" value="0810"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200810100830"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 10082020100830                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:08:30,030 ERROR [pool-1-thread-1] - Runtime exception occured while executing request: null
+javax.xml.bind.MarshalException
+ - with linked exception:
+[com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation]
+	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:311)
+	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:236)
+	at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:116)
+	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:54)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:222)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation
+	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.reportError(XMLSerializer.java:234)
+	at com.sun.xml.internal.bind.v2.runtime.LeafBeanInfoImpl.serializeRoot(LeafBeanInfoImpl.java:127)
+	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:479)
+	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:308)
+	... 7 more
+10:09:42,042  INFO [main] - ----------- MW START -----------
+10:09:42,042  INFO [main] - Start load config
+10:09:42,042  INFO [main] - LISTEN TO : 192.168.100.115:28888
+10:09:49,049  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+10:09:49,049  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:42380 , accepting in port = 28888
+10:09:49,049  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:42380
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="100949"/>
+  <field id="12" value="100949"/>
+  <field id="13" value="0810"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200810100949"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 10082020100949                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:10:31,031 ERROR [pool-1-thread-1] - Runtime exception occured while executing request: null
+javax.xml.bind.MarshalException
+ - with linked exception:
+[com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation]
+	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:311)
+	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:236)
+	at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:116)
+	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:54)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:222)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation
+	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.reportError(XMLSerializer.java:234)
+	at com.sun.xml.internal.bind.v2.runtime.LeafBeanInfoImpl.serializeRoot(LeafBeanInfoImpl.java:127)
+	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:479)
+	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:308)
+	... 7 more
+10:11:22,022  INFO [main] - ----------- MW START -----------
+10:11:22,022  INFO [main] - Start load config
+10:11:22,022  INFO [main] - LISTEN TO : 192.168.100.115:28888
+10:11:28,028  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+10:11:28,028  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:42384 , accepting in port = 28888
+10:11:28,028  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:42384
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="101128"/>
+  <field id="12" value="101128"/>
+  <field id="13" value="0810"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200810101128"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 10082020101128                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:12:57,057  INFO [main] - ----------- MW START -----------
+10:12:57,057  INFO [main] - Start load config
+10:12:57,057  INFO [main] - LISTEN TO : 192.168.100.115:28888
+10:13:15,015  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+10:13:15,015  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:42398 , accepting in port = 28888
+10:13:15,015  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:42398
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="101315"/>
+  <field id="12" value="101315"/>
+  <field id="13" value="0810"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200810101315"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 10082020101315                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:32:27,027  INFO [main] - ----------- MW START -----------
+10:32:27,027  INFO [main] - Start load config
+10:32:27,027  INFO [main] - LISTEN TO : 192.168.100.115:28888
+10:32:36,036  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+10:32:36,036  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:43252 , accepting in port = 28888
+10:32:36,036  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:43252
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="103236"/>
+  <field id="12" value="103236"/>
+  <field id="13" value="0810"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200810103236"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 10082020103236                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:33:40,040 ERROR [pool-1-thread-1] - Runtime exception occured while executing request: null
+javax.xml.bind.MarshalException
+ - with linked exception:
+[com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation]
+	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:311)
+	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:236)
+	at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:116)
+	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:52)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:220)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation
+	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.reportError(XMLSerializer.java:234)
+	at com.sun.xml.internal.bind.v2.runtime.LeafBeanInfoImpl.serializeRoot(LeafBeanInfoImpl.java:127)
+	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:479)
+	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:308)
+	... 7 more
+10:36:40,040  INFO [main] - ----------- MW START -----------
+10:36:40,040  INFO [main] - Start load config
+10:36:40,040  INFO [main] - LISTEN TO : 192.168.100.115:28888
+10:36:47,047  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+10:36:47,047  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:43284 , accepting in port = 28888
+10:36:47,047  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:43284
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="103647"/>
+  <field id="12" value="103647"/>
+  <field id="13" value="0810"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200810103647"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 10082020103647                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:36:59,059  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+
+</soapenv:Body>
+</soapenv:Envelope>
+10:37:06,006 ERROR [pool-1-thread-1] - formatStringXml Error. javax.xml.transform.TransformerException: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 2; The markup in the document following the root element must be well-formed.
+10:37:08,008  INFO [pool-1-thread-1] - Response: <br/>
+10:37:52,052 ERROR [pool-1-thread-1] - processResponse error. 
+com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Unable to create envelope from given source: 
+	at com.sun.xml.internal.messaging.saaj.soap.EnvelopeFactory.createEnvelope(EnvelopeFactory.java:117)
+	at com.sun.xml.internal.messaging.saaj.soap.ver1_1.SOAPPart1_1Impl.createEnvelopeFromSource(SOAPPart1_1Impl.java:69)
+	at com.sun.xml.internal.messaging.saaj.soap.SOAPPartImpl.getEnvelope(SOAPPartImpl.java:125)
+	at com.sun.xml.internal.messaging.saaj.soap.MessageImpl.getSOAPBody(MessageImpl.java:1351)
+	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:63)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:220)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: javax.xml.transform.TransformerException: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 2; The markup in the document following the root element must be well-formed.
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:740)
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:343)
+	at com.sun.xml.internal.messaging.saaj.util.transform.EfficientStreamingTransformer.transform(EfficientStreamingTransformer.java:399)
+	at com.sun.xml.internal.messaging.saaj.soap.EnvelopeFactory.createEnvelope(EnvelopeFactory.java:108)
+	... 8 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 2; The markup in the document following the root element must be well-formed.
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.xml.sax.helpers.XMLFilterImpl.parse(XMLFilterImpl.java:357)
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transformIdentity(TransformerImpl.java:659)
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:728)
+	... 11 more
+
+CAUSE:
+
+javax.xml.transform.TransformerException: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 2; The markup in the document following the root element must be well-formed.
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:740)
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:343)
+	at com.sun.xml.internal.messaging.saaj.util.transform.EfficientStreamingTransformer.transform(EfficientStreamingTransformer.java:399)
+	at com.sun.xml.internal.messaging.saaj.soap.EnvelopeFactory.createEnvelope(EnvelopeFactory.java:108)
+	at com.sun.xml.internal.messaging.saaj.soap.ver1_1.SOAPPart1_1Impl.createEnvelopeFromSource(SOAPPart1_1Impl.java:69)
+	at com.sun.xml.internal.messaging.saaj.soap.SOAPPartImpl.getEnvelope(SOAPPartImpl.java:125)
+	at com.sun.xml.internal.messaging.saaj.soap.MessageImpl.getSOAPBody(MessageImpl.java:1351)
+	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:63)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:220)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 2; The markup in the document following the root element must be well-formed.
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.xml.sax.helpers.XMLFilterImpl.parse(XMLFilterImpl.java:357)
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transformIdentity(TransformerImpl.java:659)
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:728)
+	... 11 more
+---------
+org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 2; The markup in the document following the root element must be well-formed.
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.xml.sax.helpers.XMLFilterImpl.parse(XMLFilterImpl.java:357)
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transformIdentity(TransformerImpl.java:659)
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:728)
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:343)
+	at com.sun.xml.internal.messaging.saaj.util.transform.EfficientStreamingTransformer.transform(EfficientStreamingTransformer.java:399)
+	at com.sun.xml.internal.messaging.saaj.soap.EnvelopeFactory.createEnvelope(EnvelopeFactory.java:108)
+	at com.sun.xml.internal.messaging.saaj.soap.ver1_1.SOAPPart1_1Impl.createEnvelopeFromSource(SOAPPart1_1Impl.java:69)
+	at com.sun.xml.internal.messaging.saaj.soap.SOAPPartImpl.getEnvelope(SOAPPartImpl.java:125)
+	at com.sun.xml.internal.messaging.saaj.soap.MessageImpl.getSOAPBody(MessageImpl.java:1351)
+	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:63)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:220)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+10:37:55,055  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.100.115:43284
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="103647"/>
+  <field id="12" value="103647"/>
+  <field id="13" value="0810"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200810103647"/>
+  <field id="39" value="98"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 10082020103647                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:41:00,000  INFO [main] - ----------- MW START -----------
+10:41:00,000  INFO [main] - Start load config
+10:41:00,000  INFO [main] - LISTEN TO : 192.168.100.115:28888
+10:41:10,010  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+10:41:10,010  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:43296 , accepting in port = 28888
+10:41:10,010  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:43296
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="104110"/>
+  <field id="12" value="104110"/>
+  <field id="13" value="0810"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200810104110"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 10082020104110                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:41:25,025  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doInquery>
+    <TimeStamp>2020-08-10T10:41:10+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>02100796</PaymentCode>
+    <TrackingRef>000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
+</soapenv:Body>
+</soapenv:Envelope>
+10:41:34,034  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<ns1:doInqueryResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
+<ReqInquery>
+<TimeStamp>2020-08-10T10:41:10+0700</TimeStamp>
+<MessageID>Inquery</MessageID>
+<ContractNo>02100796</ContractNo>
+<Customer>TITIS KURNIAJI</Customer>
+<PoliceNum>B8103GI</PoliceNum>
+<Type>TOYOTA KIJANG INNOVA 2.0 V A/T</Type>
+<Details>
+<Detail>
+<InstallmentPeriod>2019-11</InstallmentPeriod>
+<InstallmentNumber>17</InstallmentNumber>
+<InstallmentAmount>2934000</InstallmentAmount>
+<InstallmentPenalty>3741000</InstallmentPenalty>
+</Detail>
+</Details>
+<TotalAmount>6675000</TotalAmount>
+<Fee>0</Fee>
+<ResponseCode>200</ResponseCode>
+<ResponseDesc>Inquery data berhasil</ResponseDesc>
+<TrackingRef>000000000000000</TrackingRef>
+<StoreID>BCA</StoreID>
+</ReqInquery>
+</ns1:doInqueryResponse>
+</SOAP:Body>
+</SOAP:Envelope>
+
+10:41:47,047  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.100.115:43296
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="4" value="000006675000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="104110"/>
+  <field id="12" value="104110"/>
+  <field id="13" value="0810"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200810104110"/>
+  <field id="39" value="00"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 10080000066750TITIS KURNIAJI                000006675000000000000000000000000000000                 "/>
+  <field id="49" value="360"/>
+  <field id="62" value="02100796            TITIS KURNIAJI                B8103GI             TOYOTA KIJANG INNOVA 2.0 V A/T                    01                    00000000000000000000000000"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+13:59:47,047  INFO [main] - ----------- MW START -----------
+13:59:47,047  INFO [main] - Start load config
+13:59:47,047  INFO [main] - LISTEN TO : 192.168.100.115:28888
+14:00:02,002  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+14:00:02,002  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:43882 , accepting in port = 28888
+14:00:02,002  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:43882
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="140002"/>
+  <field id="12" value="140002"/>
+  <field id="13" value="0810"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200810140002"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 10082020140002                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+14:10:42,042  INFO [main] - ----------- MW START -----------
+14:10:42,042  INFO [main] - Start load config
+14:10:42,042  INFO [main] - LISTEN TO : 192.168.100.115:28888
+14:10:48,048  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+14:10:48,048  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:44218 , accepting in port = 28888
+14:10:48,048  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:44218
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="141048"/>
+  <field id="12" value="141048"/>
+  <field id="13" value="0810"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200810141048"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 10082020141048                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+14:11:18,018 ERROR [pool-1-thread-1] - Runtime exception occured while executing request: null
+javax.xml.bind.MarshalException
+ - with linked exception:
+[com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation]
+	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:311)
+	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:236)
+	at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:116)
+	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:53)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:221)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation
+	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.reportError(XMLSerializer.java:234)
+	at com.sun.xml.internal.bind.v2.runtime.LeafBeanInfoImpl.serializeRoot(LeafBeanInfoImpl.java:127)
+	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:479)
+	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:308)
+	... 7 more
+14:20:44,044  INFO [main] - ----------- MW START -----------
+14:20:44,044  INFO [main] - Start load config
+14:20:44,044  INFO [main] - LISTEN TO : 192.168.100.115:28888
+14:20:59,059  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+14:20:59,059  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:44314 , accepting in port = 28888
+14:20:59,059  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:44314
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="142059"/>
+  <field id="12" value="142059"/>
+  <field id="13" value="0810"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200810142059"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 10082020142059                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+14:21:13,013  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doInquery>
+    <TimeStamp>2020-08-10T14:20:59+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>02100796</PaymentCode>
+    <TrackingRef>000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
+</soapenv:Body>
+</soapenv:Envelope>
+14:21:18,018  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<ns1:doInqueryResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
+<ReqInquery>
+<TimeStamp>2020-08-10T14:20:59+0700</TimeStamp>
+<MessageID>Inquery</MessageID>
+<ContractNo>02100796</ContractNo>
+<Customer>TITIS KURNIAJI</Customer>
+<PoliceNum>B8103GI</PoliceNum>
+<Type>TOYOTA KIJANG INNOVA 2.0 V A/T</Type>
+<Details>
+<Detail>
+<InstallmentPeriod>2019-11</InstallmentPeriod>
+<InstallmentNumber>17</InstallmentNumber>
+<InstallmentAmount>2934000</InstallmentAmount>
+<InstallmentPenalty>3741000</InstallmentPenalty>
+</Detail>
+</Details>
+<TotalAmount>6675000</TotalAmount>
+<Fee>0</Fee>
+<ResponseCode>200</ResponseCode>
+<ResponseDesc>Inquery data berhasil</ResponseDesc>
+<TrackingRef>000000000000000</TrackingRef>
+<StoreID>BCA</StoreID>
+</ReqInquery>
+</ns1:doInqueryResponse>
+</SOAP:Body>
+</SOAP:Envelope>
+
+14:21:18,018  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.100.115:44314
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="4" value="000006675000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="142059"/>
+  <field id="12" value="142059"/>
+  <field id="13" value="0810"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200810142059"/>
+  <field id="39" value="00"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 10080000066750TITIS KURNIAJI                000006675000000000000000000000000000000                 "/>
+  <field id="49" value="360"/>
+  <field id="62" value="02100796            TITIS KURNIAJI                B8103GI             TOYOTA KIJANG INNOVA 2.0 V A/T                    01                    00000000000000000000000000"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+14:21:45,045  INFO [main] - ----------- MW START -----------
+14:21:45,045  INFO [main] - Start load config
+14:21:45,045  INFO [main] - LISTEN TO : 192.168.100.115:28888
+14:21:57,057  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+14:21:57,057  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:44322 , accepting in port = 28888
+14:21:57,057  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:44322
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="142157"/>
+  <field id="12" value="142157"/>
+  <field id="13" value="0810"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200810142157"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 10082020142157                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+14:22:10,010  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doInquery>
+    <TimeStamp>2020-08-10T14:21:57+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>02100796</PaymentCode>
+    <TrackingRef>000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
+</soapenv:Body>
+</soapenv:Envelope>
+14:22:15,015  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<ns1:doInqueryResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
+<ReqInquery>
+<TimeStamp>2020-08-10T14:21:57+0700</TimeStamp>
+<MessageID>Inquery</MessageID>
+<ContractNo>02100796</ContractNo>
+<Customer>TITIS KURNIAJI</Customer>
+<PoliceNum>B8103GI</PoliceNum>
+<Type>TOYOTA KIJANG INNOVA 2.0 V A/T</Type>
+<Details>
+<Detail>
+<InstallmentPeriod>2019-11</InstallmentPeriod>
+<InstallmentNumber>17</InstallmentNumber>
+<InstallmentAmount>2934000</InstallmentAmount>
+<InstallmentPenalty>3741000</InstallmentPenalty>
+</Detail>
+</Details>
+<TotalAmount>6675000</TotalAmount>
+<Fee>0</Fee>
+<ResponseCode>200</ResponseCode>
+<ResponseDesc>Inquery data berhasil</ResponseDesc>
+<TrackingRef>000000000000000</TrackingRef>
+<StoreID>BCA</StoreID>
+</ReqInquery>
+</ns1:doInqueryResponse>
+</SOAP:Body>
+</SOAP:Envelope>
+
+14:22:15,015  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.100.115:44322
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="4" value="000006675000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="142157"/>
+  <field id="12" value="142157"/>
+  <field id="13" value="0810"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200810142157"/>
+  <field id="39" value="00"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 10080000066750TITIS KURNIAJI                000006675000000000000000000000000000000                 "/>
+  <field id="49" value="360"/>
+  <field id="62" value="02100796            TITIS KURNIAJI                B8103GI             TOYOTA KIJANG INNOVA 2.0 V A/T                    01                    00000000000000000000000000"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+14:22:38,038  INFO [main] - ----------- MW START -----------
+14:22:38,038  INFO [main] - Start load config
+14:22:38,038  INFO [main] - LISTEN TO : 192.168.100.115:28888
+14:22:50,050  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+14:22:50,050  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:44332 , accepting in port = 28888
+14:22:50,050  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:44332
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="142250"/>
+  <field id="12" value="142250"/>
+  <field id="13" value="0810"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200810142250"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 10082020142250                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+14:23:15,015  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doInquery>
+    <TimeStamp>2020-08-10T14:22:50+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>02100796</PaymentCode>
+    <TrackingRef>000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
+</soapenv:Body>
+</soapenv:Envelope>
+14:23:20,020  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<ns1:doInqueryResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
+<ReqInquery>
+<TimeStamp>2020-08-10T14:22:50+0700</TimeStamp>
+<MessageID>Inquery</MessageID>
+<ContractNo>02100796</ContractNo>
+<Customer>TITIS KURNIAJI</Customer>
+<PoliceNum>B8103GI</PoliceNum>
+<Type>TOYOTA KIJANG INNOVA 2.0 V A/T</Type>
+<Details>
+<Detail>
+<InstallmentPeriod>2019-11</InstallmentPeriod>
+<InstallmentNumber>17</InstallmentNumber>
+<InstallmentAmount>2934000</InstallmentAmount>
+<InstallmentPenalty>3741000</InstallmentPenalty>
+</Detail>
+</Details>
+<TotalAmount>6675000</TotalAmount>
+<Fee>0</Fee>
+<ResponseCode>200</ResponseCode>
+<ResponseDesc>Inquery data berhasil</ResponseDesc>
+<TrackingRef>000000000000000</TrackingRef>
+<StoreID>BCA</StoreID>
+</ReqInquery>
+</ns1:doInqueryResponse>
+</SOAP:Body>
+</SOAP:Envelope>
+
+14:23:37,037  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.100.115:44332
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="4" value="000006675000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="142250"/>
+  <field id="12" value="142250"/>
+  <field id="13" value="0810"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200810142250"/>
+  <field id="39" value="00"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 10080000066750TITIS KURNIAJI                000006675000000000000000000000000000000                 "/>
+  <field id="49" value="360"/>
+  <field id="62" value="02100796            TITIS KURNIAJI                B8103GI             TOYOTA KIJANG INNOVA 2.0 V A/T                    01                    00000000000000000000000000"/>
+  <field id="63" value="502"/>
+</isomsg>
+

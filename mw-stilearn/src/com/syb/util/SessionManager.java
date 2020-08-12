@@ -15,6 +15,8 @@ import org.jpos.iso.ISOPackager;
 import org.jpos.iso.packager.ISO87APackager;
 
 import com.syb.bean.InqueryResponse;
+import com.syb.bean.PaymentRequest;
+import com.syb.bean.PaymentResponse;
 //import com.syb.bean.ReqInquery;
 import com.syb.bean.Request;
 
@@ -44,6 +46,8 @@ public class SessionManager {
 	
 	private JAXBContext inquiryContext = null;
 	private JAXBContext inquiryResponseContext = null;
+	private JAXBContext paymentContext = null;
+	private JAXBContext paymentResponseContext = null;
 
 	
 	protected SessionManager() {
@@ -74,6 +78,8 @@ public class SessionManager {
 		try {
 			this.inquiryContext = JAXBContext.newInstance(Request.class);
 			this.inquiryResponseContext = JAXBContext.newInstance(InqueryResponse.class);
+			this.paymentContext = JAXBContext.newInstance(PaymentRequest.class);
+			this.paymentResponseContext = JAXBContext.newInstance(PaymentResponse.class);
 		
 		} catch (JAXBException e) {
 			logger.error("JAXBContext initialization error. ", e);
@@ -163,4 +169,22 @@ public class SessionManager {
 	public String getChannel() {
 		return channel;
 	}
+
+	public JAXBContext getPaymentContext() {
+		return paymentContext;
+	}
+
+	public void setPaymentContext(JAXBContext paymentContext) {
+		this.paymentContext = paymentContext;
+	}
+
+	public JAXBContext getPaymentResponseContext() {
+		return paymentResponseContext;
+	}
+
+	public void setPaymentResponseContext(JAXBContext paymentResponseContext) {
+		this.paymentResponseContext = paymentResponseContext;
+	}
+	
+	
 }

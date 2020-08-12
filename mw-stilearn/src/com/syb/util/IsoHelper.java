@@ -79,8 +79,8 @@ public class IsoHelper {
 	}
 
 	public static String getTrackingRef(ISOMsg m) throws ISOException {
-		if (m.hasField(48) && m.getString(48).length() >= 153) {
-			return m.getString(48).substring(120,153).trim();
+		if (m.hasField(48) && m.getString(48).length() >= 151) {
+			return m.getString(48).substring(135,151).trim();
 		} else {
 			return "";
 		}
@@ -96,7 +96,7 @@ public class IsoHelper {
 
 	public static String getAmount(ISOMsg m) throws ISOException {
 		if (m.hasField(48)) {
-			return m.getString(48).substring(96, 108).trim();
+			return m.getString(48).substring(118, 124).trim();
 		} else {
 			return "";
 		}

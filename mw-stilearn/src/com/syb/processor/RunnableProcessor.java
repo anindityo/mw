@@ -3,9 +3,9 @@ package com.syb.processor;
 import java.io.StringWriter;
 import java.util.Date;
 
-import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
+import javax.xml.soap.SOAPFault;
 
 import org.apache.log4j.Logger;
 import org.jboss.netty.channel.Channel;
@@ -37,19 +37,18 @@ public class RunnableProcessor implements Runnable {
 	 * Perubahan parameter untuk class runnable proccessor String xml request
 	 * dihapus.
 	 */
-//	private String xmlRequest;
+
 	private Channel channel;
-	private String header;
 	private ISOMsg resp;
 
-	public RunnableProcessor(String header, ISOMsg resp, Channel channel) {
-//		this.xmlRequest = xmlRequest;
-		this.header = header;
+	public RunnableProcessor(ISOMsg resp, Channel channel) {
 		this.resp = resp;
 		this.channel = channel;
 	}
 
-	private void processResponse() throws JAXBException {
+	private String header = Constant.BUANA_HEADER;
+
+	private void processResponse() throws Exception {
 
 		SessionManager sessionManager = SessionManager.getInstance();
 		Client client = new Client();
@@ -79,7 +78,7 @@ public class RunnableProcessor implements Runnable {
 			try {
 				resp.set(39, Constant.RC_ERROR);
 			} catch (Exception ex) {
-				logger.error("doInquiryPostpaid error. ", ex);
+				logger.error("doInquiry error. ", ex);
 			}
 		}
 
@@ -93,9 +92,17 @@ public class RunnableProcessor implements Runnable {
 				String respContent = CommonUtil.getSoapContent(clientResponse.getSoapMessage());
 				respContent = CommonUtil.formatStringXml(respContent);
 				logger.info("Response: " + respContent);
-
+				SOAPFault fault = clientResponse.getSoapMessage().getSOAPBody().getFault();
+				String rCode = null;
+				int code = 0;
+				if (fault != null) {
+					rCode = fault.getFaultCode();
+					code = Integer.parseInt(rCode);
+				} else {
+					rCode = null;
+				}
 				String rc = null;
-				if (!clientResponse.getSoapMessage().getSOAPBody().hasFault()) {
+				if (!clientResponse.getSoapMessage().getSOAPBody().hasFault() && rCode == null) {
 //					/StringReader reader = new StringReader(respContent);
 					Unmarshaller unmarshaller = sessionManager.getInquiryResponseContext().createUnmarshaller();
 					InqueryResponse inqueryResponse = unmarshaller
@@ -105,49 +112,51 @@ public class RunnableProcessor implements Runnable {
 					ReqInquery reqInquery = inqueryResponse.getReqInquery();
 					Long amount = reqInquery.getTotalAmount();
 					rc = reqInquery.getResponseCode();
+					int responCode = Integer.parseInt(rc);
+					if (responCode == Constant.STATUS_CODE_SUCCESS) {
 
-					if (amount != null) {
-						String modifiedbit48 = "";
-						String bit48 = resp.getString(48);
-						Long admin = reqInquery.getFee();
-						Long billAmt = amount - admin;
-						bit48 = bit48.substring(0, 71) + CommonUtil.zeropad(billAmt, 12) + bit48.substring(83);
-						modifiedbit48 = bit48.substring(0, 81) + CommonUtil.strpad(reqInquery.getCustomer(), 30)
-								+ CommonUtil.zeropad(billAmt, 12) + CommonUtil.zeropad(admin, 12)
-								+ CommonUtil.strpad(reqInquery.getTrackingRef(), 32);
-						resp.set(48, modifiedbit48);
+						if (amount != null) {
+							String modifiedbit48 = "";
+							String bit48 = resp.getString(48);
+							Long admin = reqInquery.getFee();
+							Long billAmt = amount - admin;
+							bit48 = bit48.substring(0, 71) + CommonUtil.zeropad(billAmt, 12) + bit48.substring(83);
+							modifiedbit48 = bit48.substring(0, 81) + CommonUtil.strpad(reqInquery.getCustomer(), 30)
+									+ CommonUtil.zeropad(billAmt, 12) + CommonUtil.zeropad(admin, 12)
+									+ CommonUtil.strpad(reqInquery.getTrackingRef(), 32);
+							resp.set(48, modifiedbit48);
 
-					}
-					String detailTagihan = "";
+						}
+						String detailTagihan = "";
 
-					if (reqInquery.getDetail().size() > 0) {
+						if (reqInquery.getDetail().size() > 0) {
 
-						for (Detail data : reqInquery.getDetail()) {
-							detailTagihan = CommonUtil.strpad(data.getInstallmentPeriod(), 20)
-									+ CommonUtil.zeropad(data.getInstallmentNumber(), 2)
-									+ CommonUtil.zeropad(data.getInstallmentPenalty(), 12)
-									+ CommonUtil.zeropad(data.getInstallmentPenalty(), 12);
+							for (Detail data : reqInquery.getDetail()) {
+								detailTagihan = CommonUtil.strpad(data.getInstallmentPeriod(), 20)
+										+ CommonUtil.zeropad(data.getInstallmentNumber(), 2)
+										+ CommonUtil.zeropad(data.getInstallmentPenalty(), 12)
+										+ CommonUtil.zeropad(data.getInstallmentPenalty(), 12);
+							}
+
+						} else {
+							detailTagihan = "";
 						}
 
+						String bit62 = CommonUtil.strpad(reqInquery.getContractNo(), 20)
+								+ CommonUtil.strpad(reqInquery.getCustomer(), 30)
+								+ CommonUtil.strpad(reqInquery.getPoliceNum(), 20)
+								+ CommonUtil.strpad(reqInquery.getType(), 50)
+								+ ISOUtil.zeropad(reqInquery.getDetail().size(), 2) + detailTagihan;
+
+						resp.set(4, CommonUtil.zeropad(amount, 12));
+						resp.set(39, Constant.RC_SUCCESS);
+						resp.set(62, bit62);
+
 					} else {
-						detailTagihan = "";
+						resp.set(39, Constant.RC_ERROR);
 					}
-
-					String bit62 = CommonUtil.strpad(reqInquery.getContractNo(), 20)
-							+ CommonUtil.strpad(reqInquery.getCustomer(), 30)
-							+ CommonUtil.strpad(reqInquery.getPoliceNum(), 20)
-							+ CommonUtil.strpad(reqInquery.getType(), 50)
-							+ ISOUtil.zeropad(reqInquery.getDetail().size(), 2) + detailTagihan;
-
-					resp.set(4, CommonUtil.zeropad(amount, 12));
-					resp.set(39, Constant.RC_SUCCESS);
-					resp.set(62, bit62);
-				} else if (rc.equals(Constant.STATUS_LINK_DOWN)) {
-					resp.set(39, Constant.RC_ERROR);
-				} else if (rc.equals(Constant.STATUS_UNAUTHORIZED)) {
+				} else if (code == Constant.STATUS_UNAUTHORIZED) {
 					resp.set(39, Constant.RC_INVALID_MANDATORY_FIELD);
-				} else if (rc.equals(Constant.STATUS_ERROR_PAYMENT)) {
-					resp.set(39, Constant.RC_NO_BILLING);
 				}
 			} else {
 				if (clientResponse == null) {
@@ -171,11 +180,11 @@ public class RunnableProcessor implements Runnable {
 
 	}
 
-	private void processResponsePayment() throws JAXBException {
+	private void processResponsePayment() throws Exception {
 
 		SessionManager sessionManager = SessionManager.getInstance();
 		Client client = new Client();
-		Marshaller marshaller = sessionManager.getInquiryContext().createMarshaller();
+		Marshaller marshaller = sessionManager.getPaymentContext().createMarshaller();
 		marshaller.setProperty(Marshaller.JAXB_FRAGMENT, true);
 		marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 		PaymentRequest paymentRequest = new PaymentRequest();
@@ -196,7 +205,7 @@ public class RunnableProcessor implements Runnable {
 			paymentRequest.setPaymentCode(noKontrak);
 			paymentRequest.setProductId(productId);
 			paymentRequest.setAmount(amount);
-			
+
 		} catch (Exception e) {
 			logger.error("processPayment error. ", e);
 			try {
@@ -208,47 +217,58 @@ public class RunnableProcessor implements Runnable {
 		}
 
 		StringWriter stringWriter = new StringWriter();
-		 marshaller.marshal(paymentRequest, stringWriter);
+		marshaller.marshal(paymentRequest, stringWriter);
 		String requestString = CommonUtil.createEnvelope(stringWriter.toString());
-
 		ClientResponse clientResponse = client.createSoapMessage(requestString, header);
 		try {
 			if (clientResponse != null && !clientResponse.isTimeout()) {
 				String respContent = CommonUtil.getSoapContent(clientResponse.getSoapMessage());
 				respContent = CommonUtil.formatStringXml(respContent);
 				logger.info("Response: " + respContent);
+				SOAPFault fault = clientResponse.getSoapMessage().getSOAPBody().getFault();
+				String rCode = null;
+				int code = 0;
+				if (fault != null) {
+					rCode = fault.getFaultCode();
+					code = Integer.parseInt(rCode);
+				} else {
+					rCode = null;
+				}
 
 				String rc = null;
-				if (!clientResponse.getSoapMessage().getSOAPBody().hasFault()) {
-//					/StringReader reader = new StringReader(respContent);
-					Unmarshaller unmarshaller = sessionManager.getInquiryResponseContext().createUnmarshaller();
+				if (!clientResponse.getSoapMessage().getSOAPBody().hasFault() && rCode == null) {
+					Unmarshaller unmarshaller = sessionManager.getPaymentResponseContext().createUnmarshaller();
 					PaymentResponse paymentResponse = unmarshaller
 							.unmarshal(clientResponse.getSoapMessage().getSOAPBody().extractContentAsDocument(),
 									PaymentResponse.class)
 							.getValue();
 					ReqPayment reqPayment = paymentResponse.getReqPayment();
 					rc = reqPayment.getResponseCode();
+					int responseCode = Integer.parseInt(rc);
+					if (responseCode == Constant.STATUS_CODE_SUCCESS) {
 
-					if (rc != null) {
-						String bit48 = resp.getString(48);
-						bit48 = bit48.substring(0, 81) + CommonUtil.zeropad(reqPayment.getMessage(), 100) + 
-								CommonUtil.zeropad(reqPayment.getTrackingRef(), 32);
-						resp.set(48, bit48);
+						if (rc != null) {
+							String bit48 = resp.getString(48);
+							bit48 = bit48.substring(0, 81) + CommonUtil.strpad(reqPayment.getMessage(), 100)
+									+ CommonUtil.strpad(reqPayment.getTrackingRef(), 32)
+									+ CommonUtil.strpad(reqPayment.getResponseCode(), 2);
+							resp.set(48, bit48);
 
+						}
+
+						String bit62 = CommonUtil.strpad(reqPayment.getTrackingRef(), 100)
+								+ CommonUtil.strpad(reqPayment.getBillInfo(), 100)
+								+ CommonUtil.strpad(reqPayment.getMessage(), 100);
+
+						resp.set(39, Constant.RC_SUCCESS);
+						resp.set(62, bit62);
+					} else if (code == Constant.STATUS_UNAUTHORIZED) {
+						resp.set(39, Constant.RC_INVALID_MANDATORY_FIELD);
+					} else if (code == Constant.STATUS_ERROR_PAYMENT) {
+						resp.set(39, Constant.RC_NO_BILLING);
 					}
-
-					String bit62 = CommonUtil.strpad(reqPayment.getTrackingRef(), 100)
-							+ CommonUtil.strpad(reqPayment.getBillInfo(), 100)
-							+ CommonUtil.strpad(reqPayment.getMessage(), 100);
-
-					resp.set(39, Constant.RC_SUCCESS);
-					resp.set(62, bit62);
-				} else if (rc.equals(Constant.STATUS_LINK_DOWN)) {
+				} else {
 					resp.set(39, Constant.RC_ERROR);
-				} else if (rc.equals(Constant.STATUS_UNAUTHORIZED)) {
-					resp.set(39, Constant.RC_INVALID_MANDATORY_FIELD);
-				} else if (rc.equals(Constant.STATUS_ERROR_PAYMENT)) {
-					resp.set(39, Constant.RC_NO_BILLING);
 				}
 			} else {
 				if (clientResponse == null) {
@@ -282,7 +302,7 @@ public class RunnableProcessor implements Runnable {
 			if (sessionManager.getProducCode().equalsIgnoreCase(productCode)) {
 				if (Constant.TRANSACTION_TYPE_INQUIRY.equalsIgnoreCase(bit3)) {
 					processResponse();
-				}  else if(Constant.TRANSACTION_TYPE_PAYMENT.equalsIgnoreCase(bit3)) {
+				} else if (Constant.TRANSACTION_TYPE_PAYMENT.equalsIgnoreCase(bit3)) {
 					processResponsePayment();
 				}
 			}

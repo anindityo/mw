@@ -1,419 +1,999 @@
-10:02:30,030  INFO [main] - ----------- MW START -----------
-10:02:30,030  INFO [main] - Start load config
-10:03:15,015  INFO [main] - ----------- MW START -----------
-10:03:15,015  INFO [main] - Start load config
-10:03:15,015  INFO [main] - LISTEN TO : 192.168.100.115:28888
-10:05:21,021  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
-10:05:21,021  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:42370 , accepting in port = 28888
-10:05:21,021  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:42370
+09:38:34,034  INFO [main] - ----------- MW START -----------
+09:38:34,034  INFO [main] - Start load config
+09:38:35,035 ERROR [main] - JAXBContext initialization error. 
+com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException: 2 counts of IllegalAnnotationExceptions
+Property message is present but not specified in @XmlType.propOrder
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.ReqPayment.message
+		at com.syb.bean.ReqPayment
+		at private com.syb.bean.ReqPayment com.syb.bean.PaymentResponse.reqPayment
+		at com.syb.bean.PaymentResponse
+Property Message appears in @XmlType.propOrder, but no such property exists. Maybe you meant message?
+	this problem is related to the following location:
+		at com.syb.bean.ReqPayment
+		at private com.syb.bean.ReqPayment com.syb.bean.PaymentResponse.reqPayment
+		at com.syb.bean.PaymentResponse
+
+	at com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException$Builder.check(IllegalAnnotationsException.java:91)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.getTypeInfoSet(JAXBContextImpl.java:445)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:277)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:124)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1123)
+	at com.sun.xml.internal.bind.v2.ContextFactory.createContext(ContextFactory.java:147)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:247)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:234)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:462)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:641)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:584)
+	at com.syb.util.SessionManager.<init>(SessionManager.java:82)
+	at com.syb.util.SessionManager.<clinit>(SessionManager.java:27)
+	at com.syb.server.Server.main(Server.java:36)
+09:39:46,046  INFO [main] - ----------- MW START -----------
+09:39:46,046  INFO [main] - Start load config
+09:39:47,047 ERROR [main] - JAXBContext initialization error. 
+com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException: 2 counts of IllegalAnnotationExceptions
+Property message is present but not specified in @XmlType.propOrder
+	this problem is related to the following location:
+		at private java.lang.String com.syb.bean.ReqPayment.message
+		at com.syb.bean.ReqPayment
+		at private com.syb.bean.ReqPayment com.syb.bean.PaymentResponse.reqPayment
+		at com.syb.bean.PaymentResponse
+Property Message appears in @XmlType.propOrder, but no such property exists. Maybe you meant message?
+	this problem is related to the following location:
+		at com.syb.bean.ReqPayment
+		at private com.syb.bean.ReqPayment com.syb.bean.PaymentResponse.reqPayment
+		at com.syb.bean.PaymentResponse
+
+	at com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException$Builder.check(IllegalAnnotationsException.java:91)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.getTypeInfoSet(JAXBContextImpl.java:445)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:277)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:124)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1123)
+	at com.sun.xml.internal.bind.v2.ContextFactory.createContext(ContextFactory.java:147)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:247)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:234)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:462)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:641)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:584)
+	at com.syb.util.SessionManager.<init>(SessionManager.java:82)
+	at com.syb.util.SessionManager.<clinit>(SessionManager.java:27)
+	at com.syb.server.Server.main(Server.java:36)
+09:39:47,047  INFO [main] - LISTEN TO : 192.168.16.243:28888
+09:40:35,035  INFO [main] - ----------- MW START -----------
+09:40:35,035  INFO [main] - Start load config
+09:40:36,036  INFO [main] - LISTEN TO : 192.168.16.243:28888
+09:40:43,043  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+09:40:43,043  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:45750 , accepting in port = 28888
+09:40:43,043  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:45750
 <isomsg>
   <!-- org.jpos.iso.packager.ISO87APackager -->
   <field id="0" value="0200"/>
   <field id="2" value="4214080740155979"/>
   <field id="3" value="380000"/>
   <field id="7" value="0101010101"/>
-  <field id="11" value="100521"/>
-  <field id="12" value="100521"/>
-  <field id="13" value="0810"/>
+  <field id="11" value="094043"/>
+  <field id="12" value="094043"/>
+  <field id="13" value="0812"/>
   <field id="14" value="0911"/>
   <field id="15" value="0517"/>
   <field id="18" value="5311"/>
   <field id="32" value="0140012"/>
-  <field id="37" value="200810100521"/>
-  <field id="48" value="600511002100796            MOBIL               BCA                 10082020100521                              000000000000000000000000                                "/>
+  <field id="37" value="200812094043"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 12082020094043                              000000000000000000000000                                "/>
   <field id="49" value="360"/>
   <field id="63" value="502"/>
 </isomsg>
 
-10:05:21,021 ERROR [pool-1-thread-1] - Runtime exception occured while executing request: null
-javax.xml.bind.MarshalException
- - with linked exception:
-[com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation]
-	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:311)
-	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:236)
-	at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:116)
-	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:54)
-	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:222)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation
-	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.reportError(XMLSerializer.java:234)
-	at com.sun.xml.internal.bind.v2.runtime.LeafBeanInfoImpl.serializeRoot(LeafBeanInfoImpl.java:127)
-	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:479)
-	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:308)
-	... 7 more
-10:07:25,025  INFO [main] - ----------- MW START -----------
-10:07:25,025  INFO [main] - Start load config
-10:07:25,025  INFO [main] - LISTEN TO : 192.168.100.115:28888
-10:07:31,031  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
-10:07:31,031  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:42374 , accepting in port = 28888
-10:07:31,031  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:42374
-<isomsg>
-  <!-- org.jpos.iso.packager.ISO87APackager -->
-  <field id="0" value="0200"/>
-  <field id="2" value="4214080740155979"/>
-  <field id="3" value="380000"/>
-  <field id="7" value="0101010101"/>
-  <field id="11" value="100731"/>
-  <field id="12" value="100731"/>
-  <field id="13" value="0810"/>
-  <field id="14" value="0911"/>
-  <field id="15" value="0517"/>
-  <field id="18" value="5311"/>
-  <field id="32" value="0140012"/>
-  <field id="37" value="200810100731"/>
-  <field id="48" value="600511002100796            MOBIL               BCA                 10082020100731                              000000000000000000000000                                "/>
-  <field id="49" value="360"/>
-  <field id="63" value="502"/>
-</isomsg>
-
-10:07:31,031 ERROR [pool-1-thread-1] - Runtime exception occured while executing request: null
-javax.xml.bind.MarshalException
- - with linked exception:
-[com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation]
-	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:311)
-	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:236)
-	at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:116)
-	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:54)
-	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:222)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation
-	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.reportError(XMLSerializer.java:234)
-	at com.sun.xml.internal.bind.v2.runtime.LeafBeanInfoImpl.serializeRoot(LeafBeanInfoImpl.java:127)
-	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:479)
-	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:308)
-	... 7 more
-10:08:25,025  INFO [main] - ----------- MW START -----------
-10:08:25,025  INFO [main] - Start load config
-10:08:25,025  INFO [main] - LISTEN TO : 192.168.100.115:28888
-10:08:30,030  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
-10:08:30,030  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:42376 , accepting in port = 28888
-10:08:30,030  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:42376
-<isomsg>
-  <!-- org.jpos.iso.packager.ISO87APackager -->
-  <field id="0" value="0200"/>
-  <field id="2" value="4214080740155979"/>
-  <field id="3" value="380000"/>
-  <field id="7" value="0101010101"/>
-  <field id="11" value="100830"/>
-  <field id="12" value="100830"/>
-  <field id="13" value="0810"/>
-  <field id="14" value="0911"/>
-  <field id="15" value="0517"/>
-  <field id="18" value="5311"/>
-  <field id="32" value="0140012"/>
-  <field id="37" value="200810100830"/>
-  <field id="48" value="600511002100796            MOBIL               BCA                 10082020100830                              000000000000000000000000                                "/>
-  <field id="49" value="360"/>
-  <field id="63" value="502"/>
-</isomsg>
-
-10:08:30,030 ERROR [pool-1-thread-1] - Runtime exception occured while executing request: null
-javax.xml.bind.MarshalException
- - with linked exception:
-[com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation]
-	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:311)
-	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:236)
-	at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:116)
-	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:54)
-	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:222)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation
-	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.reportError(XMLSerializer.java:234)
-	at com.sun.xml.internal.bind.v2.runtime.LeafBeanInfoImpl.serializeRoot(LeafBeanInfoImpl.java:127)
-	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:479)
-	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:308)
-	... 7 more
-10:09:42,042  INFO [main] - ----------- MW START -----------
-10:09:42,042  INFO [main] - Start load config
-10:09:42,042  INFO [main] - LISTEN TO : 192.168.100.115:28888
-10:09:49,049  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
-10:09:49,049  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:42380 , accepting in port = 28888
-10:09:49,049  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:42380
-<isomsg>
-  <!-- org.jpos.iso.packager.ISO87APackager -->
-  <field id="0" value="0200"/>
-  <field id="2" value="4214080740155979"/>
-  <field id="3" value="380000"/>
-  <field id="7" value="0101010101"/>
-  <field id="11" value="100949"/>
-  <field id="12" value="100949"/>
-  <field id="13" value="0810"/>
-  <field id="14" value="0911"/>
-  <field id="15" value="0517"/>
-  <field id="18" value="5311"/>
-  <field id="32" value="0140012"/>
-  <field id="37" value="200810100949"/>
-  <field id="48" value="600511002100796            MOBIL               BCA                 10082020100949                              000000000000000000000000                                "/>
-  <field id="49" value="360"/>
-  <field id="63" value="502"/>
-</isomsg>
-
-10:10:31,031 ERROR [pool-1-thread-1] - Runtime exception occured while executing request: null
-javax.xml.bind.MarshalException
- - with linked exception:
-[com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation]
-	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:311)
-	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:236)
-	at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:116)
-	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:54)
-	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:222)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation
-	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.reportError(XMLSerializer.java:234)
-	at com.sun.xml.internal.bind.v2.runtime.LeafBeanInfoImpl.serializeRoot(LeafBeanInfoImpl.java:127)
-	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:479)
-	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:308)
-	... 7 more
-10:11:22,022  INFO [main] - ----------- MW START -----------
-10:11:22,022  INFO [main] - Start load config
-10:11:22,022  INFO [main] - LISTEN TO : 192.168.100.115:28888
-10:11:28,028  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
-10:11:28,028  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:42384 , accepting in port = 28888
-10:11:28,028  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:42384
-<isomsg>
-  <!-- org.jpos.iso.packager.ISO87APackager -->
-  <field id="0" value="0200"/>
-  <field id="2" value="4214080740155979"/>
-  <field id="3" value="380000"/>
-  <field id="7" value="0101010101"/>
-  <field id="11" value="101128"/>
-  <field id="12" value="101128"/>
-  <field id="13" value="0810"/>
-  <field id="14" value="0911"/>
-  <field id="15" value="0517"/>
-  <field id="18" value="5311"/>
-  <field id="32" value="0140012"/>
-  <field id="37" value="200810101128"/>
-  <field id="48" value="600511002100796            MOBIL               BCA                 10082020101128                              000000000000000000000000                                "/>
-  <field id="49" value="360"/>
-  <field id="63" value="502"/>
-</isomsg>
-
-10:12:57,057  INFO [main] - ----------- MW START -----------
-10:12:57,057  INFO [main] - Start load config
-10:12:57,057  INFO [main] - LISTEN TO : 192.168.100.115:28888
-10:13:15,015  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
-10:13:15,015  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:42398 , accepting in port = 28888
-10:13:15,015  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:42398
-<isomsg>
-  <!-- org.jpos.iso.packager.ISO87APackager -->
-  <field id="0" value="0200"/>
-  <field id="2" value="4214080740155979"/>
-  <field id="3" value="380000"/>
-  <field id="7" value="0101010101"/>
-  <field id="11" value="101315"/>
-  <field id="12" value="101315"/>
-  <field id="13" value="0810"/>
-  <field id="14" value="0911"/>
-  <field id="15" value="0517"/>
-  <field id="18" value="5311"/>
-  <field id="32" value="0140012"/>
-  <field id="37" value="200810101315"/>
-  <field id="48" value="600511002100796            MOBIL               BCA                 10082020101315                              000000000000000000000000                                "/>
-  <field id="49" value="360"/>
-  <field id="63" value="502"/>
-</isomsg>
-
-10:32:27,027  INFO [main] - ----------- MW START -----------
-10:32:27,027  INFO [main] - Start load config
-10:32:27,027  INFO [main] - LISTEN TO : 192.168.100.115:28888
-10:32:36,036  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
-10:32:36,036  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:43252 , accepting in port = 28888
-10:32:36,036  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:43252
-<isomsg>
-  <!-- org.jpos.iso.packager.ISO87APackager -->
-  <field id="0" value="0200"/>
-  <field id="2" value="4214080740155979"/>
-  <field id="3" value="380000"/>
-  <field id="7" value="0101010101"/>
-  <field id="11" value="103236"/>
-  <field id="12" value="103236"/>
-  <field id="13" value="0810"/>
-  <field id="14" value="0911"/>
-  <field id="15" value="0517"/>
-  <field id="18" value="5311"/>
-  <field id="32" value="0140012"/>
-  <field id="37" value="200810103236"/>
-  <field id="48" value="600511002100796            MOBIL               BCA                 10082020103236                              000000000000000000000000                                "/>
-  <field id="49" value="360"/>
-  <field id="63" value="502"/>
-</isomsg>
-
-10:33:40,040 ERROR [pool-1-thread-1] - Runtime exception occured while executing request: null
-javax.xml.bind.MarshalException
- - with linked exception:
-[com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation]
-	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:311)
-	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:236)
-	at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:116)
-	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:52)
-	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:220)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation
-	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.reportError(XMLSerializer.java:234)
-	at com.sun.xml.internal.bind.v2.runtime.LeafBeanInfoImpl.serializeRoot(LeafBeanInfoImpl.java:127)
-	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:479)
-	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:308)
-	... 7 more
-10:36:40,040  INFO [main] - ----------- MW START -----------
-10:36:40,040  INFO [main] - Start load config
-10:36:40,040  INFO [main] - LISTEN TO : 192.168.100.115:28888
-10:36:47,047  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
-10:36:47,047  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:43284 , accepting in port = 28888
-10:36:47,047  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:43284
-<isomsg>
-  <!-- org.jpos.iso.packager.ISO87APackager -->
-  <field id="0" value="0200"/>
-  <field id="2" value="4214080740155979"/>
-  <field id="3" value="380000"/>
-  <field id="7" value="0101010101"/>
-  <field id="11" value="103647"/>
-  <field id="12" value="103647"/>
-  <field id="13" value="0810"/>
-  <field id="14" value="0911"/>
-  <field id="15" value="0517"/>
-  <field id="18" value="5311"/>
-  <field id="32" value="0140012"/>
-  <field id="37" value="200810103647"/>
-  <field id="48" value="600511002100796            MOBIL               BCA                 10082020103647                              000000000000000000000000                                "/>
-  <field id="49" value="360"/>
-  <field id="63" value="502"/>
-</isomsg>
-
-10:36:59,059  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+09:41:40,040  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
 <soapenv:Header/>
 <soapenv:Body>
-
+<doInquery>
+    <TimeStamp>2020-08-12T09:40:43+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>02100796</PaymentCode>
+    <TrackingRef>000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
 </soapenv:Body>
 </soapenv:Envelope>
-10:37:06,006 ERROR [pool-1-thread-1] - formatStringXml Error. javax.xml.transform.TransformerException: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 2; The markup in the document following the root element must be well-formed.
-10:37:08,008  INFO [pool-1-thread-1] - Response: <br/>
-10:37:52,052 ERROR [pool-1-thread-1] - processResponse error. 
-com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Unable to create envelope from given source: 
-	at com.sun.xml.internal.messaging.saaj.soap.EnvelopeFactory.createEnvelope(EnvelopeFactory.java:117)
-	at com.sun.xml.internal.messaging.saaj.soap.ver1_1.SOAPPart1_1Impl.createEnvelopeFromSource(SOAPPart1_1Impl.java:69)
-	at com.sun.xml.internal.messaging.saaj.soap.SOAPPartImpl.getEnvelope(SOAPPartImpl.java:125)
-	at com.sun.xml.internal.messaging.saaj.soap.MessageImpl.getSOAPBody(MessageImpl.java:1351)
-	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:63)
-	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:220)
+09:41:46,046  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<ns1:doInqueryResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
+<ReqInquery>
+<TimeStamp>2020-08-12T09:40:43+0700</TimeStamp>
+<MessageID>Inquery</MessageID>
+<ContractNo>02100796</ContractNo>
+<Customer>TITIS KURNIAJI</Customer>
+<PoliceNum>B8103GI</PoliceNum>
+<Type>TOYOTA KIJANG INNOVA 2.0 V A/T</Type>
+<Details>
+<Detail>
+<InstallmentPeriod>2019-12</InstallmentPeriod>
+<InstallmentNumber>18</InstallmentNumber>
+<InstallmentAmount>2781000</InstallmentAmount>
+<InstallmentPenalty>3157000</InstallmentPenalty>
+</Detail>
+</Details>
+<TotalAmount>5938000</TotalAmount>
+<Fee>0</Fee>
+<ResponseCode>200</ResponseCode>
+<ResponseDesc>Inquery data berhasil</ResponseDesc>
+<TrackingRef>000000000000000</TrackingRef>
+<StoreID>BCA</StoreID>
+</ReqInquery>
+</ns1:doInqueryResponse>
+</SOAP:Body>
+</SOAP:Envelope>
+
+09:41:46,046  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.16.243:45750
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="094043"/>
+  <field id="12" value="094043"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812094043"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 12082020094043                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+09:43:46,046  INFO [main] - ----------- MW START -----------
+09:43:46,046  INFO [main] - Start load config
+09:43:46,046  INFO [main] - LISTEN TO : 192.168.16.243:28888
+09:43:53,053  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+09:43:53,053  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:45772 , accepting in port = 28888
+09:43:53,053  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:45772
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="094353"/>
+  <field id="12" value="094353"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812094353"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 12082020094353                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+09:48:33,033  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doInquery>
+    <TimeStamp>2020-08-12T09:43:53+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>02100796</PaymentCode>
+    <TrackingRef>000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
+</soapenv:Body>
+</soapenv:Envelope>
+09:49:38,038  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<ns1:doInqueryResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
+<ReqInquery>
+<TimeStamp>2020-08-12T09:43:53+0700</TimeStamp>
+<MessageID>Inquery</MessageID>
+<ContractNo>02100796</ContractNo>
+<Customer>TITIS KURNIAJI</Customer>
+<PoliceNum>B8103GI</PoliceNum>
+<Type>TOYOTA KIJANG INNOVA 2.0 V A/T</Type>
+<Details>
+<Detail>
+<InstallmentPeriod>2019-12</InstallmentPeriod>
+<InstallmentNumber>18</InstallmentNumber>
+<InstallmentAmount>2781000</InstallmentAmount>
+<InstallmentPenalty>3157000</InstallmentPenalty>
+</Detail>
+</Details>
+<TotalAmount>5938000</TotalAmount>
+<Fee>0</Fee>
+<ResponseCode>200</ResponseCode>
+<ResponseDesc>Inquery data berhasil</ResponseDesc>
+<TrackingRef>000000000000000</TrackingRef>
+<StoreID>BCA</StoreID>
+</ReqInquery>
+</ns1:doInqueryResponse>
+</SOAP:Body>
+</SOAP:Envelope>
+
+10:08:03,003  INFO [main] - ----------- MW START -----------
+10:08:03,003  INFO [main] - Start load config
+10:08:04,004  INFO [main] - LISTEN TO : 192.168.16.243:28888
+10:08:10,010  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+10:08:10,010  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:46206 , accepting in port = 28888
+10:08:10,010  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:46206
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="100810"/>
+  <field id="12" value="100810"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812100810"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 12082020100810                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:10:44,044  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doInquery>
+    <TimeStamp>2020-08-12T10:08:10+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>02100796</PaymentCode>
+    <TrackingRef>000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
+</soapenv:Body>
+</soapenv:Envelope>
+10:11:01,001  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<ns1:doInqueryResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
+<ReqInquery>
+<TimeStamp>2020-08-12T10:08:10+0700</TimeStamp>
+<MessageID>Inquery</MessageID>
+<ContractNo>02100796</ContractNo>
+<Customer>TITIS KURNIAJI</Customer>
+<PoliceNum>B8103GI</PoliceNum>
+<Type>TOYOTA KIJANG INNOVA 2.0 V A/T</Type>
+<Details>
+<Detail>
+<InstallmentPeriod>2019-12</InstallmentPeriod>
+<InstallmentNumber>18</InstallmentNumber>
+<InstallmentAmount>2781000</InstallmentAmount>
+<InstallmentPenalty>3157000</InstallmentPenalty>
+</Detail>
+</Details>
+<TotalAmount>5938000</TotalAmount>
+<Fee>0</Fee>
+<ResponseCode>200</ResponseCode>
+<ResponseDesc>Inquery data berhasil</ResponseDesc>
+<TrackingRef>000000000000000</TrackingRef>
+<StoreID>BCA</StoreID>
+</ReqInquery>
+</ns1:doInqueryResponse>
+</SOAP:Body>
+</SOAP:Envelope>
+
+10:13:17,017  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doInquery>
+    <TimeStamp>0001-08-12T06:34:20+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>02100796</PaymentCode>
+    <TrackingRef>000000000000000000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
+</soapenv:Body>
+</soapenv:Envelope>
+10:13:21,021  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<ns1:doInqueryResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
+<ReqInquery>
+<TimeStamp>0001-08-12T06:34:20+0700</TimeStamp>
+<MessageID>Inquery</MessageID>
+<ContractNo>02100796</ContractNo>
+<Customer>TITIS KURNIAJI</Customer>
+<PoliceNum>B8103GI</PoliceNum>
+<Type>TOYOTA KIJANG INNOVA 2.0 V A/T</Type>
+<Details>
+<Detail>
+<InstallmentPeriod>2019-12</InstallmentPeriod>
+<InstallmentNumber>18</InstallmentNumber>
+<InstallmentAmount>2781000</InstallmentAmount>
+<InstallmentPenalty>0</InstallmentPenalty>
+</Detail>
+</Details>
+<TotalAmount>2781000</TotalAmount>
+<Fee>0</Fee>
+<ResponseCode>200</ResponseCode>
+<ResponseDesc>Inquery data berhasil</ResponseDesc>
+<TrackingRef>000000000000000000000000000000</TrackingRef>
+<StoreID>BCA</StoreID>
+</ReqInquery>
+</ns1:doInqueryResponse>
+</SOAP:Body>
+</SOAP:Envelope>
+
+10:13:53,053  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.16.243:46206
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="4" value="000002781000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="100810"/>
+  <field id="12" value="100810"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812100810"/>
+  <field id="39" value="00"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 12080000027810TITIS KURNIAJI                000002781000000000000000000000000000000000000000000000  "/>
+  <field id="49" value="360"/>
+  <field id="62" value="02100796            TITIS KURNIAJI                B8103GI             TOYOTA KIJANG INNOVA 2.0 V A/T                    012019-12             18000000000000000000000000"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:35:39,039  INFO [main] - ----------- MW START -----------
+10:35:39,039  INFO [main] - Start load config
+10:35:40,040  INFO [main] - LISTEN TO : 192.168.16.243:28888
+10:35:44,044  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+10:35:44,044  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:46378 , accepting in port = 28888
+10:35:44,044  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:46378
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="103544"/>
+  <field id="12" value="103544"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812103544"/>
+  <field id="48" value="60051100210079             MOBIL               BCA                 12082020103544                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:35:44,044  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doInquery>
+    <TimeStamp>2020-08-12T10:35:44+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>0210079</PaymentCode>
+    <TrackingRef>000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
+</soapenv:Body>
+</soapenv:Envelope>
+10:35:44,044  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<ns1:doInqueryResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
+<ReqInquery>
+<TimeStamp>2020-08-12T10:35:44+0700</TimeStamp>
+<MessageID>Inquery</MessageID>
+<ContractNo>0210079</ContractNo>
+<Customer>-</Customer>
+<PoliceNum>-</PoliceNum>
+<Type>-</Type>
+<Details>-</Details>
+<TotalAmount>-</TotalAmount>
+<Fee>0</Fee>
+<ResponseCode>404</ResponseCode>
+<ResponseDesc>Konsumen tidak ditemukan</ResponseDesc>
+<TrackingRef>000000000000000</TrackingRef>
+<StoreID>BCA</StoreID>
+</ReqInquery>
+</ns1:doInqueryResponse>
+</SOAP:Body>
+</SOAP:Envelope>
+
+10:35:44,044  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.16.243:46378
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="103544"/>
+  <field id="12" value="103544"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812103544"/>
+  <field id="39" value="98"/>
+  <field id="48" value="60051100210079             MOBIL               BCA                 12082020103544                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:37:05,005  INFO [main] - ----------- MW START -----------
+10:37:05,005  INFO [main] - Start load config
+10:37:06,006  INFO [main] - LISTEN TO : 192.168.16.243:28888
+10:37:11,011  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+10:37:11,011  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:46388 , accepting in port = 28888
+10:37:11,011  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:46388
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="103711"/>
+  <field id="12" value="103711"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812103711"/>
+  <field id="48" value="60051100210079             MOBIL               BCA                 12082020103711                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:37:11,011  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doInquery>
+    <TimeStamp>2020-08-12T10:37:11+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>0210079</PaymentCode>
+    <TrackingRef>000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
+</soapenv:Body>
+</soapenv:Envelope>
+10:37:11,011 ERROR [pool-1-thread-1] - sendMessage Error. 
+com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Bad response: (404Not Found
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:149)
+	at com.syb.client.Client.sendMessage(Client.java:81)
+	at com.syb.client.Client.createSoapMessage(Client.java:51)
+	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:87)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:293)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: javax.xml.transform.TransformerException: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 2; The markup in the document following the root element must be well-formed.
-	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:740)
-	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:343)
-	at com.sun.xml.internal.messaging.saaj.util.transform.EfficientStreamingTransformer.transform(EfficientStreamingTransformer.java:399)
-	at com.sun.xml.internal.messaging.saaj.soap.EnvelopeFactory.createEnvelope(EnvelopeFactory.java:108)
-	... 8 more
-Caused by: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 2; The markup in the document following the root element must be well-formed.
-	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
-	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
-	at org.xml.sax.helpers.XMLFilterImpl.parse(XMLFilterImpl.java:357)
-	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transformIdentity(TransformerImpl.java:659)
-	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:728)
-	... 11 more
+Caused by: com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Bad response: (404Not Found
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:264)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:145)
+	... 7 more
 
 CAUSE:
 
-javax.xml.transform.TransformerException: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 2; The markup in the document following the root element must be well-formed.
-	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:740)
-	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:343)
-	at com.sun.xml.internal.messaging.saaj.util.transform.EfficientStreamingTransformer.transform(EfficientStreamingTransformer.java:399)
-	at com.sun.xml.internal.messaging.saaj.soap.EnvelopeFactory.createEnvelope(EnvelopeFactory.java:108)
-	at com.sun.xml.internal.messaging.saaj.soap.ver1_1.SOAPPart1_1Impl.createEnvelopeFromSource(SOAPPart1_1Impl.java:69)
-	at com.sun.xml.internal.messaging.saaj.soap.SOAPPartImpl.getEnvelope(SOAPPartImpl.java:125)
-	at com.sun.xml.internal.messaging.saaj.soap.MessageImpl.getSOAPBody(MessageImpl.java:1351)
-	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:63)
-	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:220)
+com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Bad response: (404Not Found
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:264)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:145)
+	at com.syb.client.Client.sendMessage(Client.java:81)
+	at com.syb.client.Client.createSoapMessage(Client.java:51)
+	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:87)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:293)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 2; The markup in the document following the root element must be well-formed.
-	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
-	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
-	at org.xml.sax.helpers.XMLFilterImpl.parse(XMLFilterImpl.java:357)
-	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transformIdentity(TransformerImpl.java:659)
-	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:728)
-	... 11 more
----------
-org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 2; The markup in the document following the root element must be well-formed.
-	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
-	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
-	at org.xml.sax.helpers.XMLFilterImpl.parse(XMLFilterImpl.java:357)
-	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transformIdentity(TransformerImpl.java:659)
-	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:728)
-	at com.sun.org.apache.xalan.internal.xsltc.trax.TransformerImpl.transform(TransformerImpl.java:343)
-	at com.sun.xml.internal.messaging.saaj.util.transform.EfficientStreamingTransformer.transform(EfficientStreamingTransformer.java:399)
-	at com.sun.xml.internal.messaging.saaj.soap.EnvelopeFactory.createEnvelope(EnvelopeFactory.java:108)
-	at com.sun.xml.internal.messaging.saaj.soap.ver1_1.SOAPPart1_1Impl.createEnvelopeFromSource(SOAPPart1_1Impl.java:69)
-	at com.sun.xml.internal.messaging.saaj.soap.SOAPPartImpl.getEnvelope(SOAPPartImpl.java:125)
-	at com.sun.xml.internal.messaging.saaj.soap.MessageImpl.getSOAPBody(MessageImpl.java:1351)
-	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:63)
-	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:220)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-10:37:55,055  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.100.115:43284
+10:37:11,011  INFO [pool-1-thread-1] - [Response] No Response 
+10:37:11,011  INFO [pool-1-thread-1] - Skip sending response to CA 192.168.16.243:46388 due to no response from biller!
+10:38:01,001  INFO [main] - ----------- MW START -----------
+10:38:01,001  INFO [main] - Start load config
+10:38:01,001  INFO [main] - LISTEN TO : 192.168.16.243:28888
+10:38:05,005  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+10:38:05,005  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:46400 , accepting in port = 28888
+10:38:05,005  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:46400
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="103805"/>
+  <field id="12" value="103805"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812103805"/>
+  <field id="48" value="60051100210079             MOBIL               BCA                 12082020103805                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:38:05,005  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doInquery>
+    <TimeStamp>2020-08-12T10:38:05+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>0210079</PaymentCode>
+    <TrackingRef>000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
+</soapenv:Body>
+</soapenv:Envelope>
+10:38:05,005  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" SOAP:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<SOAP:Fault>
+<faultcode>401</faultcode>
+<faultactor/>
+<faultstring>Unauthorized</faultstring>
+<detail/>
+</SOAP:Fault>
+</SOAP:Body>
+</SOAP:Envelope>
+
+10:38:05,005  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.16.243:46400
 <isomsg>
   <!-- org.jpos.iso.packager.ISO87APackager -->
   <field id="0" value="0210"/>
   <field id="2" value="4214080740155979"/>
   <field id="3" value="380000"/>
   <field id="7" value="0101010101"/>
-  <field id="11" value="103647"/>
-  <field id="12" value="103647"/>
-  <field id="13" value="0810"/>
+  <field id="11" value="103805"/>
+  <field id="12" value="103805"/>
+  <field id="13" value="0812"/>
   <field id="14" value="0911"/>
   <field id="15" value="0517"/>
   <field id="18" value="5311"/>
   <field id="32" value="0140012"/>
-  <field id="37" value="200810103647"/>
+  <field id="37" value="200812103805"/>
   <field id="39" value="98"/>
-  <field id="48" value="600511002100796            MOBIL               BCA                 10082020103647                              000000000000000000000000                                "/>
+  <field id="48" value="60051100210079             MOBIL               BCA                 12082020103805                              000000000000000000000000                                "/>
   <field id="49" value="360"/>
   <field id="63" value="502"/>
 </isomsg>
 
-10:41:00,000  INFO [main] - ----------- MW START -----------
-10:41:00,000  INFO [main] - Start load config
-10:41:00,000  INFO [main] - LISTEN TO : 192.168.100.115:28888
-10:41:10,010  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
-10:41:10,010  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:43296 , accepting in port = 28888
-10:41:10,010  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:43296
+10:38:51,051  INFO [main] - ----------- MW START -----------
+10:38:51,051  INFO [main] - Start load config
+10:38:51,051  INFO [main] - LISTEN TO : 192.168.16.243:28888
+10:38:55,055  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+10:38:55,055  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:46406 , accepting in port = 28888
+10:38:55,055  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:46406
 <isomsg>
   <!-- org.jpos.iso.packager.ISO87APackager -->
   <field id="0" value="0200"/>
   <field id="2" value="4214080740155979"/>
   <field id="3" value="380000"/>
   <field id="7" value="0101010101"/>
-  <field id="11" value="104110"/>
-  <field id="12" value="104110"/>
-  <field id="13" value="0810"/>
+  <field id="11" value="103855"/>
+  <field id="12" value="103855"/>
+  <field id="13" value="0812"/>
   <field id="14" value="0911"/>
   <field id="15" value="0517"/>
   <field id="18" value="5311"/>
   <field id="32" value="0140012"/>
-  <field id="37" value="200810104110"/>
-  <field id="48" value="600511002100796            MOBIL               BCA                 10082020104110                              000000000000000000000000                                "/>
+  <field id="37" value="200812103855"/>
+  <field id="48" value="60051100210079             MOBIL               BCA                 12082020103855                              000000000000000000000000                                "/>
   <field id="49" value="360"/>
   <field id="63" value="502"/>
 </isomsg>
 
-10:41:25,025  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+10:45:13,013  INFO [main] - ----------- MW START -----------
+10:45:13,013  INFO [main] - Start load config
+10:45:13,013  INFO [main] - LISTEN TO : 192.168.16.243:28888
+10:45:18,018  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+10:45:18,018  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:46454 , accepting in port = 28888
+10:45:18,018  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:46454
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="104518"/>
+  <field id="12" value="104518"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812104518"/>
+  <field id="48" value="60051100210079             MOBIL               BCA                 12082020104518                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:58:36,036  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
 <soapenv:Header/>
 <soapenv:Body>
 <doInquery>
-    <TimeStamp>2020-08-10T10:41:10+0700</TimeStamp>
+    <TimeStamp>2020-08-12T10:45:18+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>0210079</PaymentCode>
+    <TrackingRef>000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
+</soapenv:Body>
+</soapenv:Envelope>
+10:58:42,042  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" SOAP:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<SOAP:Fault>
+<faultcode>401</faultcode>
+<faultactor/>
+<faultstring>Unauthorized</faultstring>
+<detail/>
+</SOAP:Fault>
+</SOAP:Body>
+</SOAP:Envelope>
+
+10:59:36,036  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.16.243:46454
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="104518"/>
+  <field id="12" value="104518"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812104518"/>
+  <field id="39" value="98"/>
+  <field id="48" value="60051100210079             MOBIL               BCA                 12082020104518                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+11:00:25,025  INFO [main] - ----------- MW START -----------
+11:00:25,025  INFO [main] - Start load config
+11:00:26,026  INFO [main] - LISTEN TO : 192.168.16.243:28888
+11:00:30,030  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+11:00:30,030  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:46568 , accepting in port = 28888
+11:00:30,030  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:46568
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="110030"/>
+  <field id="12" value="110030"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812110030"/>
+  <field id="48" value="60051100210079             MOBIL               BCA                 12082020110030                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+11:00:48,048  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doInquery>
+    <TimeStamp>2020-08-12T11:00:30+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>0210079</PaymentCode>
+    <TrackingRef>000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
+</soapenv:Body>
+</soapenv:Envelope>
+11:06:19,019  INFO [main] - ----------- MW START -----------
+11:06:19,019  INFO [main] - Start load config
+11:06:19,019  INFO [main] - LISTEN TO : 192.168.16.243:28888
+11:06:24,024  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+11:06:24,024  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:46628 , accepting in port = 28888
+11:06:24,024  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:46628
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="110624"/>
+  <field id="12" value="110624"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812110624"/>
+  <field id="48" value="60051100210079             MOBIL               BCA                 12082020110624                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+11:06:37,037  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doInquery>
+    <TimeStamp>2020-08-12T11:06:24+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>0210079</PaymentCode>
+    <TrackingRef>000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
+</soapenv:Body>
+</soapenv:Envelope>
+11:06:38,038  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" SOAP:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<SOAP:Fault>
+<faultcode>401</faultcode>
+<faultactor/>
+<faultstring>Unauthorized</faultstring>
+<detail/>
+</SOAP:Fault>
+</SOAP:Body>
+</SOAP:Envelope>
+
+11:06:38,038  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.16.243:46628
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="110624"/>
+  <field id="12" value="110624"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812110624"/>
+  <field id="39" value="98"/>
+  <field id="48" value="60051100210079             MOBIL               BCA                 12082020110624                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+11:07:03,003  INFO [main] - ----------- MW START -----------
+11:07:03,003  INFO [main] - Start load config
+11:07:03,003  INFO [main] - LISTEN TO : 192.168.16.243:28888
+11:07:08,008  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+11:07:08,008  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:46638 , accepting in port = 28888
+11:07:08,008  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:46638
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="110708"/>
+  <field id="12" value="110708"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812110708"/>
+  <field id="48" value="60051100210079             MOBIL               BCA                 12082020110708                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+11:08:52,052  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doInquery>
+    <TimeStamp>2020-08-12T11:07:08+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>0210079</PaymentCode>
+    <TrackingRef>000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
+</soapenv:Body>
+</soapenv:Envelope>
+11:09:34,034  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" SOAP:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<SOAP:Fault>
+<faultcode>401</faultcode>
+<faultactor/>
+<faultstring>Unauthorized</faultstring>
+<detail/>
+</SOAP:Fault>
+</SOAP:Body>
+</SOAP:Envelope>
+
+11:22:42,042  INFO [main] - ----------- MW START -----------
+11:22:42,042  INFO [main] - Start load config
+11:22:42,042  INFO [main] - LISTEN TO : 192.168.16.243:28888
+11:22:46,046  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+11:22:46,046  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:46846 , accepting in port = 28888
+11:22:46,046  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:46846
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="112246"/>
+  <field id="12" value="112246"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812112246"/>
+  <field id="48" value="60051100210079             MOBIL               BCA                 12082020112246                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+11:22:59,059  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doInquery>
+    <TimeStamp>2020-08-12T11:22:46+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>0210079</PaymentCode>
+    <TrackingRef>000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
+</soapenv:Body>
+</soapenv:Envelope>
+11:23:08,008  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<ns1:doInqueryResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
+<ReqInquery>
+<TimeStamp>2020-08-12T11:22:46+0700</TimeStamp>
+<MessageID>Inquery</MessageID>
+<ContractNo>0210079</ContractNo>
+<Customer>-</Customer>
+<PoliceNum>-</PoliceNum>
+<Type>-</Type>
+<Details>-</Details>
+<TotalAmount>-</TotalAmount>
+<Fee>0</Fee>
+<ResponseCode>404</ResponseCode>
+<ResponseDesc>Konsumen tidak ditemukan</ResponseDesc>
+<TrackingRef>000000000000000</TrackingRef>
+<StoreID>BCA</StoreID>
+</ReqInquery>
+</ns1:doInqueryResponse>
+</SOAP:Body>
+</SOAP:Envelope>
+
+11:28:59,059  INFO [main] - ----------- MW START -----------
+11:28:59,059  INFO [main] - Start load config
+11:28:59,059  INFO [main] - LISTEN TO : 192.168.16.243:28888
+11:29:09,009  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+11:29:09,009  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:46910 , accepting in port = 28888
+11:29:09,009  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:46910
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="112909"/>
+  <field id="12" value="112909"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812112909"/>
+  <field id="48" value="60051100210079             MOBIL               BCA                 12082020112909                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+11:29:19,019  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doInquery>
+    <TimeStamp>2020-08-12T11:29:09+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>0210079</PaymentCode>
+    <TrackingRef>000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
+</soapenv:Body>
+</soapenv:Envelope>
+11:29:25,025  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<ns1:doInqueryResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
+<ReqInquery>
+<TimeStamp>2020-08-12T11:29:09+0700</TimeStamp>
+<MessageID>Inquery</MessageID>
+<ContractNo>0210079</ContractNo>
+<Customer>-</Customer>
+<PoliceNum>-</PoliceNum>
+<Type>-</Type>
+<Details>-</Details>
+<TotalAmount>-</TotalAmount>
+<Fee>0</Fee>
+<ResponseCode>404</ResponseCode>
+<ResponseDesc>Konsumen tidak ditemukan</ResponseDesc>
+<TrackingRef>000000000000000</TrackingRef>
+<StoreID>BCA</StoreID>
+</ReqInquery>
+</ns1:doInqueryResponse>
+</SOAP:Body>
+</SOAP:Envelope>
+
+11:29:41,041  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.16.243:46910
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="112909"/>
+  <field id="12" value="112909"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812112909"/>
+  <field id="39" value="98"/>
+  <field id="48" value="60051100210079             MOBIL               BCA                 12082020112909                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+11:31:31,031  INFO [main] - ----------- MW START -----------
+11:31:31,031  INFO [main] - Start load config
+11:31:32,032  INFO [main] - LISTEN TO : 192.168.16.243:28888
+11:31:36,036  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+11:31:36,036  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:46958 , accepting in port = 28888
+11:31:36,036  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:46958
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="113136"/>
+  <field id="12" value="113136"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812113136"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 12082020113136                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+11:31:46,046  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doInquery>
+    <TimeStamp>2020-08-12T11:31:36+0700</TimeStamp>
     <MessageId>Inquery</MessageId>
     <ProductId>MOBIL</ProductId>
     <PaymentCode>02100796</PaymentCode>
@@ -422,11 +1002,11 @@ org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 2; The markup in the
 </doInquery>
 </soapenv:Body>
 </soapenv:Envelope>
-10:41:34,034  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+11:31:51,051  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 <SOAP:Body>
 <ns1:doInqueryResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
 <ReqInquery>
-<TimeStamp>2020-08-10T10:41:10+0700</TimeStamp>
+<TimeStamp>2020-08-12T11:31:36+0700</TimeStamp>
 <MessageID>Inquery</MessageID>
 <ContractNo>02100796</ContractNo>
 <Customer>TITIS KURNIAJI</Customer>
@@ -434,13 +1014,13 @@ org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 2; The markup in the
 <Type>TOYOTA KIJANG INNOVA 2.0 V A/T</Type>
 <Details>
 <Detail>
-<InstallmentPeriod>2019-11</InstallmentPeriod>
-<InstallmentNumber>17</InstallmentNumber>
-<InstallmentAmount>2934000</InstallmentAmount>
-<InstallmentPenalty>3741000</InstallmentPenalty>
+<InstallmentPeriod>2019-12</InstallmentPeriod>
+<InstallmentNumber>18</InstallmentNumber>
+<InstallmentAmount>2781000</InstallmentAmount>
+<InstallmentPenalty>3157000</InstallmentPenalty>
 </Detail>
 </Details>
-<TotalAmount>6675000</TotalAmount>
+<TotalAmount>5938000</TotalAmount>
 <Fee>0</Fee>
 <ResponseCode>200</ResponseCode>
 <ResponseDesc>Inquery data berhasil</ResponseDesc>
@@ -451,364 +1031,656 @@ org.xml.sax.SAXParseException; lineNumber: 2; columnNumber: 2; The markup in the
 </SOAP:Body>
 </SOAP:Envelope>
 
-10:41:47,047  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.100.115:43296
+11:34:47,047  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.16.243:46958
 <isomsg>
   <!-- org.jpos.iso.packager.ISO87APackager -->
   <field id="0" value="0210"/>
   <field id="2" value="4214080740155979"/>
   <field id="3" value="380000"/>
-  <field id="4" value="000006675000"/>
+  <field id="4" value="000005938000"/>
   <field id="7" value="0101010101"/>
-  <field id="11" value="104110"/>
-  <field id="12" value="104110"/>
-  <field id="13" value="0810"/>
+  <field id="11" value="113136"/>
+  <field id="12" value="113136"/>
+  <field id="13" value="0812"/>
   <field id="14" value="0911"/>
   <field id="15" value="0517"/>
   <field id="18" value="5311"/>
   <field id="32" value="0140012"/>
-  <field id="37" value="200810104110"/>
+  <field id="37" value="200812113136"/>
   <field id="39" value="00"/>
-  <field id="48" value="600511002100796            MOBIL               BCA                 10080000066750TITIS KURNIAJI                000006675000000000000000000000000000000                 "/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 12080000059380TITIS KURNIAJI                000005938000000000000000000000000000000                 "/>
   <field id="49" value="360"/>
-  <field id="62" value="02100796            TITIS KURNIAJI                B8103GI             TOYOTA KIJANG INNOVA 2.0 V A/T                    01                    00000000000000000000000000"/>
+  <field id="62" value="02100796            TITIS KURNIAJI                B8103GI             TOYOTA KIJANG INNOVA 2.0 V A/T                    012019-12             18000003157000000003157000"/>
   <field id="63" value="502"/>
 </isomsg>
 
-13:59:47,047  INFO [main] - ----------- MW START -----------
-13:59:47,047  INFO [main] - Start load config
-13:59:47,047  INFO [main] - LISTEN TO : 192.168.100.115:28888
-14:00:02,002  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
-14:00:02,002  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:43882 , accepting in port = 28888
-14:00:02,002  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:43882
+11:35:33,033  INFO [main] - ----------- MW START -----------
+11:35:33,033  INFO [main] - Start load config
+11:35:33,033  INFO [main] - LISTEN TO : 192.168.16.243:28888
+11:35:38,038  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+11:35:38,038  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:46996 , accepting in port = 28888
+11:35:38,038  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:46996
 <isomsg>
   <!-- org.jpos.iso.packager.ISO87APackager -->
   <field id="0" value="0200"/>
   <field id="2" value="4214080740155979"/>
   <field id="3" value="380000"/>
   <field id="7" value="0101010101"/>
-  <field id="11" value="140002"/>
-  <field id="12" value="140002"/>
-  <field id="13" value="0810"/>
+  <field id="11" value="113538"/>
+  <field id="12" value="113538"/>
+  <field id="13" value="0812"/>
   <field id="14" value="0911"/>
   <field id="15" value="0517"/>
   <field id="18" value="5311"/>
   <field id="32" value="0140012"/>
-  <field id="37" value="200810140002"/>
-  <field id="48" value="600511002100796            MOBIL               BCA                 10082020140002                              000000000000000000000000                                "/>
+  <field id="37" value="200812113538"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 12082020113538                              000000000000000000000000                                "/>
   <field id="49" value="360"/>
   <field id="63" value="502"/>
 </isomsg>
 
-14:10:42,042  INFO [main] - ----------- MW START -----------
-14:10:42,042  INFO [main] - Start load config
-14:10:42,042  INFO [main] - LISTEN TO : 192.168.100.115:28888
-14:10:48,048  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
-14:10:48,048  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:44218 , accepting in port = 28888
-14:10:48,048  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:44218
+11:35:55,055  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doInquery>
+    <TimeStamp>2020-08-12T11:35:38+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>02100796</PaymentCode>
+    <TrackingRef>000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
+</soapenv:Body>
+</soapenv:Envelope>
+11:36:09,009  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" SOAP:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<SOAP:Fault>
+<faultcode>401</faultcode>
+<faultactor/>
+<faultstring>Unauthorized</faultstring>
+<detail/>
+</SOAP:Fault>
+</SOAP:Body>
+</SOAP:Envelope>
+
+11:36:26,026  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.16.243:46996
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="113538"/>
+  <field id="12" value="113538"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812113538"/>
+  <field id="39" value="59"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 12082020113538                              000000000000000000000000                                "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+11:42:12,012  INFO [main] - ----------- MW START -----------
+11:42:12,012  INFO [main] - Start load config
+11:42:12,012  INFO [main] - LISTEN TO : 192.168.16.243:28888
+11:42:17,017  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+11:42:17,017  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:47042 , accepting in port = 28888
+11:42:17,017  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:47042
 <isomsg>
   <!-- org.jpos.iso.packager.ISO87APackager -->
   <field id="0" value="0200"/>
   <field id="2" value="4214080740155979"/>
   <field id="3" value="380000"/>
   <field id="7" value="0101010101"/>
-  <field id="11" value="141048"/>
-  <field id="12" value="141048"/>
-  <field id="13" value="0810"/>
+  <field id="11" value="114217"/>
+  <field id="12" value="114217"/>
+  <field id="13" value="0812"/>
   <field id="14" value="0911"/>
   <field id="15" value="0517"/>
   <field id="18" value="5311"/>
   <field id="32" value="0140012"/>
-  <field id="37" value="200810141048"/>
-  <field id="48" value="600511002100796            MOBIL               BCA                 10082020141048                              000000000000000000000000                                "/>
+  <field id="37" value="200812114217"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 12082020114217                              000000000000000000000000                                "/>
   <field id="49" value="360"/>
   <field id="63" value="502"/>
 </isomsg>
 
-14:11:18,018 ERROR [pool-1-thread-1] - Runtime exception occured while executing request: null
-javax.xml.bind.MarshalException
- - with linked exception:
-[com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation]
-	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:311)
-	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.marshal(MarshallerImpl.java:236)
-	at javax.xml.bind.helpers.AbstractMarshallerImpl.marshal(AbstractMarshallerImpl.java:116)
-	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:53)
-	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:221)
+11:44:59,059  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doInquery>
+    <TimeStamp>2020-08-12T11:42:17+0700</TimeStamp>
+    <MessageId>Inquery</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>02100796</PaymentCode>
+    <TrackingRef>000000000000000</TrackingRef>
+    <StoreId>BCA</StoreId>
+</doInquery>
+</soapenv:Body>
+</soapenv:Envelope>
+11:45:00,000 ERROR [pool-1-thread-1] - sendMessage Error. 
+com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Bad response: (404Not Found
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:149)
+	at com.syb.client.Client.sendMessage(Client.java:81)
+	at com.syb.client.Client.createSoapMessage(Client.java:51)
+	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:88)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:304)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: com.sun.istack.internal.SAXException2: unable to marshal type "java.lang.String" as an element because it is missing an @XmlRootElement annotation
-	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.reportError(XMLSerializer.java:234)
-	at com.sun.xml.internal.bind.v2.runtime.LeafBeanInfoImpl.serializeRoot(LeafBeanInfoImpl.java:127)
-	at com.sun.xml.internal.bind.v2.runtime.XMLSerializer.childAsRoot(XMLSerializer.java:479)
-	at com.sun.xml.internal.bind.v2.runtime.MarshallerImpl.write(MarshallerImpl.java:308)
+Caused by: com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Bad response: (404Not Found
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:264)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:145)
 	... 7 more
-14:20:44,044  INFO [main] - ----------- MW START -----------
-14:20:44,044  INFO [main] - Start load config
-14:20:44,044  INFO [main] - LISTEN TO : 192.168.100.115:28888
-14:20:59,059  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
-14:20:59,059  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:44314 , accepting in port = 28888
-14:20:59,059  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:44314
+
+CAUSE:
+
+com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Bad response: (404Not Found
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:264)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:145)
+	at com.syb.client.Client.sendMessage(Client.java:81)
+	at com.syb.client.Client.createSoapMessage(Client.java:51)
+	at com.syb.processor.RunnableProcessor.processResponse(RunnableProcessor.java:88)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:304)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+11:45:36,036  INFO [pool-1-thread-1] - [Response] No Response 
+11:45:39,039  INFO [pool-1-thread-1] - Skip sending response to CA 192.168.16.243:47042 due to no response from biller!
+11:56:11,011  INFO [main] - ----------- MW START -----------
+11:56:11,011  INFO [main] - Start load config
+11:56:12,012  INFO [main] - LISTEN TO : 192.168.16.243:28888
+11:56:33,033  INFO [main] - ----------- MW START -----------
+11:56:33,033  INFO [main] - Start load config
+11:56:34,034  INFO [main] - LISTEN TO : 192.168.16.243:28888
+11:56:39,039  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+11:56:39,039  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:47156 , accepting in port = 28888
+11:56:39,039  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:47156
 <isomsg>
   <!-- org.jpos.iso.packager.ISO87APackager -->
   <field id="0" value="0200"/>
   <field id="2" value="4214080740155979"/>
-  <field id="3" value="380000"/>
+  <field id="3" value="180000"/>
   <field id="7" value="0101010101"/>
-  <field id="11" value="142059"/>
-  <field id="12" value="142059"/>
-  <field id="13" value="0810"/>
+  <field id="11" value="115639"/>
+  <field id="12" value="115639"/>
+  <field id="13" value="0812"/>
   <field id="14" value="0911"/>
   <field id="15" value="0517"/>
   <field id="18" value="5311"/>
   <field id="32" value="0140012"/>
-  <field id="37" value="200810142059"/>
-  <field id="48" value="600511002100796            MOBIL               BCA                 10082020142059                              000000000000000000000000                                "/>
+  <field id="37" value="200812115639"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 12082020115639                              000000000000000000000000                                "/>
   <field id="49" value="360"/>
   <field id="63" value="502"/>
 </isomsg>
 
-14:21:13,013  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
-<soapenv:Header/>
-<soapenv:Body>
-<doInquery>
-    <TimeStamp>2020-08-10T14:20:59+0700</TimeStamp>
-    <MessageId>Inquery</MessageId>
-    <ProductId>MOBIL</ProductId>
-    <PaymentCode>02100796</PaymentCode>
-    <TrackingRef>000000000000000</TrackingRef>
-    <StoreId>BCA</StoreId>
-</doInquery>
-</soapenv:Body>
-</soapenv:Envelope>
-14:21:18,018  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-<SOAP:Body>
-<ns1:doInqueryResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
-<ReqInquery>
-<TimeStamp>2020-08-10T14:20:59+0700</TimeStamp>
-<MessageID>Inquery</MessageID>
-<ContractNo>02100796</ContractNo>
-<Customer>TITIS KURNIAJI</Customer>
-<PoliceNum>B8103GI</PoliceNum>
-<Type>TOYOTA KIJANG INNOVA 2.0 V A/T</Type>
-<Details>
-<Detail>
-<InstallmentPeriod>2019-11</InstallmentPeriod>
-<InstallmentNumber>17</InstallmentNumber>
-<InstallmentAmount>2934000</InstallmentAmount>
-<InstallmentPenalty>3741000</InstallmentPenalty>
-</Detail>
-</Details>
-<TotalAmount>6675000</TotalAmount>
-<Fee>0</Fee>
-<ResponseCode>200</ResponseCode>
-<ResponseDesc>Inquery data berhasil</ResponseDesc>
-<TrackingRef>000000000000000</TrackingRef>
-<StoreID>BCA</StoreID>
-</ReqInquery>
-</ns1:doInqueryResponse>
-</SOAP:Body>
-</SOAP:Envelope>
-
-14:21:18,018  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.100.115:44314
-<isomsg>
-  <!-- org.jpos.iso.packager.ISO87APackager -->
-  <field id="0" value="0210"/>
-  <field id="2" value="4214080740155979"/>
-  <field id="3" value="380000"/>
-  <field id="4" value="000006675000"/>
-  <field id="7" value="0101010101"/>
-  <field id="11" value="142059"/>
-  <field id="12" value="142059"/>
-  <field id="13" value="0810"/>
-  <field id="14" value="0911"/>
-  <field id="15" value="0517"/>
-  <field id="18" value="5311"/>
-  <field id="32" value="0140012"/>
-  <field id="37" value="200810142059"/>
-  <field id="39" value="00"/>
-  <field id="48" value="600511002100796            MOBIL               BCA                 10080000066750TITIS KURNIAJI                000006675000000000000000000000000000000                 "/>
-  <field id="49" value="360"/>
-  <field id="62" value="02100796            TITIS KURNIAJI                B8103GI             TOYOTA KIJANG INNOVA 2.0 V A/T                    01                    00000000000000000000000000"/>
-  <field id="63" value="502"/>
-</isomsg>
-
-14:21:45,045  INFO [main] - ----------- MW START -----------
-14:21:45,045  INFO [main] - Start load config
-14:21:45,045  INFO [main] - LISTEN TO : 192.168.100.115:28888
-14:21:57,057  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
-14:21:57,057  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:44322 , accepting in port = 28888
-14:21:57,057  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:44322
+12:05:24,024  INFO [main] - ----------- MW START -----------
+12:05:24,024  INFO [main] - Start load config
+12:05:24,024  INFO [main] - LISTEN TO : 192.168.16.243:28888
+12:05:30,030  INFO [New I/O worker #1] - Panjang Stream dari CA = 254
+12:05:30,030  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:47286 , accepting in port = 28888
+12:05:30,030  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:47286
 <isomsg>
   <!-- org.jpos.iso.packager.ISO87APackager -->
   <field id="0" value="0200"/>
   <field id="2" value="4214080740155979"/>
-  <field id="3" value="380000"/>
+  <field id="3" value="180000"/>
   <field id="7" value="0101010101"/>
-  <field id="11" value="142157"/>
-  <field id="12" value="142157"/>
-  <field id="13" value="0810"/>
+  <field id="11" value="120530"/>
+  <field id="12" value="120530"/>
+  <field id="13" value="0812"/>
   <field id="14" value="0911"/>
   <field id="15" value="0517"/>
   <field id="18" value="5311"/>
   <field id="32" value="0140012"/>
-  <field id="37" value="200810142157"/>
-  <field id="48" value="600511002100796            MOBIL               BCA                 10082020142157                              000000000000000000000000                                "/>
+  <field id="37" value="200812120530"/>
+  <field id="48" value="600511002100796            MOBIL               BCA                 12082020120530000000339300000000000000TRD023S0232DSDS                 "/>
   <field id="49" value="360"/>
   <field id="63" value="502"/>
 </isomsg>
 
-14:22:10,010  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
-<soapenv:Header/>
-<soapenv:Body>
-<doInquery>
-    <TimeStamp>2020-08-10T14:21:57+0700</TimeStamp>
-    <MessageId>Inquery</MessageId>
-    <ProductId>MOBIL</ProductId>
-    <PaymentCode>02100796</PaymentCode>
-    <TrackingRef>000000000000000</TrackingRef>
-    <StoreId>BCA</StoreId>
-</doInquery>
-</soapenv:Body>
-</soapenv:Envelope>
-14:22:15,015  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-<SOAP:Body>
-<ns1:doInqueryResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
-<ReqInquery>
-<TimeStamp>2020-08-10T14:21:57+0700</TimeStamp>
-<MessageID>Inquery</MessageID>
-<ContractNo>02100796</ContractNo>
-<Customer>TITIS KURNIAJI</Customer>
-<PoliceNum>B8103GI</PoliceNum>
-<Type>TOYOTA KIJANG INNOVA 2.0 V A/T</Type>
-<Details>
-<Detail>
-<InstallmentPeriod>2019-11</InstallmentPeriod>
-<InstallmentNumber>17</InstallmentNumber>
-<InstallmentAmount>2934000</InstallmentAmount>
-<InstallmentPenalty>3741000</InstallmentPenalty>
-</Detail>
-</Details>
-<TotalAmount>6675000</TotalAmount>
-<Fee>0</Fee>
-<ResponseCode>200</ResponseCode>
-<ResponseDesc>Inquery data berhasil</ResponseDesc>
-<TrackingRef>000000000000000</TrackingRef>
-<StoreID>BCA</StoreID>
-</ReqInquery>
-</ns1:doInqueryResponse>
-</SOAP:Body>
-</SOAP:Envelope>
-
-14:22:15,015  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.100.115:44322
-<isomsg>
-  <!-- org.jpos.iso.packager.ISO87APackager -->
-  <field id="0" value="0210"/>
-  <field id="2" value="4214080740155979"/>
-  <field id="3" value="380000"/>
-  <field id="4" value="000006675000"/>
-  <field id="7" value="0101010101"/>
-  <field id="11" value="142157"/>
-  <field id="12" value="142157"/>
-  <field id="13" value="0810"/>
-  <field id="14" value="0911"/>
-  <field id="15" value="0517"/>
-  <field id="18" value="5311"/>
-  <field id="32" value="0140012"/>
-  <field id="37" value="200810142157"/>
-  <field id="39" value="00"/>
-  <field id="48" value="600511002100796            MOBIL               BCA                 10080000066750TITIS KURNIAJI                000006675000000000000000000000000000000                 "/>
-  <field id="49" value="360"/>
-  <field id="62" value="02100796            TITIS KURNIAJI                B8103GI             TOYOTA KIJANG INNOVA 2.0 V A/T                    01                    00000000000000000000000000"/>
-  <field id="63" value="502"/>
-</isomsg>
-
-14:22:38,038  INFO [main] - ----------- MW START -----------
-14:22:38,038  INFO [main] - Start load config
-14:22:38,038  INFO [main] - LISTEN TO : 192.168.100.115:28888
-14:22:50,050  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
-14:22:50,050  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:44332 , accepting in port = 28888
-14:22:50,050  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:44332
+12:08:35,035  INFO [main] - ----------- MW START -----------
+12:08:35,035  INFO [main] - Start load config
+12:08:35,035  INFO [main] - LISTEN TO : 192.168.16.243:28888
+12:08:40,040  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+12:08:40,040  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:47322 , accepting in port = 28888
+12:08:40,040  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:47322
 <isomsg>
   <!-- org.jpos.iso.packager.ISO87APackager -->
   <field id="0" value="0200"/>
   <field id="2" value="4214080740155979"/>
-  <field id="3" value="380000"/>
+  <field id="3" value="180000"/>
   <field id="7" value="0101010101"/>
-  <field id="11" value="142250"/>
-  <field id="12" value="142250"/>
-  <field id="13" value="0810"/>
+  <field id="11" value="120839"/>
+  <field id="12" value="120839"/>
+  <field id="13" value="0812"/>
   <field id="14" value="0911"/>
   <field id="15" value="0517"/>
   <field id="18" value="5311"/>
   <field id="32" value="0140012"/>
-  <field id="37" value="200810142250"/>
-  <field id="48" value="600511002100796            MOBIL               BCA                 10082020142250                              000000000000000000000000                                "/>
+  <field id="37" value="200812120839"/>
+  <field id="48" value="600511002100796            MOBIL               MAN                 12082020120839                              000000339300000000000000TRD023S0232DSDS                 "/>
   <field id="49" value="360"/>
   <field id="63" value="502"/>
 </isomsg>
 
-14:23:15,015  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+12:11:48,048  INFO [main] - ----------- MW START -----------
+12:11:48,048  INFO [main] - Start load config
+12:11:48,048  INFO [main] - LISTEN TO : 192.168.16.243:28888
+12:11:53,053  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+12:11:53,053  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:47354 , accepting in port = 28888
+12:11:53,053  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:47354
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="180000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="121153"/>
+  <field id="12" value="121153"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812121153"/>
+  <field id="48" value="600511002100796            MOBIL               MAN                 12082020121153                              000000339300000000000000TRD023S0232DSDS                 "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+12:51:15,015  INFO [main] - ----------- MW START -----------
+12:51:15,015  INFO [main] - Start load config
+12:51:15,015  INFO [main] - LISTEN TO : 192.168.16.243:28888
+12:51:19,019  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+12:51:19,019  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:47630 , accepting in port = 28888
+12:51:19,019  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:47630
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="180000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="125119"/>
+  <field id="12" value="125119"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812125119"/>
+  <field id="48" value="600511002100796            MOBIL               MAN                 12082020125119                              000000339300000000000000TRD023S0232DSDS                 "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+12:53:03,003  INFO [main] - ----------- MW START -----------
+12:53:03,003  INFO [main] - Start load config
+12:53:03,003  INFO [main] - LISTEN TO : 192.168.16.243:28888
+12:53:06,006  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+12:53:06,006  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:47648 , accepting in port = 28888
+12:53:06,006  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:47648
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="180000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="125306"/>
+  <field id="12" value="125306"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812125306"/>
+  <field id="48" value="600511002100796            MOBIL               MAN                 12082020125306                              000000339300000000000000TRD023S0232DSDS                 "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+12:53:34,034  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
 <soapenv:Header/>
 <soapenv:Body>
-<doInquery>
-    <TimeStamp>2020-08-10T14:22:50+0700</TimeStamp>
-    <MessageId>Inquery</MessageId>
+<doPayment>
+    <TimeStamp>2020-08-12T12:53:06+0700</TimeStamp>
+    <MessageId>Payment</MessageId>
     <ProductId>MOBIL</ProductId>
     <PaymentCode>02100796</PaymentCode>
-    <TrackingRef>000000000000000</TrackingRef>
-    <StoreId>BCA</StoreId>
-</doInquery>
+    <Amount>393000</Amount>
+    <TrackingRef>TRD023S0232DSDS</TrackingRef>
+    <StoreId>MAN</StoreId>
+</doPayment>
 </soapenv:Body>
 </soapenv:Envelope>
-14:23:20,020  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+12:53:50,050  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 <SOAP:Body>
-<ns1:doInqueryResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
-<ReqInquery>
-<TimeStamp>2020-08-10T14:22:50+0700</TimeStamp>
-<MessageID>Inquery</MessageID>
-<ContractNo>02100796</ContractNo>
-<Customer>TITIS KURNIAJI</Customer>
-<PoliceNum>B8103GI</PoliceNum>
-<Type>TOYOTA KIJANG INNOVA 2.0 V A/T</Type>
-<Details>
-<Detail>
-<InstallmentPeriod>2019-11</InstallmentPeriod>
-<InstallmentNumber>17</InstallmentNumber>
-<InstallmentAmount>2934000</InstallmentAmount>
-<InstallmentPenalty>3741000</InstallmentPenalty>
-</Detail>
-</Details>
-<TotalAmount>6675000</TotalAmount>
-<Fee>0</Fee>
+<ns1:doPaymentResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
+<ReqPayment>
+<TimeStamp>2020-08-12T12:53:06+0700</TimeStamp>
+<MessageID>Payment</MessageID>
 <ResponseCode>200</ResponseCode>
-<ResponseDesc>Inquery data berhasil</ResponseDesc>
-<TrackingRef>000000000000000</TrackingRef>
-<StoreID>BCA</StoreID>
-</ReqInquery>
-</ns1:doInqueryResponse>
+<ResponseDesc>Pembayaran berhasil</ResponseDesc>
+<TrackingRef>TRD023S0232DSDS</TrackingRef>
+<StoreID>MAN</StoreID>
+<BillInfo>DES,JAN,FEB,MAR,APR,MEI,JUN,JUL</BillInfo>
+<Message>Terima kasih</Message>
+</ReqPayment>
+</ns1:doPaymentResponse>
 </SOAP:Body>
 </SOAP:Envelope>
 
-14:23:37,037  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.100.115:44332
+13:06:05,005  INFO [pool-1-thread-1] - [VALUE TRUNCATED] Value 200 (3) is exceeding padlength (2). Value altered to 20
+13:06:05,005  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.16.243:47648
 <isomsg>
   <!-- org.jpos.iso.packager.ISO87APackager -->
   <field id="0" value="0210"/>
   <field id="2" value="4214080740155979"/>
-  <field id="3" value="380000"/>
-  <field id="4" value="000006675000"/>
+  <field id="3" value="180000"/>
   <field id="7" value="0101010101"/>
-  <field id="11" value="142250"/>
-  <field id="12" value="142250"/>
-  <field id="13" value="0810"/>
+  <field id="11" value="125306"/>
+  <field id="12" value="125306"/>
+  <field id="13" value="0812"/>
   <field id="14" value="0911"/>
   <field id="15" value="0517"/>
   <field id="18" value="5311"/>
   <field id="32" value="0140012"/>
-  <field id="37" value="200810142250"/>
+  <field id="37" value="200812125306"/>
   <field id="39" value="00"/>
-  <field id="48" value="600511002100796            MOBIL               BCA                 10080000066750TITIS KURNIAJI                000006675000000000000000000000000000000                 "/>
+  <field id="48" value="600511002100796            MOBIL               MAN                 120820201253060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000Terima kasih00000000000000000TRD023S0232DSDS20"/>
   <field id="49" value="360"/>
-  <field id="62" value="02100796            TITIS KURNIAJI                B8103GI             TOYOTA KIJANG INNOVA 2.0 V A/T                    01                    00000000000000000000000000"/>
+  <field id="62" value="TRD023S0232DSDS                                                                                     DES,JAN,FEB,MAR,APR,MEI,JUN,JUL                                                                     Terima kasih                                                                                        "/>
   <field id="63" value="502"/>
 </isomsg>
 
+13:07:41,041  INFO [main] - ----------- MW START -----------
+13:07:41,041  INFO [main] - Start load config
+13:07:41,041  INFO [main] - LISTEN TO : 192.168.16.243:28888
+13:07:44,044  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+13:07:44,044  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:47786 , accepting in port = 28888
+13:07:44,044  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:47786
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="180000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="130744"/>
+  <field id="12" value="130744"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812130744"/>
+  <field id="48" value="600511002100796            MOBIL               MAN                 12082020130744                              000000339300000000000000TRD023S0232DSDS                 "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+13:08:06,006  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doPayment>
+    <TimeStamp>2020-08-12T13:07:44+0700</TimeStamp>
+    <MessageId>Payment</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>02100796</PaymentCode>
+    <Amount>393000</Amount>
+    <TrackingRef>TRD023S0232DSDS</TrackingRef>
+    <StoreId>MAN</StoreId>
+</doPayment>
+</soapenv:Body>
+</soapenv:Envelope>
+13:08:11,011 ERROR [pool-1-thread-1] - sendMessage Error. 
+com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Invalid Content-Type:text/html. Is this an error message instead of a SOAP response?
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:149)
+	at com.syb.client.Client.sendMessage(Client.java:81)
+	at com.syb.client.Client.createSoapMessage(Client.java:51)
+	at com.syb.processor.RunnableProcessor.processResponsePayment(RunnableProcessor.java:221)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:306)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Invalid Content-Type:text/html. Is this an error message instead of a SOAP response?
+	at com.sun.xml.internal.messaging.saaj.soap.MessageImpl.identifyContentType(MessageImpl.java:655)
+	at com.sun.xml.internal.messaging.saaj.soap.MessageFactoryImpl.createMessage(MessageFactoryImpl.java:85)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:332)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:145)
+	... 7 more
+
+CAUSE:
+
+com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Invalid Content-Type:text/html. Is this an error message instead of a SOAP response?
+	at com.sun.xml.internal.messaging.saaj.soap.MessageImpl.identifyContentType(MessageImpl.java:655)
+	at com.sun.xml.internal.messaging.saaj.soap.MessageFactoryImpl.createMessage(MessageFactoryImpl.java:85)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:332)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:145)
+	at com.syb.client.Client.sendMessage(Client.java:81)
+	at com.syb.client.Client.createSoapMessage(Client.java:51)
+	at com.syb.processor.RunnableProcessor.processResponsePayment(RunnableProcessor.java:221)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:306)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+13:12:26,026  INFO [main] - ----------- MW START -----------
+13:12:26,026  INFO [main] - Start load config
+13:12:26,026  INFO [main] - LISTEN TO : 192.168.16.243:28888
+13:12:28,028  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+13:12:28,028  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:47820 , accepting in port = 28888
+13:12:28,028  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:47820
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="180000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="131228"/>
+  <field id="12" value="131228"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812131228"/>
+  <field id="48" value="600511002100796            MOBIL               MAN                 12082020131228                              000000339300000000000000TRD023S0232DSDS                 "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+13:12:28,028  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doPayment>
+    <TimeStamp>2020-08-12T13:12:28+0700</TimeStamp>
+    <MessageId>Payment</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>02100796</PaymentCode>
+    <Amount>393000</Amount>
+    <TrackingRef>TRD023S0232DSDS</TrackingRef>
+    <StoreId>MAN</StoreId>
+</doPayment>
+</soapenv:Body>
+</soapenv:Envelope>
+13:12:31,031 ERROR [pool-1-thread-1] - sendMessage Error. 
+com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Invalid Content-Type:text/html. Is this an error message instead of a SOAP response?
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:149)
+	at com.syb.client.Client.sendMessage(Client.java:81)
+	at com.syb.client.Client.createSoapMessage(Client.java:51)
+	at com.syb.processor.RunnableProcessor.processResponsePayment(RunnableProcessor.java:221)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:306)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Invalid Content-Type:text/html. Is this an error message instead of a SOAP response?
+	at com.sun.xml.internal.messaging.saaj.soap.MessageImpl.identifyContentType(MessageImpl.java:655)
+	at com.sun.xml.internal.messaging.saaj.soap.MessageFactoryImpl.createMessage(MessageFactoryImpl.java:85)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:332)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:145)
+	... 7 more
+
+CAUSE:
+
+com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Invalid Content-Type:text/html. Is this an error message instead of a SOAP response?
+	at com.sun.xml.internal.messaging.saaj.soap.MessageImpl.identifyContentType(MessageImpl.java:655)
+	at com.sun.xml.internal.messaging.saaj.soap.MessageFactoryImpl.createMessage(MessageFactoryImpl.java:85)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:332)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:145)
+	at com.syb.client.Client.sendMessage(Client.java:81)
+	at com.syb.client.Client.createSoapMessage(Client.java:51)
+	at com.syb.processor.RunnableProcessor.processResponsePayment(RunnableProcessor.java:221)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:306)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+13:12:31,031  INFO [pool-1-thread-1] - [Response] No Response 
+13:12:31,031  INFO [pool-1-thread-1] - Skip sending response to CA 192.168.16.243:47820 due to no response from biller!
+13:12:48,048  INFO [main] - ----------- MW START -----------
+13:12:48,048  INFO [main] - Start load config
+13:12:48,048  INFO [main] - LISTEN TO : 192.168.16.243:28888
+13:12:50,050  INFO [main] - ----------- MW START -----------
+13:12:50,050  INFO [main] - Start load config
+13:13:03,003  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+13:13:03,003  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:47830 , accepting in port = 28888
+13:13:03,003  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:47830
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="180000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="131303"/>
+  <field id="12" value="131303"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812131303"/>
+  <field id="48" value="600511002100796            MOBIL               MAN                 12082020131303                              000000339300000000000000TRD023S0232DSDS                 "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+13:13:46,046  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doPayment>
+    <TimeStamp>2020-08-12T13:13:03+0700</TimeStamp>
+    <MessageId>Payment</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>02100796</PaymentCode>
+    <Amount>393000</Amount>
+    <TrackingRef>TRD023S0232DSDS</TrackingRef>
+    <StoreId>MAN</StoreId>
+</doPayment>
+</soapenv:Body>
+</soapenv:Envelope>
+13:13:48,048 ERROR [pool-1-thread-1] - sendMessage Error. 
+com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Invalid Content-Type:text/html. Is this an error message instead of a SOAP response?
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:149)
+	at com.syb.client.Client.sendMessage(Client.java:81)
+	at com.syb.client.Client.createSoapMessage(Client.java:51)
+	at com.syb.processor.RunnableProcessor.processResponsePayment(RunnableProcessor.java:221)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:306)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Invalid Content-Type:text/html. Is this an error message instead of a SOAP response?
+	at com.sun.xml.internal.messaging.saaj.soap.MessageImpl.identifyContentType(MessageImpl.java:655)
+	at com.sun.xml.internal.messaging.saaj.soap.MessageFactoryImpl.createMessage(MessageFactoryImpl.java:85)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:332)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:145)
+	... 7 more
+
+CAUSE:
+
+com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Invalid Content-Type:text/html. Is this an error message instead of a SOAP response?
+	at com.sun.xml.internal.messaging.saaj.soap.MessageImpl.identifyContentType(MessageImpl.java:655)
+	at com.sun.xml.internal.messaging.saaj.soap.MessageFactoryImpl.createMessage(MessageFactoryImpl.java:85)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:332)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:145)
+	at com.syb.client.Client.sendMessage(Client.java:81)
+	at com.syb.client.Client.createSoapMessage(Client.java:51)
+	at com.syb.processor.RunnableProcessor.processResponsePayment(RunnableProcessor.java:221)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:306)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+13:34:21,021  INFO [main] - ----------- MW START -----------
+13:34:21,021  INFO [main] - Start load config
+13:34:22,022  INFO [main] - LISTEN TO : 192.168.16.243:28888
+13:34:26,026  INFO [New I/O worker #1] - Panjang Stream dari CA = 284
+13:34:26,026  INFO [New I/O worker #1] - Serving from IP: 192.168.16.243:47996 , accepting in port = 28888
+13:34:26,026  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.16.243:47996
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="180000"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="133426"/>
+  <field id="12" value="133426"/>
+  <field id="13" value="0812"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200812133426"/>
+  <field id="48" value="600511002100796            MOBIL               MAN                 12082020133426                              000000339300000000000000TRD023S0232DSDS                 "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+13:34:48,048  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doPayment>
+    <TimeStamp>2020-08-12T13:34:26+0700</TimeStamp>
+    <MessageId>Payment</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>02100796</PaymentCode>
+    <Amount>393000</Amount>
+    <TrackingRef>TRD023S0232DSDS</TrackingRef>
+    <StoreId>MAN</StoreId>
+</doPayment>
+</soapenv:Body>
+</soapenv:Envelope>
+13:34:52,052 ERROR [pool-1-thread-1] - sendMessage Error. 
+com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Invalid Content-Type:text/html. Is this an error message instead of a SOAP response?
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:149)
+	at com.syb.client.Client.sendMessage(Client.java:81)
+	at com.syb.client.Client.createSoapMessage(Client.java:51)
+	at com.syb.processor.RunnableProcessor.processResponsePayment(RunnableProcessor.java:222)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:307)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Invalid Content-Type:text/html. Is this an error message instead of a SOAP response?
+	at com.sun.xml.internal.messaging.saaj.soap.MessageImpl.identifyContentType(MessageImpl.java:655)
+	at com.sun.xml.internal.messaging.saaj.soap.MessageFactoryImpl.createMessage(MessageFactoryImpl.java:85)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:332)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:145)
+	... 7 more
+
+CAUSE:
+
+com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Invalid Content-Type:text/html. Is this an error message instead of a SOAP response?
+	at com.sun.xml.internal.messaging.saaj.soap.MessageImpl.identifyContentType(MessageImpl.java:655)
+	at com.sun.xml.internal.messaging.saaj.soap.MessageFactoryImpl.createMessage(MessageFactoryImpl.java:85)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:332)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:145)
+	at com.syb.client.Client.sendMessage(Client.java:81)
+	at com.syb.client.Client.createSoapMessage(Client.java:51)
+	at com.syb.processor.RunnableProcessor.processResponsePayment(RunnableProcessor.java:222)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:307)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+13:35:08,008  INFO [pool-1-thread-1] - [Response] No Response 
+13:35:08,008  INFO [pool-1-thread-1] - Skip sending response to CA 192.168.16.243:47996 due to no response from biller!

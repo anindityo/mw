@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlType;
 
 @XmlRootElement(name = "ReqPayment")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(propOrder = { "timestamp", "messageId","responseCode", "responseDesc", "trackingRef", "storeId", "billInfo","Message" })
+@XmlType(propOrder = { "timestamp", "messageId","responseCode", "responseDesc", "trackingRef", "storeId", "billInfo","message" })
 public class ReqPayment {
 	
 	@XmlElement(name = "TimeStamp")

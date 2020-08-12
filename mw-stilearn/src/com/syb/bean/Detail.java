@@ -1,12 +1,23 @@
 package com.syb.bean;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
+@XmlRootElement(name = "Details")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(propOrder = { "installmentPeriod", "installmentNumber", "installmentAmount","installmentPenalty"})
 public class Detail {
 
-	
+	@XmlElement(name="InstallmentPeriod")
 	private String installmentPeriod;
+	@XmlElement(name="InstallmentNumber")
 	private Long installmentNumber;
+	@XmlElement(name="InstallmentAmount")
 	private Long installmentAmount;
+	@XmlElement(name="InstallmentPenalty")
 	private Long installmentPenalty;
 	
 	public Detail () {

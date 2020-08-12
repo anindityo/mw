@@ -39,7 +39,7 @@ public class Constant {
 	public static final String REF_ID = "1234";
 	public static final String INSTALLMENTROWS = "1234";
 	
-	public static final String BUANA_HEADER_INQUIRY = "http://122.129.117.54/wsdl_buana/SYBServices.php/doInquery";
+	public static final String BUANA_HEADER = "http://122.129.117.54/wsdl_buana/SYBServices.php";
 	
 	public static final String TRXDATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
 //	public static final String METHOD_PAY_TOPUP = "recharge";

@@ -112,7 +112,7 @@ public class Processor {
 //			String xmlReq = request.toString();
 			
 			
-			RunnableProcessor runnableProcessor = new RunnableProcessor(Constant.BUANA_HEADER_INQUIRY,
+			RunnableProcessor runnableProcessor = new RunnableProcessor(
 					resp, channel);
 			sessionManager.getConnectionExecutor().execute(runnableProcessor);
 
@@ -154,7 +154,7 @@ public class Processor {
 ////			String payReq = paymentRequest.toString();
 //
 ////			String url = sessionManager.getUrl();
-			RunnableProcessor runnableProcessor = new RunnableProcessor(Constant.BUANA_HEADER_INQUIRY,
+			RunnableProcessor runnableProcessor = new RunnableProcessor(
 					resp, channel);
 			sessionManager.getConnectionExecutor().execute(runnableProcessor);
 
