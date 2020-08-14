@@ -95,7 +95,7 @@ public class IsoHelper {
 	}
 
 	public static String getAmount(ISOMsg m) throws ISOException {
-		if (m.hasField(48)) {
+		if (m.hasField(4)) {
 			return m.getString(48).substring(118, 124).trim();
 		} else {
 			return "";

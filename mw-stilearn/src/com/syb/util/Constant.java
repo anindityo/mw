@@ -22,12 +22,14 @@ public class Constant {
 	public static final String RC_NO_BILLING = "55";
 	public static final String RC_ERROR = "98";
 	public static final String RC_INVALID_BANKCODE = "26";
+	public static final String RC_INVALID_USERNAME_PASSWORD = "01";
 	public static final String USER_CREATED_SYSTEM = "SYSTEM";
 	
 	public static final Integer STATUS_CODE_SUCCESS = 200;
 	public static final Integer STATUS_LINK_DOWN = 404;
 	public static final Integer STATUS_UNAUTHORIZED = 401;
 	public static final Integer STATUS_ERROR_PAYMENT = 406;
+	public static final Integer STATUS_BAD_REQUEST = 400;
 	
 	public static final String ACTION_GETBILLSBYCONTRACTNUMBER = "getBillsByContractNumber";
 	public static final String ACTION_SETBILLSPAYMENTBYCONTRACTNUMBER = "setBillsPaymentByContractNumber";
