@@ -13,9 +13,9 @@ public class Constant {
 	public static final String TRANSACTION_TYPE_PAYMENT = "1";
 	
 	public static final String RC_SUCCESS = "00";
-	public static final String RC_LINK_SERVICEPROVIDER_DOWN = "02";
+	public static final String RC_LINK_SERVICEPROVIDER_DOWN = "31";
 	//public static final String RC_TIMEOUT= "03";
-	public static final String RC_INVALID_MANDATORY_FIELD = "59";
+	public static final String RC_INVALID_MANDATORY_FIELD = "07";
 	public static final String RC_INVALID_MTI= "08";
 	public static final String RC_INVALID_PROCESSING_CODE = "24";
 	public static final String RC_INVALID_PRODUCT_CODE = "30";

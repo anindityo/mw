@@ -156,6 +156,8 @@ public class RunnableProcessor implements Runnable {
 						resp.set(39, Constant.RC_INVALID_USERNAME_PASSWORD);
 					} else if (code == Constant.STATUS_BAD_REQUEST) {
 						resp.set(39, Constant.RC_INVALID_MANDATORY_FIELD);
+					} else if (code == Constant.STATUS_LINK_DOWN) {
+						resp.set(39, Constant.RC_LINK_SERVICEPROVIDER_DOWN);
 					} else {
 						resp.set(39, Constant.RC_ERROR);
 					}
@@ -278,6 +280,8 @@ public class RunnableProcessor implements Runnable {
 						resp.set(39, Constant.RC_NO_BILLING);
 					} else if (code == Constant.STATUS_BAD_REQUEST) {
 						resp.set(39, Constant.RC_ERROR);
+					} else if (code == Constant.STATUS_LINK_DOWN) {
+						resp.set(39, Constant.RC_LINK_SERVICEPROVIDER_DOWN);
 					} else {
 						resp.set(39, Constant.RC_ERROR);
 					}
