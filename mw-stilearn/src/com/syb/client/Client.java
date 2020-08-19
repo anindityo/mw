@@ -38,7 +38,7 @@ public class Client {
 				
 				MimeHeaders headers = soapMessage.getMimeHeaders();
 				headers.setHeader("SOAPAction", header);
-				headers.setHeader("Content-Type", "text/html; charset=utf-8");
+				headers.setHeader("Content-Type", "text/html");
 				
 				SOAPPart soapPart = soapMessage.getSOAPPart();
 				soapPart.setContent(content);

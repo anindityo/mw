@@ -113,7 +113,7 @@ public class RunnableProcessor implements Runnable {
 					Long amount = reqInquery.getTotalAmount();
 					rc = reqInquery.getResponseCode();
 					int responCode = Integer.parseInt(rc);
-					if (responCode == Constant.STATUS_CODE_SUCCESS) {
+					if (responCode == Constant.RC_SUCCESS_BILLER) {
 
 						if (amount != null) {
 							String modifiedbit48 = "";
@@ -152,12 +152,12 @@ public class RunnableProcessor implements Runnable {
 						resp.set(39, Constant.RC_SUCCESS);
 						resp.set(62, bit62);
 
-					} else if (code == Constant.STATUS_UNAUTHORIZED) {
+					} else if (responCode == Constant.RC_UNAUTHORIZED_BILLER) {
 						resp.set(39, Constant.RC_INVALID_USERNAME_PASSWORD);
-					} else if (code == Constant.STATUS_BAD_REQUEST) {
+					} else if (responCode == Constant.STATUS_BAD_REQUEST) {
 						resp.set(39, Constant.RC_INVALID_MANDATORY_FIELD);
-					} else if (code == Constant.STATUS_LINK_DOWN) {
-						resp.set(39, Constant.RC_LINK_SERVICEPROVIDER_DOWN);
+					} else if (responCode == Constant.RC_CUSTOMER_NOT_FOUND_BILLER) {
+						resp.set(39, Constant.RC_INVALID_CUSTOMER_ID);
 					} else {
 						resp.set(39, Constant.RC_ERROR);
 					}
@@ -165,8 +165,8 @@ public class RunnableProcessor implements Runnable {
 					resp.set(39, Constant.RC_INVALID_USERNAME_PASSWORD);
 				} else if (code == Constant.STATUS_BAD_REQUEST) {
 					resp.set(39, Constant.RC_INVALID_MANDATORY_FIELD);
-				} else if (code == Constant.STATUS_LINK_DOWN) {
-					resp.set(39, Constant.RC_LINK_SERVICEPROVIDER_DOWN);
+				} else if (code == Constant.STATUS_NOT_FOUND) {
+					resp.set(39, Constant.RC_LINK_TO_SERVICE_PROVIDER_DOWN);
 				} else {
 					resp.set(39, Constant.RC_ERROR);
 				}
@@ -209,14 +209,17 @@ public class RunnableProcessor implements Runnable {
 			String productId = IsoHelper.getProductId(resp);
 			String noKontrak = IsoHelper.getPaymentCode(resp);
 			String amount = IsoHelper.getTotalAmount(resp);
-
+			Long amountL = Long.parseLong(amount);
+			String totalAmount = Long.toString(amountL);
+			
+			
 			paymentRequest.setTimestamp(timestamp);
 			paymentRequest.setMessageId(messageId);
 			paymentRequest.setTrackingRef(trackRef);
 			paymentRequest.setStoreId(storeId);
 			paymentRequest.setPaymentCode(noKontrak);
 			paymentRequest.setProductId(productId);
-			paymentRequest.setAmount(amount);
+			paymentRequest.setAmount(totalAmount);
 
 		} catch (Exception e) {
 			logger.error("processPayment error. ", e);
@@ -257,7 +260,7 @@ public class RunnableProcessor implements Runnable {
 					ReqPayment reqPayment = paymentResponse.getReqPayment();
 					rc = reqPayment.getResponseCode();
 					int responseCode = Integer.parseInt(rc);
-					if (responseCode == Constant.STATUS_CODE_SUCCESS) {
+					if (responseCode == Constant.RC_SUCCESS_BILLER) {
 
 						if (rc != null) {
 							String bit48 = resp.getString(48);
@@ -274,25 +277,23 @@ public class RunnableProcessor implements Runnable {
 
 						resp.set(39, Constant.RC_SUCCESS);
 						resp.set(62, bit62);
-					} else if (code == Constant.STATUS_UNAUTHORIZED) {
+					} else if (responseCode == Constant.RC_UNAUTHORIZED_BILLER) {
 						resp.set(39, Constant.RC_INVALID_USERNAME_PASSWORD);
-					} else if (code == Constant.STATUS_ERROR_PAYMENT) {
+					} else if (responseCode == Constant.RC_LAST_BILL_BILLER) {
 						resp.set(39, Constant.RC_NO_BILLING);
-					} else if (code == Constant.STATUS_BAD_REQUEST) {
-						resp.set(39, Constant.RC_ERROR);
-					} else if (code == Constant.STATUS_LINK_DOWN) {
-						resp.set(39, Constant.RC_LINK_SERVICEPROVIDER_DOWN);
+					} else if (responseCode == Constant.STATUS_BAD_REQUEST) {
+						resp.set(39, Constant.RC_INVALID_MANDATORY_FIELD);
+					} else if (responseCode == Constant.RC_CUSTOMER_NOT_FOUND_BILLER) {
+						resp.set(39, Constant.RC_LINK_TO_SERVICE_PROVIDER_DOWN);
 					} else {
 						resp.set(39, Constant.RC_ERROR);
 					}
 				} else if (code == Constant.STATUS_UNAUTHORIZED) {
 					resp.set(39, Constant.RC_INVALID_USERNAME_PASSWORD);
-				} else if (code == Constant.STATUS_ERROR_PAYMENT) {
-					resp.set(39, Constant.RC_NO_BILLING);
 				} else if (code == Constant.STATUS_BAD_REQUEST) {
 					resp.set(39, Constant.RC_ERROR);
-				} else if (code == Constant.STATUS_LINK_DOWN) {
-					resp.set(39, Constant.RC_LINK_SERVICEPROVIDER_DOWN);
+				} else if (code == Constant.STATUS_NOT_FOUND) {
+					resp.set(39, Constant.RC_LINK_TO_SERVICE_PROVIDER_DOWN);
 				} else {
 					resp.set(39, Constant.RC_ERROR);
 				}

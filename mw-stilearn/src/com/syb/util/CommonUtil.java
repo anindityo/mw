@@ -101,7 +101,7 @@ public class CommonUtil {
 	}
 
 	public static String generateTimestamp(Date date) {
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		return dateFormat.format(date);
 	}
 

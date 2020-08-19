@@ -13,7 +13,7 @@ public class Constant {
 	public static final String TRANSACTION_TYPE_PAYMENT = "1";
 	
 	public static final String RC_SUCCESS = "00";
-	public static final String RC_LINK_SERVICEPROVIDER_DOWN = "31";
+	public static final String RC_INVALID_CUSTOMER_ID = "31";
 	//public static final String RC_TIMEOUT= "03";
 	public static final String RC_INVALID_MANDATORY_FIELD = "07";
 	public static final String RC_INVALID_MTI= "08";
@@ -24,11 +24,17 @@ public class Constant {
 	public static final String RC_INVALID_BANKCODE = "26";
 	public static final String RC_INVALID_USERNAME_PASSWORD = "01";
 	public static final String USER_CREATED_SYSTEM = "SYSTEM";
+	public static final String RC_LINK_TO_SERVICE_PROVIDER_DOWN = "02";
 	
-	public static final Integer STATUS_CODE_SUCCESS = 200;
-	public static final Integer STATUS_LINK_DOWN = 404;
+	public static final Integer RC_SUCCESS_BILLER = 200; //RC SUCCESS BILLER
+	public static final Integer RC_CUSTOMER_NOT_FOUND_BILLER = 404; //RC_CUSTOMER_NOT_FOUND_BILLER
+	public static final Integer RC_UNAUTHORIZED_BILLER = 401; //RC_UNAUTHORIZED_BILLER
+	public static final Integer RC_LAST_BILL_BILLER = 406; //RC_LAST_BILL_BILLER
+	
+	
+	public static final Integer STATUS_SUCCESS = 200;
+	public static final Integer STATUS_NOT_FOUND = 404;
 	public static final Integer STATUS_UNAUTHORIZED = 401;
-	public static final Integer STATUS_ERROR_PAYMENT = 406;
 	public static final Integer STATUS_BAD_REQUEST = 400;
 	
 	public static final String ACTION_GETBILLSBYCONTRACTNUMBER = "getBillsByContractNumber";
