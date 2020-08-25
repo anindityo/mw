@@ -11,6 +11,7 @@ public class Constant {
 	public static final String MTI_REVERSAL = "04";
 	public static final String TRANSACTION_TYPE_INQUIRY = "3";
 	public static final String TRANSACTION_TYPE_PAYMENT = "1";
+	public static final String TRANSACTION_TYPE_REVERSE = "5";
 	
 	public static final String RC_SUCCESS = "00";
 	public static final String RC_INVALID_CUSTOMER_ID = "31";

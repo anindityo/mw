@@ -1,0 +1,284 @@
+10:15:55,055  INFO [main] - ----------- MW START -----------
+10:15:55,055  INFO [main] - Start load config
+10:16:33,033  INFO [main] - ----------- MW START -----------
+10:16:33,033  INFO [main] - Start load config
+10:16:33,033  INFO [main] - LISTEN TO : 192.168.100.15:28888
+10:16:58,058  INFO [New I/O worker #1] - Panjang Stream dari CA = 296
+10:16:58,058  INFO [New I/O worker #1] - Serving from IP: 192.168.100.15:51834 , accepting in port = 28888
+10:16:58,058  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.15:51834
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="180000"/>
+  <field id="4" value="000000339300"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="101658"/>
+  <field id="12" value="101658"/>
+  <field id="13" value="0818"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200818101658"/>
+  <field id="48" value="600511002100796            MOBIL               MAN                 18082020101658                              000000000000000000000000TRD023S0232DSDS                 "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:17:19,019  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doPayment>
+    <TimeStamp>2020-08-18T10:16:58+0700</TimeStamp>
+    <MessageId>Payment</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>02100796</PaymentCode>
+    <Amount>000000339300</Amount>
+    <TrackingRef>TRD023S0232DSDS</TrackingRef>
+    <StoreId>MAN</StoreId>
+</doPayment>
+</soapenv:Body>
+</soapenv:Envelope>
+10:17:41,041  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<ns1:doPaymentResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
+<ReqPayment>
+<TimeStamp>2020-08-18T10:16:58+0700</TimeStamp>
+<MessageID>Payment</MessageID>
+<ResponseCode>200</ResponseCode>
+<ResponseDesc>Pembayaran berhasil</ResponseDesc>
+<TrackingRef>TRD023S0232DSDS</TrackingRef>
+<StoreID>MAN</StoreID>
+<BillInfo>JAN,FEB,MAR,APR,MEI,JUN,JUL</BillInfo>
+<Message>Terima kasih</Message>
+</ReqPayment>
+</ns1:doPaymentResponse>
+</SOAP:Body>
+</SOAP:Envelope>
+
+10:18:03,003  INFO [pool-1-thread-1] - [VALUE TRUNCATED] Value 200 (3) is exceeding padlength (2). Value altered to 20
+10:18:06,006  INFO [pool-1-thread-1] - Outgoing CA - IP Address: 192.168.100.15:51834
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0210"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="180000"/>
+  <field id="4" value="000000339300"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="101658"/>
+  <field id="12" value="101658"/>
+  <field id="13" value="0818"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200818101658"/>
+  <field id="39" value="00"/>
+  <field id="48" value="600511002100796            MOBIL               MAN                 18082020101658Terima kasih                                                                                        TRD023S0232DSDS                 20"/>
+  <field id="49" value="360"/>
+  <field id="62" value="TRD023S0232DSDS                                                                                     JAN,FEB,MAR,APR,MEI,JUN,JUL                                                                         Terima kasih                                                                                        "/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:19:42,042  INFO [main] - ----------- MW START -----------
+10:19:42,042  INFO [main] - Start load config
+10:19:42,042  INFO [main] - LISTEN TO : 192.168.100.15:28888
+10:19:46,046  INFO [New I/O worker #1] - Panjang Stream dari CA = 296
+10:19:46,046  INFO [New I/O worker #1] - Serving from IP: 192.168.100.15:51856 , accepting in port = 28888
+10:19:46,046  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.15:51856
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="180000"/>
+  <field id="4" value="000000339300"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="101946"/>
+  <field id="12" value="101946"/>
+  <field id="13" value="0818"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200818101946"/>
+  <field id="48" value="600511002100798            MOBIL               MAN                 18082020101946                              000000000000000000000000TRD023S0232DSDS                 "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:20:11,011  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doPayment>
+    <TimeStamp>2020-08-18T10:19:46+0700</TimeStamp>
+    <MessageId>Payment</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>02100798</PaymentCode>
+    <Amount>000000339300</Amount>
+    <TrackingRef>TRD023S0232DSDS</TrackingRef>
+    <StoreId>MAN</StoreId>
+</doPayment>
+</soapenv:Body>
+</soapenv:Envelope>
+10:20:20,020  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<ns1:doPaymentResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
+<ReqPayment>
+<TimeStamp>2020-08-18T10:19:46+0700</TimeStamp>
+<MessageID>Payment</MessageID>
+<ResponseCode>200</ResponseCode>
+<ResponseDesc>Pembayaran berhasil</ResponseDesc>
+<TrackingRef>TRD023S0232DSDS</TrackingRef>
+<StoreID>MAN</StoreID>
+<BillInfo>MEI,JUN,JUL,AGU,SEP,OKT,NOP,DES,JAN,FEB,MAR,APR,MEI,JUN,JUL</BillInfo>
+<Message>Terima kasih</Message>
+</ReqPayment>
+</ns1:doPaymentResponse>
+</SOAP:Body>
+</SOAP:Envelope>
+
+10:21:34,034  INFO [main] - ----------- MW START -----------
+10:21:34,034  INFO [main] - Start load config
+10:21:34,034  INFO [main] - LISTEN TO : 192.168.100.15:28888
+10:21:40,040  INFO [New I/O worker #1] - Panjang Stream dari CA = 296
+10:21:40,040  INFO [New I/O worker #1] - Serving from IP: 192.168.100.15:51882 , accepting in port = 28888
+10:21:40,040  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.15:51882
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="180000"/>
+  <field id="4" value="000000339300"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="102140"/>
+  <field id="12" value="102140"/>
+  <field id="13" value="0818"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200818102140"/>
+  <field id="48" value="600511000798               MOBIL               MAN                 18082020102140                              000000000000000000000000TRD023S0232DSDS                 "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:22:13,013  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doPayment>
+    <TimeStamp>2020-08-18T10:21:40+0700</TimeStamp>
+    <MessageId>Payment</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>00798</PaymentCode>
+    <Amount>000000339300</Amount>
+    <TrackingRef>TRD023S0232DSDS</TrackingRef>
+    <StoreId>MAN</StoreId>
+</doPayment>
+</soapenv:Body>
+</soapenv:Envelope>
+10:22:15,015 ERROR [pool-1-thread-1] - sendMessage Error. 
+com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Invalid Content-Type:text/html. Is this an error message instead of a SOAP response?
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:149)
+	at com.syb.client.Client.sendMessage(Client.java:82)
+	at com.syb.client.Client.createSoapMessage(Client.java:52)
+	at com.syb.processor.RunnableProcessor.processResponsePayment(RunnableProcessor.java:234)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:332)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Invalid Content-Type:text/html. Is this an error message instead of a SOAP response?
+	at com.sun.xml.internal.messaging.saaj.soap.MessageImpl.identifyContentType(MessageImpl.java:655)
+	at com.sun.xml.internal.messaging.saaj.soap.MessageFactoryImpl.createMessage(MessageFactoryImpl.java:85)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:332)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:145)
+	... 7 more
+
+CAUSE:
+
+com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Invalid Content-Type:text/html. Is this an error message instead of a SOAP response?
+	at com.sun.xml.internal.messaging.saaj.soap.MessageImpl.identifyContentType(MessageImpl.java:655)
+	at com.sun.xml.internal.messaging.saaj.soap.MessageFactoryImpl.createMessage(MessageFactoryImpl.java:85)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:332)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:145)
+	at com.syb.client.Client.sendMessage(Client.java:82)
+	at com.syb.client.Client.createSoapMessage(Client.java:52)
+	at com.syb.processor.RunnableProcessor.processResponsePayment(RunnableProcessor.java:234)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:332)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+10:22:24,024  INFO [pool-1-thread-1] - [Response] No Response 
+10:22:25,025  INFO [pool-1-thread-1] - Skip sending response to CA 192.168.100.15:51882 due to no response from biller!
+10:23:17,017  INFO [main] - ----------- MW START -----------
+10:23:17,017  INFO [main] - Start load config
+10:23:17,017  INFO [main] - LISTEN TO : 192.168.100.15:28888
+10:23:22,022  INFO [New I/O worker #1] - Panjang Stream dari CA = 296
+10:23:22,022  INFO [New I/O worker #1] - Serving from IP: 192.168.100.15:51892 , accepting in port = 28888
+10:23:22,022  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.15:51892
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="180000"/>
+  <field id="4" value="000000339300"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="102322"/>
+  <field id="12" value="102322"/>
+  <field id="13" value="0818"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200818102322"/>
+  <field id="48" value="600511000798               MOBIL               MAN                 18082020102322                              000000000000000000000000TRD023S0232DSDS                 "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+10:23:36,036  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doPayment>
+    <TimeStamp>2020-08-18T10:23:22+0700</TimeStamp>
+    <MessageId>Payment</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>00798</PaymentCode>
+    <Amount>000000339300</Amount>
+    <TrackingRef>TRD023S0232DSDS</TrackingRef>
+    <StoreId>MAN</StoreId>
+</doPayment>
+</soapenv:Body>
+</soapenv:Envelope>
+10:23:38,038 ERROR [pool-1-thread-1] - sendMessage Error. 
+com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Invalid Content-Type:text/html. Is this an error message instead of a SOAP response?
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:149)
+	at com.syb.client.Client.sendMessage(Client.java:82)
+	at com.syb.client.Client.createSoapMessage(Client.java:52)
+	at com.syb.processor.RunnableProcessor.processResponsePayment(RunnableProcessor.java:234)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:332)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Invalid Content-Type:text/html. Is this an error message instead of a SOAP response?
+	at com.sun.xml.internal.messaging.saaj.soap.MessageImpl.identifyContentType(MessageImpl.java:655)
+	at com.sun.xml.internal.messaging.saaj.soap.MessageFactoryImpl.createMessage(MessageFactoryImpl.java:85)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:332)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:145)
+	... 7 more
+
+CAUSE:
+
+com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Invalid Content-Type:text/html. Is this an error message instead of a SOAP response?
+	at com.sun.xml.internal.messaging.saaj.soap.MessageImpl.identifyContentType(MessageImpl.java:655)
+	at com.sun.xml.internal.messaging.saaj.soap.MessageFactoryImpl.createMessage(MessageFactoryImpl.java:85)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:332)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:145)
+	at com.syb.client.Client.sendMessage(Client.java:82)
+	at com.syb.client.Client.createSoapMessage(Client.java:52)
+	at com.syb.processor.RunnableProcessor.processResponsePayment(RunnableProcessor.java:234)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:332)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)

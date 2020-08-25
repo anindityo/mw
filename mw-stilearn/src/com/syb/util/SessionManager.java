@@ -19,6 +19,8 @@ import com.syb.bean.PaymentRequest;
 import com.syb.bean.PaymentResponse;
 //import com.syb.bean.ReqInquery;
 import com.syb.bean.Request;
+import com.syb.bean.ReverseRequest;
+import com.syb.bean.ReverseResponse;
 
 public class SessionManager {
 	
@@ -48,6 +50,9 @@ public class SessionManager {
 	private JAXBContext inquiryResponseContext = null;
 	private JAXBContext paymentContext = null;
 	private JAXBContext paymentResponseContext = null;
+	private JAXBContext reverseContext = null;
+	private JAXBContext reverseResponseContext = null;
+
 
 	
 	protected SessionManager() {
@@ -80,6 +85,8 @@ public class SessionManager {
 			this.inquiryResponseContext = JAXBContext.newInstance(InqueryResponse.class);
 			this.paymentContext = JAXBContext.newInstance(PaymentRequest.class);
 			this.paymentResponseContext = JAXBContext.newInstance(PaymentResponse.class);
+			this.reverseContext = JAXBContext.newInstance(ReverseRequest.class);
+			this.reverseResponseContext = JAXBContext.newInstance(ReverseResponse.class);
 		
 		} catch (JAXBException e) {
 			logger.error("JAXBContext initialization error. ", e);
@@ -184,6 +191,22 @@ public class SessionManager {
 
 	public void setPaymentResponseContext(JAXBContext paymentResponseContext) {
 		this.paymentResponseContext = paymentResponseContext;
+	}
+
+	public JAXBContext getReverseContext() {
+		return reverseContext;
+	}
+
+	public void setReverseContext(JAXBContext reverseContext) {
+		this.reverseContext = reverseContext;
+	}
+
+	public JAXBContext getReverseResponseContext() {
+		return reverseResponseContext;
+	}
+
+	public void setReverseResponseContext(JAXBContext reverseResponseContext) {
+		this.reverseResponseContext = reverseResponseContext;
 	}
 	
 	

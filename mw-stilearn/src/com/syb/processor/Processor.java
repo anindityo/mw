@@ -46,7 +46,10 @@ public class Processor {
 								resp = doInquery(msg, channel);
 							} else if (transactionType.equals(Constant.TRANSACTION_TYPE_PAYMENT)) {
 								resp = doPayment(msg, channel);
+							} else if (transactionType.equals(Constant.TRANSACTION_TYPE_REVERSE)){
+								resp = doReverse(msg, channel);
 							} else {
+							
 								logger.info("bit 3 (" + transactionType + ") is invalid");
 								resp.set(39, Constant.RC_INVALID_PROCESSING_CODE);
 							}
@@ -82,17 +85,16 @@ public class Processor {
 		}
 	}
 
-	/* Perubahan marshaller di runnable processor
-	 * sebelumnya di class processor
+	/*
+	 * Perubahan marshaller di runnable processor sebelumnya di class processor
 	 * 
-	 * */
+	 */
 	public ISOMsg doInquery(ISOMsg req, Channel channel) {
 		ISOMsg resp = (ISOMsg) req.clone();
 //		try {
 
-			SessionManager sessionManager = SessionManager.getInstance();
-			
-			
+		SessionManager sessionManager = SessionManager.getInstance();
+
 //			String messageId = "Inquery";
 //			Date dTrxDate = IsoHelper.getTrxDate(req);
 //			String timestamp = CommonUtil.generateTimestamp(dTrxDate);
@@ -110,11 +112,9 @@ public class Processor {
 //			request.setStoreId(storeId);
 //			
 //			String xmlReq = request.toString();
-			
-			
-			RunnableProcessor runnableProcessor = new RunnableProcessor(
-					resp, channel);
-			sessionManager.getConnectionExecutor().execute(runnableProcessor);
+
+		RunnableProcessor runnableProcessor = new RunnableProcessor(resp, channel);
+		sessionManager.getConnectionExecutor().execute(runnableProcessor);
 
 //		} catch (Exception e) {
 //			logger.error("doInquiry error. ", e);
@@ -127,12 +127,12 @@ public class Processor {
 //		}
 		return resp;
 	}
-	
+
 	public ISOMsg doPayment(ISOMsg req, Channel channel) {
 		ISOMsg resp = (ISOMsg) req.clone();
 //		try {
 //
-			SessionManager sessionManager = SessionManager.getInstance();
+		SessionManager sessionManager = SessionManager.getInstance();
 //			String messageId = "Payment";
 //			Date dTrxDate = IsoHelper.getTrxDate(req);
 //			String timestamp = CommonUtil.generateTimestamp(dTrxDate);
@@ -154,9 +154,8 @@ public class Processor {
 ////			String payReq = paymentRequest.toString();
 //
 ////			String url = sessionManager.getUrl();
-			RunnableProcessor runnableProcessor = new RunnableProcessor(
-					resp, channel);
-			sessionManager.getConnectionExecutor().execute(runnableProcessor);
+		RunnableProcessor runnableProcessor = new RunnableProcessor(resp, channel);
+		sessionManager.getConnectionExecutor().execute(runnableProcessor);
 
 //		} catch (Exception e) {
 //			logger.error("doInquiry error. ", e);
@@ -167,6 +166,14 @@ public class Processor {
 //			}
 //
 //		}
+		return resp;
+	}
+	
+	public ISOMsg doReverse(ISOMsg req, Channel channel) {
+		ISOMsg resp = (ISOMsg) req.clone();
+		SessionManager sessionManager = SessionManager.getInstance();
+		RunnableProcessor runnableProcessor = new RunnableProcessor(resp, channel);
+		sessionManager.getConnectionExecutor().execute(runnableProcessor);
 		return resp;
 	}
 

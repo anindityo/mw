@@ -21,6 +21,7 @@ import com.syb.bean.PaymentResponse;
 import com.syb.bean.ReqInquery;
 import com.syb.bean.ReqPayment;
 import com.syb.bean.Request;
+import com.syb.bean.ReverseRequest;
 //import com.syb.bean.Request;
 import com.syb.client.Client;
 import com.syb.server.CollectorAgentHandler;
@@ -120,8 +121,8 @@ public class RunnableProcessor implements Runnable {
 							String bit48 = resp.getString(48);
 							Long admin = reqInquery.getFee();
 							Long billAmt = amount - admin;
-							bit48 = bit48.substring(0, 71) + CommonUtil.zeropad(billAmt, 12) + bit48.substring(83);
-							modifiedbit48 = bit48.substring(0, 81) + CommonUtil.strpad(reqInquery.getCustomer(), 30)
+//							bit48 = bit48.substring(0, 82) + CommonUtil.zeropad(billAmt, 12);
+							modifiedbit48 = bit48.substring(0, 82) + CommonUtil.strpad(reqInquery.getCustomer(), 30)
 									+ CommonUtil.zeropad(billAmt, 12) + CommonUtil.zeropad(admin, 12)
 									+ CommonUtil.strpad(reqInquery.getTrackingRef(), 32);
 							resp.set(48, modifiedbit48);
@@ -134,7 +135,7 @@ public class RunnableProcessor implements Runnable {
 							for (Detail data : reqInquery.getDetail()) {
 								detailTagihan = CommonUtil.strpad(data.getInstallmentPeriod(), 20)
 										+ CommonUtil.zeropad(data.getInstallmentNumber(), 2)
-										+ CommonUtil.zeropad(data.getInstallmentPenalty(), 12)
+										+ CommonUtil.zeropad(data.getInstallmentAmount(), 12)
 										+ CommonUtil.zeropad(data.getInstallmentPenalty(), 12);
 							}
 
@@ -200,6 +201,7 @@ public class RunnableProcessor implements Runnable {
 		marshaller.setProperty(Marshaller.JAXB_FRAGMENT, true);
 		marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 		PaymentRequest paymentRequest = new PaymentRequest();
+		String totalAmount = null;
 		try {
 			String messageId = "Payment";
 			Date dTrxDate = IsoHelper.getTrxDate(resp);
@@ -210,9 +212,11 @@ public class RunnableProcessor implements Runnable {
 			String noKontrak = IsoHelper.getPaymentCode(resp);
 			String amount = IsoHelper.getTotalAmount(resp);
 			Long amountL = Long.parseLong(amount);
-			String totalAmount = Long.toString(amountL);
-			
-			
+			totalAmount = Long.toString(amountL);
+
+//			String bit488  = resp.getString(48);
+//			System.out.println(bit488);
+
 			paymentRequest.setTimestamp(timestamp);
 			paymentRequest.setMessageId(messageId);
 			paymentRequest.setTrackingRef(trackRef);
@@ -261,17 +265,14 @@ public class RunnableProcessor implements Runnable {
 					rc = reqPayment.getResponseCode();
 					int responseCode = Integer.parseInt(rc);
 					if (responseCode == Constant.RC_SUCCESS_BILLER) {
-
+						String bit48 = "";
 						if (rc != null) {
-							String bit48 = resp.getString(48);
-							bit48 = bit48.substring(0, 81) + CommonUtil.strpad(reqPayment.getMessage(), 100)
-									+ CommonUtil.strpad(reqPayment.getTrackingRef(), 32)
-									+ CommonUtil.strpad(reqPayment.getResponseCode(), 2);
+							bit48 = resp.getString(48);
+							bit48 = bit48.substring(0, 82) + CommonUtil.strpad(reqPayment.getTrackingRef(), 32);
 							resp.set(48, bit48);
 
 						}
-
-						String bit62 = CommonUtil.strpad(reqPayment.getTrackingRef(), 100)
+						String bit62 = CommonUtil.strpad(IsoHelper.getPaymentCode(resp), 20)
 								+ CommonUtil.strpad(reqPayment.getBillInfo(), 100)
 								+ CommonUtil.strpad(reqPayment.getMessage(), 100);
 
@@ -319,6 +320,130 @@ public class RunnableProcessor implements Runnable {
 
 	}
 
+	private void processResponseReverse() throws Exception {
+		SessionManager sessionManager = SessionManager.getInstance();
+		Client client = new Client();
+
+		Marshaller marshaller = sessionManager.getPaymentContext().createMarshaller();
+		marshaller.setProperty(Marshaller.JAXB_FRAGMENT, true);
+		marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+		ReverseRequest reverseRequest = new ReverseRequest();
+		String totalAmount = null;
+		try {
+			String messageId = "Payment";
+			Date dTrxDate = IsoHelper.getTrxDate(resp);
+			String timestamp = CommonUtil.generateTimestamp(dTrxDate);
+			String trackRef = IsoHelper.getTrackingRef(resp);
+			String storeId = IsoHelper.getStoreId(resp);
+			String productId = IsoHelper.getProductId(resp);
+			String noKontrak = IsoHelper.getPaymentCode(resp);
+			String amount = IsoHelper.getTotalAmount(resp);
+			Long amountL = Long.parseLong(amount);
+			totalAmount = Long.toString(amountL);
+
+//			String bit488  = resp.getString(48);
+//			System.out.println(bit488);
+
+			reverseRequest.setTimestamp(timestamp);
+			reverseRequest.setMessageId(messageId);
+			reverseRequest.setTrackingRef(trackRef);
+			reverseRequest.setStoreId(storeId);
+			reverseRequest.setPaymentCode(noKontrak);
+			reverseRequest.setProductId(productId);
+			reverseRequest.setAmount(totalAmount);
+
+		} catch (Exception e) {
+			logger.error("processPayment error. ", e);
+			try {
+				resp.set(39, Constant.RC_ERROR);
+			} catch (Exception ex) {
+				logger.error("processPayment error. ", ex);
+			}
+
+		}
+
+		StringWriter stringWriter = new StringWriter();
+		marshaller.marshal(reverseRequest, stringWriter);
+		String requestString = CommonUtil.createEnvelope(stringWriter.toString());
+		ClientResponse clientResponse = client.createSoapMessage(requestString, header);
+		try {
+			if (clientResponse != null && !clientResponse.isTimeout()) {
+				String respContent = CommonUtil.getSoapContent(clientResponse.getSoapMessage());
+				respContent = CommonUtil.formatStringXml(respContent);
+				logger.info("Response: " + respContent);
+				SOAPFault fault = clientResponse.getSoapMessage().getSOAPBody().getFault();
+				String rCode = null;
+				int code = 0;
+				if (fault != null) {
+					rCode = fault.getFaultCode();
+					code = Integer.parseInt(rCode);
+				} else {
+					rCode = null;
+				}
+
+				String rc = null;
+				if (!clientResponse.getSoapMessage().getSOAPBody().hasFault() && rCode == null) {
+					Unmarshaller unmarshaller = sessionManager.getPaymentResponseContext().createUnmarshaller();
+					PaymentResponse paymentResponse = unmarshaller
+							.unmarshal(clientResponse.getSoapMessage().getSOAPBody().extractContentAsDocument(),
+									PaymentResponse.class)
+							.getValue();
+					ReqPayment reqPayment = paymentResponse.getReqPayment();
+					rc = reqPayment.getResponseCode();
+					int responseCode = Integer.parseInt(rc);
+					if (responseCode == Constant.RC_SUCCESS_BILLER) {
+						String bit48 = "";
+						if (rc != null) {
+							bit48 = resp.getString(48);
+							bit48 = bit48.substring(0, 82) + CommonUtil.strpad(reqPayment.getTrackingRef(), 32);
+							resp.set(48, bit48);
+
+						}
+//						String bit62 = CommonUtil.strpad(IsoHelper.getPaymentCode(resp), 20)
+//								+ CommonUtil.strpad(reqPayment.getBillInfo(), 100)
+//								+ CommonUtil.strpad(reqPayment.getMessage(), 100);
+
+						resp.set(39, Constant.RC_SUCCESS);
+//						resp.set(62, bit62);
+					} else if (responseCode == Constant.RC_UNAUTHORIZED_BILLER) {
+						resp.set(39, Constant.RC_INVALID_USERNAME_PASSWORD);
+					} else if (responseCode == Constant.STATUS_BAD_REQUEST) {
+						resp.set(39, Constant.RC_INVALID_MANDATORY_FIELD);
+					} else if (responseCode == Constant.RC_CUSTOMER_NOT_FOUND_BILLER) {
+						resp.set(39, Constant.RC_LINK_TO_SERVICE_PROVIDER_DOWN);
+					} else {
+						resp.set(39, Constant.RC_ERROR);
+					}
+				} else if (code == Constant.STATUS_UNAUTHORIZED) {
+					resp.set(39, Constant.RC_INVALID_USERNAME_PASSWORD);
+				} else if (code == Constant.STATUS_BAD_REQUEST) {
+					resp.set(39, Constant.RC_ERROR);
+				} else if (code == Constant.STATUS_NOT_FOUND) {
+					resp.set(39, Constant.RC_LINK_TO_SERVICE_PROVIDER_DOWN);
+				} else {
+					resp.set(39, Constant.RC_ERROR);
+				}
+			} else {
+				if (clientResponse == null) {
+					logger.info("[Response] No Response ");
+					resp = null;
+				} else {
+					resp.set(39, Constant.RC_ERROR);
+					logger.info("[Response] HTTP Response Error " + clientResponse.getSoapMessage());
+				}
+			}
+		} catch (Exception e) {
+			logger.error("processResponseReverse error. ", e);
+			try {
+				resp.set(39, Constant.RC_ERROR);
+			} catch (Exception ex) {
+				logger.error("processResponseReverse error. ", ex);
+			}
+		} finally {
+			CollectorAgentHandler.sendResponseToFrontEnd(channel, resp);
+		}
+	}
+
 	@Override
 	public void run() {
 		try {
@@ -331,6 +456,8 @@ public class RunnableProcessor implements Runnable {
 					processResponse();
 				} else if (Constant.TRANSACTION_TYPE_PAYMENT.equalsIgnoreCase(bit3)) {
 					processResponsePayment();
+				} else if (Constant.TRANSACTION_TYPE_REVERSE.equals(bit3)) {
+					processResponseReverse();
 				}
 			}
 

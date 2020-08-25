@@ -132,7 +132,7 @@ public class IsoHelper {
 	
 	public static String getPaymentCode(ISOMsg m) throws ISOException {
 		if (m.hasField(48)) {
-			return m.getString(48).substring(7, 25).trim();
+			return m.getString(48).substring(7, 20).trim();
 		} else {
 			return "";
 		}

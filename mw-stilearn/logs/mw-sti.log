@@ -1,9 +1,35 @@
-18:46:50,050  INFO [main] - ----------- MW START -----------
-18:46:50,050  INFO [main] - Start load config
-18:46:50,050  INFO [main] - LISTEN TO : 192.168.100.115:28888
-18:46:59,059  INFO [New I/O worker #1] - Panjang Stream dari CA = 296
-18:46:59,059  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:37080 , accepting in port = 28888
-18:46:59,059  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:37080
+07:37:01,001  INFO [main] - ----------- MW START -----------
+07:37:01,001  INFO [main] - Start load config
+07:37:02,002  INFO [main] - LISTEN TO : 192.168.100.15:28888
+07:37:09,009  INFO [New I/O worker #1] - Panjang Stream dari CA = 296
+07:37:09,009  INFO [New I/O worker #1] - Serving from IP: 192.168.100.15:53784 , accepting in port = 28888
+07:37:09,009  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.15:53784
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="380000"/>
+  <field id="4" value="000000339300"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="073709"/>
+  <field id="12" value="073709"/>
+  <field id="13" value="0822"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200822073709"/>
+  <field id="48" value="600511002100796            MOBIL               MAN                 22082020073709                              00000000000000000000000012313141414141                  "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+07:38:37,037  INFO [main] - ----------- MW START -----------
+07:38:37,037  INFO [main] - Start load config
+07:38:37,037  INFO [main] - LISTEN TO : 192.168.100.15:28888
+07:38:39,039  INFO [New I/O worker #1] - Panjang Stream dari CA = 296
+07:38:39,039  INFO [New I/O worker #1] - Serving from IP: 192.168.100.15:53788 , accepting in port = 28888
+07:38:39,039  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.15:53788
 <isomsg>
   <!-- org.jpos.iso.packager.ISO87APackager -->
   <field id="0" value="0200"/>
@@ -11,271 +37,145 @@
   <field id="3" value="180000"/>
   <field id="4" value="000000339300"/>
   <field id="7" value="0101010101"/>
-  <field id="11" value="184659"/>
-  <field id="12" value="184659"/>
-  <field id="13" value="0819"/>
+  <field id="11" value="073839"/>
+  <field id="12" value="073839"/>
+  <field id="13" value="0822"/>
   <field id="14" value="0911"/>
   <field id="15" value="0517"/>
   <field id="18" value="5311"/>
   <field id="32" value="0140012"/>
-  <field id="37" value="200819184659"/>
-  <field id="48" value="600511000798               MOBIL               MAN                 19082020184659                              000000000000000000000000TRD023S0232DSDS                 "/>
+  <field id="37" value="200822073839"/>
+  <field id="48" value="600511002100796            MOBIL               MAN                 22082020073839                              00000000000000000000000012313141414141                  "/>
   <field id="49" value="360"/>
   <field id="63" value="502"/>
 </isomsg>
 
-18:48:02,002  INFO [main] - ----------- MW START -----------
-18:48:02,002  INFO [main] - Start load config
-18:48:02,002  INFO [main] - LISTEN TO : 192.168.100.115:28888
-18:48:05,005  INFO [New I/O worker #1] - Panjang Stream dari CA = 296
-18:48:05,005  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:37084 , accepting in port = 28888
-18:48:05,005  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:37084
-<isomsg>
-  <!-- org.jpos.iso.packager.ISO87APackager -->
-  <field id="0" value="0200"/>
-  <field id="2" value="4214080740155979"/>
-  <field id="3" value="180000"/>
-  <field id="4" value="000000339300"/>
-  <field id="7" value="0101010101"/>
-  <field id="11" value="184805"/>
-  <field id="12" value="184805"/>
-  <field id="13" value="0819"/>
-  <field id="14" value="0911"/>
-  <field id="15" value="0517"/>
-  <field id="18" value="5311"/>
-  <field id="32" value="0140012"/>
-  <field id="37" value="200819184805"/>
-  <field id="48" value="600511000798               MOBIL               MAN                 19082020184805                              000000000000000000000000TRD023S0232DSDS                 "/>
-  <field id="49" value="360"/>
-  <field id="63" value="502"/>
-</isomsg>
-
-18:50:15,015  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+07:39:04,004  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
 <soapenv:Header/>
 <soapenv:Body>
 <doPayment>
-    <TimeStamp>2020-08-19T18:48:05+0700</TimeStamp>
+    <TimeStamp>2020-08-22 07:38:39</TimeStamp>
     <MessageId>Payment</MessageId>
     <ProductId>MOBIL</ProductId>
-    <PaymentCode>00798</PaymentCode>
-    <Amount>000000339300</Amount>
-    <TrackingRef>TRD023S0232DSDS</TrackingRef>
-    <StoreId>MAN</StoreId>
-</doPayment>
-</soapenv:Body>
-</soapenv:Envelope>
-18:50:35,035  INFO [main] - ----------- MW START -----------
-18:50:35,035  INFO [main] - Start load config
-18:50:35,035  INFO [main] - LISTEN TO : 192.168.100.115:28888
-18:50:39,039  INFO [New I/O worker #1] - Panjang Stream dari CA = 296
-18:50:39,039  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:37094 , accepting in port = 28888
-18:50:39,039  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:37094
-<isomsg>
-  <!-- org.jpos.iso.packager.ISO87APackager -->
-  <field id="0" value="0200"/>
-  <field id="2" value="4214080740155979"/>
-  <field id="3" value="180000"/>
-  <field id="4" value="000000339300"/>
-  <field id="7" value="0101010101"/>
-  <field id="11" value="185039"/>
-  <field id="12" value="185039"/>
-  <field id="13" value="0819"/>
-  <field id="14" value="0911"/>
-  <field id="15" value="0517"/>
-  <field id="18" value="5311"/>
-  <field id="32" value="0140012"/>
-  <field id="37" value="200819185039"/>
-  <field id="48" value="600511000798               MOBIL               MAN                 19082020185039                              000000000000000000000000TRD023S0232DSDS                 "/>
-  <field id="49" value="360"/>
-  <field id="63" value="502"/>
-</isomsg>
-
-18:54:22,022  INFO [main] - ----------- MW START -----------
-18:54:22,022  INFO [main] - Start load config
-18:54:22,022  INFO [main] - LISTEN TO : 192.168.100.115:28888
-18:54:24,024  INFO [main] - ----------- MW START -----------
-18:54:24,024  INFO [main] - Start load config
-18:54:31,031  INFO [New I/O worker #1] - Panjang Stream dari CA = 296
-18:54:31,031  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:37252 , accepting in port = 28888
-18:54:31,031  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:37252
-<isomsg>
-  <!-- org.jpos.iso.packager.ISO87APackager -->
-  <field id="0" value="0200"/>
-  <field id="2" value="4214080740155979"/>
-  <field id="3" value="180000"/>
-  <field id="4" value="000000339300"/>
-  <field id="7" value="0101010101"/>
-  <field id="11" value="185431"/>
-  <field id="12" value="185431"/>
-  <field id="13" value="0819"/>
-  <field id="14" value="0911"/>
-  <field id="15" value="0517"/>
-  <field id="18" value="5311"/>
-  <field id="32" value="0140012"/>
-  <field id="37" value="200819185431"/>
-  <field id="48" value="600511000798               MOBIL               MAN                 19082020185431                              000000000000000000000000TRD023S0232DSDS                 "/>
-  <field id="49" value="360"/>
-  <field id="63" value="502"/>
-</isomsg>
-
-18:56:07,007  INFO [main] - ----------- MW START -----------
-18:56:07,007  INFO [main] - Start load config
-18:56:07,007  INFO [main] - LISTEN TO : 192.168.100.115:28888
-18:56:09,009  INFO [New I/O worker #1] - Panjang Stream dari CA = 296
-18:56:09,009  INFO [New I/O worker #1] - Serving from IP: 192.168.100.115:37312 , accepting in port = 28888
-18:56:09,009  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.115:37312
-<isomsg>
-  <!-- org.jpos.iso.packager.ISO87APackager -->
-  <field id="0" value="0200"/>
-  <field id="2" value="4214080740155979"/>
-  <field id="3" value="180000"/>
-  <field id="4" value="000000339300"/>
-  <field id="7" value="0101010101"/>
-  <field id="11" value="185609"/>
-  <field id="12" value="185609"/>
-  <field id="13" value="0819"/>
-  <field id="14" value="0911"/>
-  <field id="15" value="0517"/>
-  <field id="18" value="5311"/>
-  <field id="32" value="0140012"/>
-  <field id="37" value="200819185609"/>
-  <field id="48" value="600511000798               MOBIL               MAN                 19082020185609                              000000000000000000000000TRD023S0232DSDS                 "/>
-  <field id="49" value="360"/>
-  <field id="63" value="502"/>
-</isomsg>
-
-18:56:44,044  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
-<soapenv:Header/>
-<soapenv:Body>
-<doPayment>
-    <TimeStamp>2020-08-19 18:56:09</TimeStamp>
-    <MessageId>Payment</MessageId>
-    <ProductId>MOBIL</ProductId>
-    <PaymentCode>00798</PaymentCode>
+    <PaymentCode>02100796</PaymentCode>
     <Amount>339300</Amount>
-    <TrackingRef>TRD023S0232DSDS</TrackingRef>
+    <TrackingRef>12313141414141</TrackingRef>
     <StoreId>MAN</StoreId>
 </doPayment>
 </soapenv:Body>
 </soapenv:Envelope>
-18:57:09,009 ERROR [pool-1-thread-1] - sendMessage Error. 
-com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed
+07:39:21,021  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<ns1:doPaymentResponse xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/">
+<ReqPayment>
+<TimeStamp>2020-08-22 07:38:39</TimeStamp>
+<MessageID>Payment</MessageID>
+<ResponseCode>200</ResponseCode>
+<ResponseDesc>Pembayaran berhasil</ResponseDesc>
+<TrackingRef>12313141414141</TrackingRef>
+<StoreID>MAN</StoreID>
+<BillInfo>AGU</BillInfo>
+<Message>Terima kasih</Message>
+</ReqPayment>
+</ns1:doPaymentResponse>
+</SOAP:Body>
+</SOAP:Envelope>
+
+07:42:35,035  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doPayment>
+    <TimeStamp>2020-08-22 07:38:39</TimeStamp>
+    <MessageId>Payment</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>02100796</PaymentCode>
+    <Amount>339300</Amount>
+    <TrackingRef></TrackingRef>
+    <StoreId>MAN</StoreId>
+</doPayment>
+</soapenv:Body>
+</soapenv:Envelope>
+07:42:38,038  INFO [pool-1-thread-1] - Response: <SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" SOAP:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<SOAP:Body>
+<SOAP:Fault>
+<faultcode>400</faultcode>
+<faultactor/>
+<faultstring>Bad Request</faultstring>
+<detail/>
+</SOAP:Fault>
+</SOAP:Body>
+</SOAP:Envelope>
+
+07:43:02,002  INFO [main] - ----------- MW START -----------
+07:43:02,002  INFO [main] - Start load config
+07:43:02,002  INFO [main] - LISTEN TO : 192.168.100.15:28888
+07:43:05,005  INFO [New I/O worker #1] - Panjang Stream dari CA = 296
+07:43:05,005  INFO [New I/O worker #1] - Serving from IP: 192.168.100.15:53800 , accepting in port = 28888
+07:43:05,005  INFO [New I/O worker #1] - Incoming CA - IP Address: 192.168.100.15:53800
+<isomsg>
+  <!-- org.jpos.iso.packager.ISO87APackager -->
+  <field id="0" value="0200"/>
+  <field id="2" value="4214080740155979"/>
+  <field id="3" value="180000"/>
+  <field id="4" value="000000339300"/>
+  <field id="7" value="0101010101"/>
+  <field id="11" value="074305"/>
+  <field id="12" value="074305"/>
+  <field id="13" value="0822"/>
+  <field id="14" value="0911"/>
+  <field id="15" value="0517"/>
+  <field id="18" value="5311"/>
+  <field id="32" value="0140012"/>
+  <field id="37" value="200822074305"/>
+  <field id="48" value="600511002100796            MOBIL               MAN                 22082020074305                              00000000000000000000000012313141414141                  "/>
+  <field id="49" value="360"/>
+  <field id="63" value="502"/>
+</isomsg>
+
+07:43:19,019  INFO [pool-1-thread-1] - <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syb="http://10.10.10.40/wsdl_buana/SYBServices.php">
+<soapenv:Header/>
+<soapenv:Body>
+<doPayment>
+    <TimeStamp>2020-08-22 07:43:05</TimeStamp>
+    <MessageId>Payment</MessageId>
+    <ProductId>MOBIL</ProductId>
+    <PaymentCode>02100796</PaymentCode>
+    <Amount>339300</Amount>
+    <TrackingRef>12313141414141</TrackingRef>
+    <StoreId>MAN</StoreId>
+</doPayment>
+</soapenv:Body>
+</soapenv:Envelope>
+07:43:21,021 ERROR [pool-1-thread-1] - sendMessage Error. 
+com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Invalid Content-Type:text/html. Is this an error message instead of a SOAP response?
 	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:149)
 	at com.syb.client.Client.sendMessage(Client.java:82)
 	at com.syb.client.Client.createSoapMessage(Client.java:52)
-	at com.syb.processor.RunnableProcessor.processResponsePayment(RunnableProcessor.java:237)
-	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:335)
+	at com.syb.processor.RunnableProcessor.processResponsePayment(RunnableProcessor.java:241)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:336)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed
-	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:282)
+Caused by: com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Invalid Content-Type:text/html. Is this an error message instead of a SOAP response?
+	at com.sun.xml.internal.messaging.saaj.soap.MessageImpl.identifyContentType(MessageImpl.java:655)
+	at com.sun.xml.internal.messaging.saaj.soap.MessageFactoryImpl.createMessage(MessageFactoryImpl.java:85)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:332)
 	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:145)
 	... 7 more
-Caused by: java.net.SocketException: Connection reset
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1950)
-	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1945)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1944)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1514)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1498)
-	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
-	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:269)
-	... 8 more
-Caused by: java.net.SocketException: Connection reset
-	at java.net.SocketInputStream.read(SocketInputStream.java:210)
-	at java.net.SocketInputStream.read(SocketInputStream.java:141)
-	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
-	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
-	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
-	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:735)
-	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:678)
-	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:706)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1593)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1498)
-	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
-	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:249)
-	... 8 more
 
 CAUSE:
 
-com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Message send failed
-	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:282)
+com.sun.xml.internal.messaging.saaj.SOAPExceptionImpl: Invalid Content-Type:text/html. Is this an error message instead of a SOAP response?
+	at com.sun.xml.internal.messaging.saaj.soap.MessageImpl.identifyContentType(MessageImpl.java:655)
+	at com.sun.xml.internal.messaging.saaj.soap.MessageFactoryImpl.createMessage(MessageFactoryImpl.java:85)
+	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:332)
 	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:145)
 	at com.syb.client.Client.sendMessage(Client.java:82)
 	at com.syb.client.Client.createSoapMessage(Client.java:52)
-	at com.syb.processor.RunnableProcessor.processResponsePayment(RunnableProcessor.java:237)
-	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:335)
+	at com.syb.processor.RunnableProcessor.processResponsePayment(RunnableProcessor.java:241)
+	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:336)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.net.SocketException: Connection reset
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1950)
-	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1945)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1944)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1514)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1498)
-	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
-	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:269)
-	... 8 more
-Caused by: java.net.SocketException: Connection reset
-	at java.net.SocketInputStream.read(SocketInputStream.java:210)
-	at java.net.SocketInputStream.read(SocketInputStream.java:141)
-	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
-	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
-	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
-	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:735)
-	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:678)
-	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:706)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1593)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1498)
-	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
-	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:249)
-	... 8 more
-
-CAUSE:
-
-java.net.SocketException: Connection reset
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1950)
-	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1945)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1944)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1514)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1498)
-	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
-	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:269)
-	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:145)
-	at com.syb.client.Client.sendMessage(Client.java:82)
-	at com.syb.client.Client.createSoapMessage(Client.java:52)
-	at com.syb.processor.RunnableProcessor.processResponsePayment(RunnableProcessor.java:237)
-	at com.syb.processor.RunnableProcessor.run(RunnableProcessor.java:335)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.net.SocketException: Connection reset
-	at java.net.SocketInputStream.read(SocketInputStream.java:210)
-	at java.net.SocketInputStream.read(SocketInputStream.java:141)
-	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
-	at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)
-	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
-	at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:735)
-	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:678)
-	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:706)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1593)
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1498)
-	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
-	at com.sun.xml.internal.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:249)
-	... 8 more
+07:43:37,037  INFO [pool-1-thread-1] - [Response] No Response 
+07:43:40,040  INFO [pool-1-thread-1] - Skip sending response to CA 192.168.100.15:53800 due to no response from biller!
